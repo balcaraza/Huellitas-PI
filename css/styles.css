@@ -1,0 +1,8 @@
+footer .container-fluid{
+    background-color:#C45564;
+    width: auto;/*altura*/
+    height: auto;/*ancho*/
+    color:#faf9f3 ;
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+}
