@@ -1,0 +1,53 @@
+
+
+
+
+
+
+
+
+
+/*navbar general*/
+nav{  
+    padding: 10px ;
+    background-color: #fAf9f3;
+}
+/*navbar con enlace a otras paginas*/
+.navbar-nav .nav-link {
+    margin-right: 55px; /* Márgenes a la derecha de cada enlace */
+    color: #C45564;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+/*navbar con imagen del logo de Huellitas*/
+nav img{
+    margin-right: 200px;
+    height: 75px;
+    width: 115px;
+}
+/*navbar imagen del carrito de compras*/
+.nav-img{
+    margin-right: 100px;
+    height: 50px;
+    width: 50px;
+   
+}
+/*navbar imagen del carrito de compras para hacerlo interactivo con el mouse*/
+.nav-img:hover{
+    transform: scale(1.1);
+}
+/*Cambio de color del button o de mi boton*/
+.navbar .btn-c{
+    background-color: #007BA7 ;
+    color: white;
+    padding: 10px 40px;
+}
+/* Agrega un estilo al botón cuando el mouse está sobre él */
+.navbar .btn-c:hover{
+    background-color: #C45564;
+    color: white;
+}
+
+
+
