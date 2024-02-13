@@ -1,107 +1,203 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/nosotros.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/nosotros.css" />
     <title>Acerca de Nosotros</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/main.js"></script>
   </head>
   <body>
-    
+    <nav class="navbar navbar-expand-md">
+      <div class="container">
+        <img src="/src/img/LogoHuellitas.png" alt="Logo Huellitas" />
+        <!--Imagen del logo de la pagina web Huellitas-->
+
+        <!-- Boton para que el menu sea desplegable al momento de ser responsiva, entre 320px(Mobile) a 768px(Tablet) -->
+        <button
+          class="navbar-toggler navbar-toggler-menu"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="catalogo.html">Productos</a>
+            <a class="nav-link" href="kits.html" target="_blank">Kits</a>
+            <a class="nav-link" href="tipsRapidos.html" target="_blank">Tips</a>
+            <a class="nav-link" href="acercaNosotros.html" target="_blank">Nosotros</a>
+            <a class="nav-link" href="contacto.html" target="_blank">Contacto</a>
+            <a href="compra.html" target="_blank">
+              <img class="nav-img" src="/src/img/CarritoCompras.png" alt="Carrito Compras" />
+              <!--Imagen carrito de compras-->
+            </a>
+            <!--Boton para ingresar a la cuenta del usuario-->
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <button type="button" class="btn btn-lg btn-c">Ingresar</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
     <main class="container mt-5">
       <article class="row">
-          <h1 class="text-start mb-4">Conócenos</h1>
-          <section class="col-md-6 order-md-1 col-sm-12 containerTxt">
-              <p class="text-xxl tex'sm">Nos esforzamos por incrementar la visibilidad de los productores locales y ofrecer una alternativa accesible a productos de calidad para mascotas con manufactura en México, para así promover el bienestar y felicidad de los compañeros de hogar.</p>
-          </section>
-          <aside class="col-md-6 order-md-2 col-12 text-center">
-              <img src="https://via.placeholder.com/400x300" alt="Imagen de la empresa" class="img-fluid">
-          </aside>
+        <h1 class="text-start mb-4">Conócenos</h1>
+        <section class="col-md-12 col-sm-12 containerTxt">
+          <p class="text-xxl tex'sm">
+            Nos esforzamos por incrementar la visibilidad de los productores locales y ofrecer una alternativa accesible a productos de calidad para mascotas
+            con manufactura en México, para así promover el bienestar y felicidad de los compañeros de hogar.
+          </p>
+        </section>
       </article>
+
     </main>
 
+    
 
-  <section class="container">
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button bg-warning text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Misión 
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p>Nos esforzamos por  incrementar la visibilidad de los productores locales y ofrecer una alternativa accesible a productos de calidad para mascotas con manufactura en México, para así promover el bienestar y felicidad de los compañeros de hogar.</p>
+    <section class="container">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button bg-warning text-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Misión
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                Nos esforzamos por incrementar la visibilidad de los productores locales y ofrecer una alternativa accesible a productos de calidad para
+                mascotas con manufactura en México, para así promover el bienestar y felicidad de los compañeros de hogar.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button bg-warning text-white collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Visión
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                Nuestra visión es convertirnos en la principal tienda en línea para amantes de mascotas en todo el país, distinguiéndose por nuestra dedicación
+                inquebrantable a la calidad, una amplia gama de productos y un servicio al cliente excepcional. Aspiramos a ser reconocidos como líderes
+                indiscutibles en la industria del comercio electrónico de productos para mascotas, ofreciendo a nuestros clientes acceso sin igual a productos
+                de alta calidad que satisfagan las necesidades y deseos de sus queridos compañeros del hogar.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning text-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Valores
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ul>
+                <li>
+                  <strong>Responsabilidad:</strong> Nos comprometemos a ofrecer productos de la más alta calidad que cumplan o superen las expectativas de
+                  nuestros clientes y promuevan la salud y el bienestar de las mascotas. Adoptamos prácticas comerciales sostenibles que minimicen el impacto
+                  ambiental.
+                </li>
+                <li>
+                  <strong>Integridad:</strong> Operamos con honestidad, transparencia y ética en todas nuestras interacciones con clientes, proveedores y equipo
+                  interno.
+                </li>
+                <li>
+                  <strong>Confianza:</strong> Valoramos la confianza que nuestros clientes depositan en nosotros y nos esforzamos por merecerla en cada
+                  transacción.
+                </li>
+                <li>
+                  <strong>Respeto:</strong> Ejercemos un trato amable y sin distinción alguna hacia todas las personas con las que nos relacionamos, esto
+                  incluye nuestros clientes, proveedores y equipo interno.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button bg-warning text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Visión
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p>Nuestra visión es convertirnos en la principal tienda en línea para amantes de mascotas en todo el país, distinguiéndose por nuestra dedicación inquebrantable a la calidad, una amplia gama de productos y un servicio al cliente excepcional. Aspiramos a ser reconocidos como líderes indiscutibles en la industria del comercio electrónico de productos para mascotas, ofreciendo a nuestros clientes acceso sin igual a productos de alta calidad que satisfagan las necesidades y deseos de sus queridos compañeros del hogar.</p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed bg-warning text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Valores
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <ul>
-              <li><strong>Responsabilidad:</strong> Nos comprometemos a ofrecer productos de la más alta calidad que cumplan o superen las expectativas de nuestros clientes y promuevan la salud y el bienestar de las mascotas. Adoptamos prácticas comerciales sostenibles que minimicen el impacto ambiental.</li>
-              <li><strong>Integridad:</strong> Operamos con honestidad, transparencia y ética en todas nuestras interacciones con clientes, proveedores y equipo interno.</li>
-              <li><strong>Confianza:</strong> Valoramos la confianza que nuestros clientes depositan en nosotros y nos esforzamos por merecerla en cada transacción.</li>
-              <li><strong>Respeto:</strong> Ejercemos un trato amable y sin distinción alguna hacia todas las personas con las que nos relacionamos, esto incluye nuestros clientes, proveedores y equipo interno. </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://via.placeholder.com/301x500" class="d-block w-100" alt="...">
+    <footer>
+      <div class="fixed-button">
+        <!--mantiene fijo el footer-->
+        <div class="container-fluid">
+          <div class="row justify-content-between">
+            <div class="col-8 m-10">
+              <!--m margin-->
+              <div class="p-3">
+                <!--p padding-->
+                <h5>© Huellitas SA de CV</h5>
+                <h5>Todos los derechos reservados</h5>
+              </div>
+              <!--dv padding-->
+            </div>
+            <!--col-->
+            <div class="col-4 m-10">
+              <!-- style="padding: 15px;--->
+              <div class="p-3">
+                <a href="#"><img src="/src/img/facebook.png" alt="facebook" /></a>
+                <a href="#"><img src="/src/img/instagram.png" alt="instagram" /></a>
+                <a href="#"><img src="/src/img/twitter.png" alt="twitter" /></a>
+              </div>
+            </div>
+            <!--col-->
+          </div>
+          <!--row-->
         </div>
-        <div class="carousel-item">
-          <img src="https://via.placeholder.com/302x500" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="https://via.placeholder.com/303x500" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="https://via.placeholder.com/304x500" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="https://via.placeholder.com/305x500" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="https://via.placeholder.com/305x500" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="https://via.placeholder.com/300x500" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="https://via.placeholder.com/300x500" class="d-block w-100" alt="...">
-        </div>
+        <!--container-F-->
       </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <!--fix-->
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
