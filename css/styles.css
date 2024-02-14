@@ -14,13 +14,13 @@ nav{
 }
 /*navbar con imagen del logo de Huellitas*/
 nav img{
-    margin-right: 200px;
+    margin-right: 150px;
     height: 75px;
     width: 115px;
 }
 /*navbar imagen del carrito de compras*/
 .nav-img{
-    margin-right: 100px;
+    margin-right: 55px;
     height: 50px;
     width: 50px;
    
@@ -37,11 +37,109 @@ nav img{
 }
 /* Agrega un estilo al botón cuando el mouse está sobre él */
 .navbar .btn-c:hover{
-    background-color: #C45564;
+    background-color: #007BA7;
+    opacity: 0.7;
     color: white;
+    transform: scale(1.1);
 }
 
+/* Estilos específicos para Laptop L (máximo ancho de 1440px) */
+@media (max-width: 1440px) {
+    /*navbar con imagen del logo de Huellitas*/
+    nav img {
+        margin-right: 200px;
+        height: 65px;
+        width: 100px;
+    }
+    /*navbar con enlace a otras paginas*/
+    .navbar-nav .nav-link {
+        margin: 5px;
+        margin-right: 55px;
+        font-size: 20px; 
+    }
+    /*navbar general*/
+    nav {
+        padding: 5px;
+    }
+    /*navbar imagen del carrito de compras*/
+    .nav-img{
+        margin: 5px;
+        margin-right: 55px;  
+        height: 40px;
+        width: 40px; 
+    }
+    /* Boton ingresar de mi navbar */
+    .navbar .btn-c{
+        margin: 5px;
+        padding: 8px 30px;
+        font-size: 20px;
+    }
 
+}
+@media (max-width: 1400px) {
+    /*navbar con imagen del logo de Huellitas*/
+    nav img {
+        margin-right: 100px;
+        height: 65px;
+        width: 100px;
+    }
+    /*navbar con enlace a otras paginas*/
+    .navbar-nav .nav-link {
+        margin: 5px;
+        margin-right: 30px;
+        font-size: 20px; 
+    }
+    /*navbar general*/
+    nav {
+        padding: 5px;
+    }
+    /*navbar imagen del carrito de compras*/
+    .nav-img{
+        margin: 5px;
+        margin-right: 30px;  
+        height: 40px;
+        width: 40px; 
+    }
+    /* Boton ingresar de mi navbar */
+    .navbar .btn-c{
+        margin: 5px;
+        padding: 8px 30px;
+        font-size: 20px;
+    }
+
+}
+/* Estilos específicos para Laptop (máximo ancho de 1024px) */
+@media (max-width: 1024px) {
+    /*navbar con imagen del logo de Huellitas*/
+    nav img {
+        margin-right: 55px;
+        height: 65px;
+        width: 100px;
+    }
+    /*navbar con enlace a otras paginas*/
+    .navbar-nav .nav-link {
+        margin-right: 30px;
+        font-size: 18px; 
+    }
+    /*navbar general*/
+    nav {
+        padding: 10px;
+    }
+    /*navbar imagen del carrito de compras*/
+    .nav-img{
+        margin: 5px;
+        margin-right: 35px;
+        height: 32px;
+        width: 32px;   
+    }
+    /* Boton ingresar de mi navbar */
+    .navbar .btn-c{
+        margin: 5px;
+        padding: 5px 30px;
+        font-size: 18px;
+    }
+
+}
 
 footer .container-fluid{
     background-color:#C45564;
