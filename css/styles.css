@@ -141,12 +141,27 @@ nav img{
 
 }
 
-footer .container-fluid{
+/*estilos especificos para el footer*/
+
+    footer{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;/*aplilamiento*/
+    justify-content: space-evenly;/*separa el contenido*/
+    width: 100%;/*ancho 100 del dispositivo*/
     background-color:#C45564;
-    width: auto;/*altura*/
-    height: auto;/*ancho*/
-    color:#faf9f3 ;
+    /*position: fixed;*/
+    bottom: 0;
+    margin-top: 25px;
+    }
+    footer .d-flex{
+    justify-content: space-evenly;/*especifico para los div del footer*/
     font-family: 'Roboto', sans-serif;
-    font-size: small;
-}
+    color:#faf9f3 ;/*color de letra*/
+    }
+    footer .d-flex img{/*separacion entre imagenes*/
+    margin: 5px;
+    }
+
+
 
