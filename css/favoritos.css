@@ -1,0 +1,65 @@
+.negro{
+    color:#383B47;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 10px;
+    display: inline-block;
+}
+.amarillo{
+    color:#FCD168;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    display:inline;
+    
+}
+.producto{
+    color: #383B47;
+    font-family: "Roboto",sans-serif;
+    font-weight:bold;   
+    display: inline-block;
+   
+
+}
+.precio{
+    color: #007BA7;
+    font-family:"Roboto",sans-serif ;
+    font-weight: bolder;
+    float: right;
+}
+
+.container-products {
+	display: grid;
+    grid-column:inherit;
+	/* grid-template-columns: repeat(3, 1fr); */
+	margin: 30px 0;
+	gap: 30px;
+}
+.card-product {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	cursor: pointer;
+}
+
+.favButton{
+    color: #B92336;
+    padding: 0;
+    margin:0;
+    position: absolute;
+    z-index:1;
+  
+}
+.favorito{
+    color: #B92336;
+    padding: 0;
+    margin: 0;
+    position:absolute;
+    float:inline-end;
+}
+#fav{
+float: inline-end;
+}

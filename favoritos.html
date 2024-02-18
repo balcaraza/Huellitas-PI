@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="/css/favoritos.css">
     <script src="js/main.js"></script>
-    <title>Inicio</title>
+    <title>Favoritos</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,6 +18,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
@@ -55,6 +61,87 @@
         </div>
       </div>
     </nav>
+
+    <main class="container">
+
+       <h1 class="negro">Mis <span class="amarillo">favoritos</span></h1>
+       <!-- card para favoritos -->
+       <br/>
+       <div class="container-products" >      
+       <div class="card mb-3" style="max-width: 540px;">       
+        <div class="row g-0">
+          <div class="col-md-4">
+           <!-- <button type="button" class="favButton"> -->
+            <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
+            <!-- </button> -->
+           <img src="/src/img/imagen.png" class="img-fluid rounded-start" alt="...">           
+          </div>
+          <div class="col-sm-8">
+            <div class="card-body">
+              <h5 class="producto"><strong>producto</strong></h5>
+              <p class="precio"><small>$...</small></p>
+              <p class="descripcion">Descripción</p>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <!-- <button type="button" class="favButton"> -->
+              <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
+              <!-- </button>  -->
+            <img src="/src/img/imagen.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="producto"><strong>producto</strong></h5>
+              <p class="precio"><small>$...</small></p>
+              <p class="descripcion">Descripción</p>           
+          </div>
+          </div>
+        </div>
+      </div>
+          
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <!-- <button type="button" class="favButton"> -->
+            <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
+            <!-- </button>  -->
+          <img src="/src/img/imagen.png" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="producto"><strong>producto</strong></h5>
+            <p class="precio"><small>$...</small></p>
+            <p class="descripcion">Descripción</p>         
+        </div>
+        </div>
+      </div>
+    </div>
+  
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <!-- <button type="button" class="favButton"> -->
+          <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
+        <!-- </button>  -->
+        <img src="/src/img/imagen.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="producto"><strong>producto</strong></h5>
+          <p class="precio"><small>$...</small></p>
+          <p class="descripcion">Descripción</p>
+        
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </main>
     <footer>
       <div class="fixed-button">
         <!--mantiene fijo el footer-->
