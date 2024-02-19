@@ -80,7 +80,7 @@
               role="alert" id="alertValidaciones">
           <p id="alertValidacionesTexto"></p>
           </div>
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation" novalidate id="form">
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre" placeholder="Escriba su nombre">
@@ -89,16 +89,16 @@
                 <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com">
       
                 <label for="telefono" class="form-label">Teléfono</label>
-                <input type="tel" class="form-control" id="telefono" placeholder="3340768500">
+                <input type="tel" class="form-control" id="telefono" placeholder="3340768500" max="10">
               
               </div>
               <div class="mb-3 text">
                 <label for="mensaje" class="form-label">Déjanos tu mensaje:</label>
                 <textarea class="form-control" id="mensaje" rows="3"></textarea>
               </div>
-              
+              <input type="submit" id="button" value="Enviar"  class="btn btn-primary btn-lg btn-block" >
             </form>
-            <button id="btnAgregar" class="btn btn-primary btn-lg btn-block" type="button">Enviar</button>
+           
           </div>
         
            <!-- Columna para el mapa -->
@@ -152,5 +152,16 @@
     ></script>
     <!--Script Custom-->
     <script src="js/main.js"></script>
+
+
+
+
+    
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('gbj0L461fqbrtx1EF')
+</script>
   </body>
 </html>
