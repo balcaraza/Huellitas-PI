@@ -1,0 +1,60 @@
+/*Card - Acomodar de forma uniforme todas las card */
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* Titulo de la pagina */
+h2{
+    /* font-family: "Roboto", sans-serif; */
+    font-family: "Montserrat", sans-serif;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+
+}
+/* Card - Cambiar el tamaño de toda la card */
+.card{
+    margin: 15px;
+    width: 15rem; /*Tamaño de mi card*/
+    transition: transform 0.3s ease-in-out;
+}
+/* Agregarle un efecto a mi card */
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 1px 1px 10px gray; /*Aplicarle un sombreado*/
+    
+}
+/* Card - imagen del carrito de compras */
+.img-carrito{
+    width: 25px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    
+}
+/* Card - Agregarle un efecto al carrito de compras */
+.img-carrito:hover{
+    cursor: pointer; /*cambia el diseño del cursor al ponerlo sobre la imagen*/
+}
+/* Card - Boton para agregar a favoritos */
+.button-favorite{
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    padding-left: 15px;
+}
+/* Card - Cambiar la posicion del precio */
+.card-precio{
+    text-align: right;
+    margin-top: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;   
+}
+/* Card - Modificar todo lo que se encuentre dentro de la card */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
