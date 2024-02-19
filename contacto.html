@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/contacto.css">
-    <script src="js/main.js"></script>
+    
     <title>Contacto</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -20,7 +20,7 @@
   </head>
   
   <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-md">
         <div class="container">
           <img src="/src/img/LogoHuellitas.png" alt="Logo Huellitas" />
           <!--Imagen del logo de la pagina web Huellitas-->
@@ -63,9 +63,13 @@
    <h2 class="parteTitulo2">estaremos felices de atenderte.</h2>
         <div class="row">
            <!-- Columna para el formulario -->
-          <div class="col-md-6">
-            <form>
-              <br/>
+          <div class="col-md-6 col-sm-1">
+          <br/>
+            <div class="alert alert-danger fade show" style="display:none;"
+              role="alert" id="alertValidaciones">
+          <p id="alertValidacionesTexto"></p>
+          </div>
+            <form class="needs-validation" novalidate>
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre" placeholder="Escriba su nombre">
@@ -74,54 +78,25 @@
                 <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com">
       
                 <label for="telefono" class="form-label">Teléfono</label>
-                <input type="tel" class="form-control" id="telefono" placeholder="5555555555">
+                <input type="tel" class="form-control" id="telefono" placeholder="3340768500">
+              
               </div>
               <div class="mb-3 text">
                 <label for="mensaje" class="form-label">Déjanos tu mensaje:</label>
                 <textarea class="form-control" id="mensaje" rows="3"></textarea>
               </div>
+              
             </form>
-          
+            <button id="btnAgregar" class="btn btn-primary btn-lg btn-block" type="button">Enviar</button>
           </div>
-           <!-- Columna para la imagen -->
-          <div class="col-md-6 text-center">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481727.1314081326!2d-99.47332443972586!3d19.39108443128627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2sMexico%20City%2C%20CDMX!5e0!3m2!1sen!2smx!4v1707864869952!5m2!1sen!2smx" width="350" height="350"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+        
+           <!-- Columna para el mapa -->
+          <div class="col-md-6 col-sm-1 text-center" >
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481727.1314081326!2d-99.47332443972586!3d19.39108443128627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2sMexico%20City%2C%20CDMX!5e0!3m2!1sen!2smx!4v1707864869952!5m2!1sen!2smx" width="300" height="350"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
           </div>
         </div>
       </main>
-      
-     
-      <footer>
-        <div class="fixed-bottom">
-          <!--mantiene fijo el footer-->
-          <div class="container-fluid">
-            <div class="row justify-content-between">
-              <div class="col-8 m-10">
-                <!--m margin-->
-                <div class="p-3">
-                  <!--p padding-->
-                  <h5>© Huellitas SA de CV</h5>
-                  <h5>Todos los derechos reservados</h5>
-                </div>
-                <!--dv padding-->
-              </div>
-              <!--col-->
-              <div class="col-4 m-10">
-                <!-- style="padding: 15px;--->
-                <div class="p-3">
-                  <a href="#"><img src="/src/img/facebook.png" alt="facebook" /></a>
-                  <a href="#"><img src="/src/img/instagram.png" alt="instagram" /></a>
-                  <a href="#"><img src="/src/img/twitter.png" alt="twitter" /></a>
-                </div>
-              </div>
-              <!--col-->
-            </div>
-            <!--row-->
-          </div>
-          <!--container-F-->
-        </div>
-        <!--fix-->
-      </footer>
+      <script src="js/contacto.js" defer></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

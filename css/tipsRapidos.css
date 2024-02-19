@@ -1,0 +1,65 @@
+main {
+    /* margenes para desktop */
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.card-body {
+    overflow: auto; /* Permite desplazamiento si el contenido excede la altura máxima */
+}
+.card-img-top{
+    object-fit: cover; /*Cubrir completamente el contenedor de la imagen*/
+}
+.card {
+    transition: box-shadow 0.3s ease; /* Transición suave para el resaltado */
+    max-height:400px; /* Establece la altura máxima */
+}
+.card:hover {
+    /* Estilos cuando el mouse está sobre la tarjeta */
+    box-shadow: 0px 0px 25px #C45564;; /* Sombra para resaltar */
+}
+
+.estilo1{
+    color: #383B47;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 10px;
+    display: inline-block;
+   
+}
+.estilo2{
+    line-height: 1px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    display:inline;
+    color: #FCD168;
+}
+p {
+    text-align:justify; /* Centrar el texto */
+    color: #383B47;
+    font-family:"Roboto", sans-serif; /*se cambio esto*/
+    font-optical-sizing: auto;
+    font-weight:800;  
+    font-size: 14px;
+    
+}
+h6>*{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: #FCD168;
+}
+@media only screen and (max-width: 768px) {
+    /* margenes para dispositivos móviles */
+    main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    /* Diseño card movil */
+    .card-body {
+        overflow: auto; /* Permite desplazamiento si el contenido excede la altura máxima */
+    }
+}
