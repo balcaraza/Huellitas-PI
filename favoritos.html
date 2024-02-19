@@ -2,21 +2,39 @@
 <!--Vista de listado de favoritos-->
 <html lang="en">
   <head>
+    <!--Meta general -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Fuentes Generales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Estilos generales-->
     <link rel="stylesheet" href="css/styles.css" />
+<<<<<<< HEAD
+    <link href="css/registro.css"
     <script src="js/main.js"></script>
     <title>Inicio</title>
+=======
+    <link rel="stylesheet" href="css/favoritos.css" />
+
+    <!--Bootstrap-->
+>>>>>>> 6fdead1d1aff58f3107b6df05e2185e272fb475d
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <!--link fuentes-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+    <!--Recursos Especificos-->
+
+    <title>Favoritos</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
@@ -55,6 +73,87 @@
         </div>
       </div>
     </nav>
+
+    <main class="container">
+
+       <h1 class="negro">Mis <span class="amarillo">favoritos</span></h1>
+       <!-- card para favoritos -->
+       <br/>
+       <div class="container-products" >      
+       <div class="card mb-3" style="max-width: 540px;">       
+        <div class="row g-0">
+          <div class="col-md-4">
+           <!-- <button type="button" class="favButton"> -->
+            <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
+            <!-- </button> -->
+           <img src="/src/img/imagen.png" class="img-fluid rounded-start" alt="...">           
+          </div>
+          <div class="col-sm-8">
+            <div class="card-body">
+              <h5 class="producto"><strong>producto</strong></h5>
+              <p class="precio"><small>$...</small></p>
+              <p class="descripcion">Descripción</p>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <!-- <button type="button" class="favButton"> -->
+              <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
+              <!-- </button>  -->
+            <img src="/src/img/imagen.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="producto"><strong>producto</strong></h5>
+              <p class="precio"><small>$...</small></p>
+              <p class="descripcion">Descripción</p>           
+          </div>
+          </div>
+        </div>
+      </div>
+          
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <!-- <button type="button" class="favButton"> -->
+            <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
+            <!-- </button>  -->
+          <img src="/src/img/imagen.png" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="producto"><strong>producto</strong></h5>
+            <p class="precio"><small>$...</small></p>
+            <p class="descripcion">Descripción</p>         
+        </div>
+        </div>
+      </div>
+    </div>
+  
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <!-- <button type="button" class="favButton"> -->
+          <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
+        <!-- </button>  -->
+        <img src="/src/img/imagen.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="producto"><strong>producto</strong></h5>
+          <p class="precio"><small>$...</small></p>
+          <p class="descripcion">Descripción</p>
+        
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </main>
     <footer>
       <div class="fixed-button">
         <!--mantiene fijo el footer-->
@@ -86,10 +185,13 @@
       </div>
       <!--fix-->
     </footer>
+    <!--Script bootstrap-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <!--Script Custom-->
+    <script src="js/main.js"></script>
   </body>
 </html>

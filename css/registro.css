@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }/*Sirve para alinear al centro el formulario*/
+  
+  .form-content{
+      width: 100%;
+      max-width: 450px;
+      padding: 50px 60px 70px;
+      text-align: center;
+      border-radius: 25px;
+  }/*sirve para el responsive*/
+  .form-content h1{
+      font-size: 30px;
+      margin-bottom: 60px;
+      color: rgb(0, 0, 0);
+      position: relative;
+  }/*Sirve para el estilo del titulo del formulario*/
+  .input-field{
+      display: flex;
+      align-items: center;
+      transition: max-height 0.6s;/*sirve para manipular la duracion de la transicion*/
+      overflow: hidden; /*Sirve para pcultar el input de nombre*/
+  }/*Sirve para le diseño*/
+  
+  .btn-field{
+      width: 100%;
+      display: flex;
+      justify-content: space-between
+  }/*Sirve para el diseño y acomodo de los botones*/
+  .btn-field button{
+      flex-basis: 48%;
+      font-size: 16px;
+      background-color: #C45564;
+      color: #FFFFFF; 
+      height: 40px;
+      border-radius: 10px;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      transition: background 0.6s; /*Sirve para la trnasicion de colores de los botones*/
+  }/*Transicion de los botones*/
+  .btn-field button.disable{
+      background-color: #EAEAEA;
+      color: #2C2F35;
+  }
+  .input{
+      width: 800px;
+      height: 30px;
+      margin-left: 7px;
+      margin-bottom: 20px;
+      
+  }/*Diseño de los input y acomodo de los input*/
