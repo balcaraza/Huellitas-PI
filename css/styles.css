@@ -5,7 +5,7 @@ nav{
     background-color: #fAf9f3;
 }
 /*navbar con enlace a otras paginas*/
-.navbar-nav .nav-link {
+.navbar-nav, .nav-link {
     margin-right: 55px; /* Márgenes a la derecha de cada enlace */
     color: #C45564;
     font-size: 20px;
@@ -30,13 +30,13 @@ nav img{
     transform: scale(1.1);
 }
 /*Cambio de color del button o de mi boton*/
-.navbar .btn-c{
+.navbar .btn-c, .carousel .linkedin{
     background-color: #007BA7 ;
     color: white;
     padding: 10px 40px;
 }
 /* Agrega un estilo al botón cuando el mouse está sobre él */
-.navbar .btn-c:hover{
+.navbar .btn-c:hover, .carousel .linkedin:hover{
     background-color: #007BA7;
     opacity: 0.7;
     color: white;
@@ -141,12 +141,34 @@ nav img{
 
 }
 
+/*estilos especificos para el footer*/
+
+    footer{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;/*aplilamiento*/
+    justify-content: space-evenly;/*separa el contenido*/
+    width: 100%;/*ancho 100 del dispositivo*/
+}
+
+.linkedin{
+    margin: 5px;
+}
+
 footer .container-fluid{
     background-color:#C45564;
-    width: auto;/*altura*/
-    height: auto;/*ancho*/
-    color:#faf9f3 ;
+    /*position: fixed;*/
+    bottom: 0;
+    margin-top: 25px;
+    }
+    footer .d-flex{
+    justify-content: space-evenly;/*especifico para los div del footer*/
     font-family: 'Roboto', sans-serif;
-    font-size: small;
-}
+    color:#faf9f3 ;/*color de letra*/
+    }
+    footer .d-flex img{/*separacion entre imagenes*/
+    margin: 5px;
+    }
+
+
 
