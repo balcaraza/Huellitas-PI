@@ -1,4 +1,4 @@
-let signUp = document.getElementById("signUp");
+/*let signUp = document.getElementById("signUp");
 let signIn = document.getElementById("signIn");
 let nameInput = document.getElementById("nameInput")
 let tittle = document.getElementById("tittle")
@@ -15,3 +15,4 @@ signUp.onclick = function(){
     signUp.classList.remove("disable");
     signIn.classList.add("disable");
 }
+*/
