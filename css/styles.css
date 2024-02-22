@@ -140,35 +140,32 @@ nav img{
     }
 
 }
-
+.linkedin{
+    margin: 5px;
+}
 /*estilos especificos para el footer*/
+/*
+body{
+    display:grid;
+    min-height: 100vh;una parte de viewport equivalente a 100(pantalla)
+    grid-template-rows: auto 1fr auto;tamaño de linea 
+    de los rows 1 fraccion, con relacion a las demas
+    margin-top: 50px; alto
+  } */
 
-    footer{
+footer{
+    padding-top: 25px;
     align-items: center;
     display: flex;
     flex-wrap: wrap;/*aplilamiento*/
     justify-content: space-evenly;/*separa el contenido*/
     width: 100%;/*ancho 100 del dispositivo*/
-}
-
-.linkedin{
-    margin: 5px;
-}
-
-footer .container-fluid{
-    background-color:#C45564;
-    /*position: fixed;*/
-    bottom: 0;
-    margin-top: 25px;
-    }
-    footer .d-flex{
-    justify-content: space-evenly;/*especifico para los div del footer*/
+    background-color:#C45564; 
     font-family: 'Roboto', sans-serif;
-    color:#faf9f3 ;/*color de letra*/
-    }
-    footer .d-flex img{/*separacion entre imagenes*/
+    justify-content: space-evenly;/*especifico para los div del footer*/
+    /*position: fixed;*/
+    /* bottom: 0;*/
+}
+footer .d-flex img{/*separacion entre imagenes*/
     margin: 5px;
-    }
-
-
-
+} 
