@@ -17,9 +17,9 @@
     />
     <!--Estilos generales-->
     <link rel="stylesheet" href="css/styles.css" />
-    <link href="css/favoritos.css"
+    <link href="css/favoritos.css">
     <script src="js/main.js"></script>
-    <title>Inicio</title>
+    <title>favoritos</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -31,9 +31,9 @@
     <title>Favoritos</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-xl">
       <div class="container">
-        <img src="/src/img/LogoHuellitas.png" alt="Logo Huellitas" />
+        <a href="index.html"><img src="/src/img/LogoHuellitas.png" alt="Logo Huellitas" /></a>
         <!--Imagen del logo de la pagina web Huellitas-->
 
         <!-- Boton para que el menu sea desplegable al momento de ser responsiva, entre 320px(Mobile) a 768px(Tablet) -->
@@ -51,16 +51,16 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-link" href="catalogo.html" >Productos</a>
-            <a class="nav-link" href="kits.html" target="_blank">Kits</a>
-            <a class="nav-link" href="tipsRapidos.html" target="_blank">Tips</a>
-            <a class="nav-link" href="acercaNosotros.html" target="_blank">Nosotros</a>
-            <a class="nav-link" href="contacto.html" target="_blank">Contacto</a>
-            <a href="compra.html" target="_blank">
+            <a class="nav-link" href="kits.html" >Kits</a>
+            <a class="nav-link" href="tipsRapidos.html" >Tips</a>
+            <a class="nav-link" href="acercaNosotros.html" >Nosotros</a>
+            <a class="nav-link" href="contacto.html">Contacto</a>
+            <a href="compra.html" >
               <img class="nav-img" src="/src/img/CarritoCompras.png" alt="Carrito Compras" />
               <!--Imagen carrito de compras-->
             </a>
             <!--Boton para ingresar a la cuenta del usuario-->
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="#"  rel="noopener noreferrer">
               <button type="button" class="btn btn-lg btn-c">Ingresar</button>
             </a>
           </div>
@@ -68,117 +68,164 @@
       </div>
     </nav>
 
-    <main class="container">
+    <main class="container mt-5">
 
-       <h1 class="negro">Mis <span class="amarillo">favoritos</span></h1>
+       <h1 class="negro mb-4">Mis <span class="amarillo">favoritos</span></h1>
        <!-- card para favoritos -->
-       <br/>
-       <div class="container-products" >      
+       
+       <div class="container-products" >     
+        <div class="card-product">
        <div class="card mb-3" style="max-width: 540px;">       
         <div class="row g-0">
           <div class="col-md-4">
            <!-- <button type="button" class="favButton"> -->
             <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
             <!-- </button> -->
-           <img src="/src/img/imagen.png" class="img-fluid rounded-start" alt="...">           
-          </div>
-          <div class="col-sm-8">
-            <div class="card-body">
-              <h5 class="producto"><strong>producto</strong></h5>
-              <p class="precio"><small>$...</small></p>
-              <p class="descripcion">Descripción</p>
-          </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <!-- <button type="button" class="favButton"> -->
-              <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
-              <!-- </button>  -->
-            <img src="/src/img/imagen.png" class="img-fluid rounded-start" alt="...">
+           <img src="/src/img/imagen.png" class="img-fluid card-img-top rounded-start" alt="...">           
           </div>
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="producto"><strong>producto</strong></h5>
-              <p class="precio"><small>$...</small></p>
-              <p class="descripcion">Descripción</p>           
+              <p class="card-text precio">$...</p>
+              <p class="descripcion">Descripción</p>
+              <div class ="boton">
+                <div class="addNumber_cont">
+                  <button id="dasabledBtn" class="menos" onclick="addValueFunction()"
+                  value="decrease">
+                  -
+                  </button>
+                <div class="value_cont">
+                <h3 id="amount" value="">0</h3>
+                </div>
+                  <button onclick="addValueFunction" class="mas">
+                  +
+                  </button>
+                </div>
+              </div>
           </div>
           </div>
         </div>
       </div>
-          
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
+    </div> 
+
+    <div class="card-product">
+      <div class="card mb-3" style="max-width: 540px;">       
+       <div class="row g-0">
+         <div class="col-md-4">
           <!-- <button type="button" class="favButton"> -->
-            <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
-            <!-- </button>  -->
-          <img src="/src/img/imagen.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="producto"><strong>producto</strong></h5>
-            <p class="precio"><small>$...</small></p>
-            <p class="descripcion">Descripción</p>         
-        </div>
-        </div>
-      </div>
-    </div>
-  
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
+           <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
+           <!-- </button> -->
+          <img src="/src/img/imagen.png" class="img-fluid card-img-top rounded-start" alt="...">           
+         </div>
+         <div class="col-sm-8">
+           <div class="card-body">
+             <h5 class="producto"><strong>producto</strong></h5>
+             <p class="card-text precio">$...</p>
+             <p class="descripcion">Descripción</p>
+             <div class ="boton">
+               <div class="addNumber_cont">
+                 <button id="dasabledBtn" class="menos" onclick="addValueFunction()"
+                 value="decrease">
+                 -
+                 </button>
+               <div class="value_cont">
+               <h3 id="amount" value="">0</h3>
+               </div>
+                 <button onclick="addValueFunction"class="mas">
+                 +
+                 </button>
+               </div>
+             </div>
+         </div>
+         </div>
+       </div>
+     </div>
+   </div> 
+
+   <div class="card-product">
+    <div class="card mb-3" style="max-width: 540px;">       
+     <div class="row g-0">
+       <div class="col-md-4">
         <!-- <button type="button" class="favButton"> -->
-          <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
-        <!-- </button>  -->
-        <img src="/src/img/imagen.png" class="img-fluid rounded-start" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="producto"><strong>producto</strong></h5>
-          <p class="precio"><small>$...</small></p>
-          <p class="descripcion">Descripción</p>
-        
-      </div>
-      </div>
-    </div>
-  </div>
+         <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
+         <!-- </button> -->
+        <img src="/src/img/imagen.png" class="img-fluid card-img-top rounded-start" alt="...">           
+       </div>
+       <div class="col-sm-8">
+         <div class="card-body">
+           <h5 class="producto"><strong>producto</strong></h5>
+           <p class="card-text precio">$...</p>
+           <p class="descripcion">Descripción</p>
+           <div class ="boton">
+             <div class="addNumber_cont">
+               <button id="dasabledBtn" class="menos" onclick="addValueFunction()"
+               value="decrease">
+               -
+               </button>
+             <div class="value_cont">
+             <h3 id="amount" value="">0</h3>
+             </div>
+               <button onclick="addValueFunction"class="mas">
+               +
+               </button>
+             </div>
+           </div>
+       </div>
+       </div>
+     </div>
+   </div>
+ </div> 
+
+ <div class="card-product">
+  <div class="card mb-3" style="max-width: 540px;">       
+   <div class="row g-0">
+     <div class="col-md-4">
+      <!-- <button type="button" class="favButton"> -->
+       <img src="/src/img/FAV.svg" class="favorito" width="25px" height="25px"alt="">
+       <!-- </button> -->
+      <img src="/src/img/imagen.png" class="img-fluid card-img-top rounded-start" alt="...">           
+     </div>
+     <div class="col-sm-8">
+       <div class="card-body">
+         <h5 class="producto"><strong>producto</strong></h5>
+         <p class="card-text precio">$...</p>
+         <p class="descripcion">Descripción</p>
+         <div class ="boton">
+           <div class="addNumber_cont">
+             <button id="dasabledBtn" class="menos" onclick="addValueFunction()"
+             value="decrease">
+             -
+             </button>
+           <div class="value_cont">
+           <h3 id="amount" value="">0</h3>
+           </div>
+             <button onclick="addValueFunction"class="mas">
+             +
+             </button>
+           </div>
+         </div>
+     </div>
+     </div>
+   </div>
+ </div>
+</div> 
+    
 </div>
       </main>
+    <!--footer-->
+    <br>
     <footer>
-      <div class="fixed-button">
-        <!--mantiene fijo el footer-->
-        <div class="container-fluid">
-          <div class="row justify-content-between">
-            <div class="col-8 m-10">
-              <!--m margin-->
-              <div class="p-3">
-                <!--p padding-->
-                <h5>© Huellitas SA de CV</h5>
-                <h5>Todos los derechos reservados</h5>
-              </div>
-              <!--dv padding-->
-            </div>
-            <!--col-->
-            <div class="col-4 m-10">
-              <!-- style="padding: 15px;--->
-              <div class="p-3">
-                <a href="#"><img src="/src/img/facebook.png" alt="facebook" /></a>
-                <a href="#"><img src="/src/img/instagram.png" alt="instagram" /></a>
-                <a href="#"><img src="/src/img/twitter.png" alt="twitter" /></a>
-              </div>
-            </div>
-            <!--col-->
-          </div>
-          <!--row-->
+        <div class="col-md-4 d-flex align-items-center mt-10" ><!--resolucion-->
+          <p style="color: white;"> <br/> © Huellitas SA de CV <br/>
+          Todos los derechos reservados <br/></p>
         </div>
-        <!--container-F-->
-      </div>
-      <!--fix-->
+        <div class="col-md-4 d-flex justify-content-space" id="foterImags">
+          <a href="#"><img src="/src/img/facebook.png" alt="facebook" /></a>
+          <a href="#"><img src="/src/img/instagram.png" alt="instagram" /></a>
+          <a href="#"><img src="/src/img/twitter.png" alt="twitter" /></a>
+        </div>
     </footer>
+    <!--footer-->
     <!--Script bootstrap-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
