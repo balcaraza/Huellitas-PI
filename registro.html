@@ -27,7 +27,7 @@
    />
    <!--Recursos Especificos-->
 
-   <title>Formulario</title>
+   <title>Registro</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-xl">
@@ -70,17 +70,19 @@
     <main>
        <!--Formulario de registro-->
        <div>
-        <h2 class="titulo1">Resgistrate</h2>
+        <h2 class="titulo1">Regístrate</h2>
         <form>
-          <div class="alert alert-danger" role="alert" id="alertUno"></div>
+          <div class="alert alert-danger" role="alert" id="alertUno" style="display:none;" >
+            <p id="alertUnoTxt"></p>
+          </div>
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Escriba su nombre">
             <label for="correo" class="form-label">Correo Electrónico</label>
             <input type="email" class="form-control" id="correo" aria-describedby="emailHelp" placeholder="nombre@ejemplo.com">
            
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="Password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="Password">
           </div>
           <button id="btnValidarFirst" type="submit" class="btn btn-primary">Enviar</button>
         </form>
@@ -89,13 +91,15 @@
         <div>
           <h2 class="titulo2" >Inicia Sesión</h2>
             <form>
-              <div class="alert alert-danger" role="alert" id="alertDos"></div>
+              <div class="alert alert-danger" role="alert" id="alertDos" style="display:none;" >
+                <p id="alertDosTxt"></p>
+              </div>
               <div class="mb-3">
                 <label for="correo2" class="form-label">Correo Electrónico</label>
                 <input type="email" class="form-control" id="correo2" aria-describedby="emailHelp" placeholder="nombre@ejemplo.com">
                
-                <label for="contrasena" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="contrasena">
+                <label for="Password2" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="Password2">
               </div>
               <button id="btnValidarSecond" type="submit" class="btn btn-primary">Enviar</button>
             </form>
