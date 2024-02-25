@@ -24,11 +24,7 @@ function validarTelefono() {
 
 btn.addEventListener("click", function (event) {
     event.preventDefault();
-    txtNombre.style.border = "";
-    txtTelefono.style.border = "";
-    txtCorreo.style.border = "";
-    txtMensaje.style.border ="";
-    isValid = true;
+    limpiarCampos(txtNombre,txtTelefono,txtCorreo,txtMensaje,isValid,alertValidacionesTexto,alertValidacionesTexto );
     txtNombre.value = txtNombre.value.trim();
     txtTelefono.value = txtTelefono.value.trim();
     txtCorreo.value = txtCorreo.value.trim();
@@ -92,16 +88,19 @@ btn.addEventListener("click", function (event) {
             console.error('Error al enviar el mensaje:', err);
         });
         //Para limpiar despues de enviar
-        txtNombre.style.border = "";
-        txtTelefono.style.border = "";
-        txtCorreo.style.border = "";
-        txtMensaje.style.border ="";
-        alertValidacionesTexto.innerHTML="";
-        alertValidaciones.style.display="none";
-        isValid = true;
+        limpiarCampos(txtNombre,txtTelefono,txtCorreo,txtMensaje,isValid,alertValidacionesTexto,alertValidacionesTexto );
         txtNombre.value = "";
         txtTelefono.value = "";
         txtCorreo.value = "";
         txtMensaje.value = "";
     }//if isValid
 });//btnAgregar
+function limpiarCampos(txtNombre,txtTelefono,txtCorreo,txtMensaje,isValid,alertValidacionesTexto,alertValidacionesTexto ){
+    txtNombre.style.border = "";
+    txtTelefono.style.border = "";
+    txtCorreo.style.border = "";
+    txtMensaje.style.border ="";
+    alertValidacionesTexto.innerHTML="";
+    alertValidaciones.style.display="none";
+    isValid = true;
+};//function limpiarCampos
