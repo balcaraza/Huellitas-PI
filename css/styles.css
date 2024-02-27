@@ -140,12 +140,6 @@ nav img{
     }
 
 }
-main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /* Card - Cambiar el tamaño de toda la card */
 .card-producto{
     margin: 15px;
@@ -183,7 +177,10 @@ main{
     font-family: "Monserrat", sans-serif;
     font-weight: bold;
     color: #FCD168;
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    padding-top: 30px;
     text-align: center;
     font-weight: bold;
 }
@@ -197,9 +194,20 @@ main{
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     color: #007BA7;
-    padding: 30px;
-    text-align: center;
+    /* padding: 30px; */
+    padding-bottom: 0px;
+    padding-left: 60px;
+    padding-top: 30px;
+    text-align: left;
     font-weight: bold;
+    width: 80vw;
+}
+.carrusel{
+    padding-top: 10px;
+}
+.tarjetas{
+    display:flex;
+    justify-content: space-evenly;
 }
 .linkedin{
     margin: 5px;
