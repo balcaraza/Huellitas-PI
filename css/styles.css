@@ -140,6 +140,67 @@ nav img{
     }
 
 }
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card - Cambiar el tamaño de toda la card */
+.card{
+    margin: 15px;
+    width: 15rem; /*Tamaño de mi card*/
+    transition: transform 0.3s ease-in-out;
+}
+.img-carrito{
+    width: 25px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    
+}
+/* Card - Boton para agregar a favoritos */
+.button-favorite{
+    border:#383B47;
+    background-color: transparent;
+    font-size: 25px;
+    padding-left: 15px;
+}
+/* Card - Cambiar la posicion del precio */
+.card-precio{
+    text-align: right;
+    margin-top: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;   
+}
+/* Card - Modificar todo lo que se encuentre dentro de la card */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+.amarillo{
+    font-family: "Monserrat", sans-serif;
+    font-weight: bold;
+    color: #FCD168;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.negro{
+    color: #383B47;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.azul{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #007BA7;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+}
 .linkedin{
     margin: 5px;
 }

@@ -15,8 +15,7 @@
       rel="stylesheet"
     />
     <!--Estilos generales-->
-    <link rel="stylesheet" href="css/styles.css" />
-    
+    <link rel="stylesheet" href="css/styles.css" />    
 
     <!--Bootstrap-->
     <link
@@ -26,6 +25,7 @@
       crossorigin="anonymous"
     />
     <!--Recursos Especificos-->
+    <link rel="shortcut icon" href="./src/img/huellitasIcon.png" type="image/x-icon">
 
     <title>Home</title>
   </head>
@@ -66,6 +66,76 @@
         </div>
       </div>
     </nav>
+    <main class="container">
+      <h2 class="amarillo">¡Dale a tu mejor amigo la vida que se merece,<span class="negro">con<br/>productos que hacen la cola moverse de felicidad!</span></h2>
+      <br/>
+      <h5 class="azul">Aprovecha nuestros kits.</h5>
+      <br/>
+      <div class="container-carousel">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./src/img/imagen.png" class="d-block w-100" width="2000px" height="300px" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/img/imagen.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/img/imagen.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+      <br/>
+      <h5 class="azul">Descubre nuestros productos más populares.</h5>
+      <div class="card">
+        <div>
+        <!-- Imagen del Producto -->
+        <img src="./src/CepilloLimpieza.jpg" class="card-img-top" alt="Cepillo Limpieza">
+        <!--Boton de favoritos en forma de corazon-->
+        <button class="button-favorite">
+          <i class="fa-regular fa-heart"></i>
+        </button> 
+          <!-- Imagen Carrito de compras -->
+          <img class="img-carrito" src="./src/img/CarritoCompras.png" alt="Carrito Compras">
+        </div>
+        
+        <div class="card-body">
+            <!-- Titulo o nombre del producto -->
+            <p>Cepillo De Limpieza Para Mascotas Sintético Azul 19.7x10.6x5 Cm</p>
+            <!-- Precio del producto -->
+            <h5 class="card-precio">$79.90</h5>
+        </div>
+      </div> <!--div class="card"-->
+
+      <div class="card">
+        <div>
+        <!-- Imagen del Producto -->
+        <img src="./src/TazonPanda.jpg" class="card-img-top" alt="Tazon Panda">
+        <!--Boton de favoritos en forma de corazon-->
+        <button class="button-favorite">
+          <i class="fa-regular fa-heart"></i>
+        </button> 
+          <!-- Imagen Carrito de compras -->
+          <img class="img-carrito" src="./src/img/CarritoCompras.png" alt="Carrito Compras">
+        </div>
+        
+        <div class="card-body">
+            <!-- Titulo o nombre del producto -->
+            <p>Tazón Para Mascota Panda Animal Faces Plástico Blanco </p>
+            <!-- Precio del producto -->
+            <h5 class="card-precio">$99.90</h5>
+        </div>
+      </div> <!--div class="card"-->  
+    </main>
     <!--footer-->
     <br>
     <footer>
