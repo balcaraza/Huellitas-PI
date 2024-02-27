@@ -147,7 +147,7 @@ main{
 }
 
 /* Card - Cambiar el tamaño de toda la card */
-.card{
+.card-producto{
     margin: 15px;
     width: 15rem; /*Tamaño de mi card*/
     transition: transform 0.3s ease-in-out;
