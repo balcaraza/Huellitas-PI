@@ -1,0 +1,32 @@
+
+
+.colorN{
+    color: #383B47;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 10px;
+}
+.colorA{
+    color:  #FCD168;
+    font-optical-sizing: auto;    
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 10px;
+}
+
+.centerCards{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.panelBtn{
+    display: flex;
+    justify-content: space-around;
+}
