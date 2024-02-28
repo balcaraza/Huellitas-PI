@@ -1,6 +1,41 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+  
+}
+@media (width <426px){
+   main {
+    grid-template-columns: 1fr;
+
+    }
+}
 form{
     color: #383B47;
     font-family: "roboto";
     font-optical-sizing: auto;
     font-weight:800;   
+    font-optical-sizing: auto;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-bottom: 70px;
+}
+.titulo1{
+    color: #383B47;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 55px;
+    margin-left: 55px;
+
+}
+.titulo2{
+    color: #FCD168;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 55px;
+    margin-left: 55px;
 }
