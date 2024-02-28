@@ -34,14 +34,14 @@ btn.addEventListener("click", function (event) {
 
     if (txtNombre.value.length < 3) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend",
-            `Por favor ingresa un nombre válido.<br/>`);
+            `Por favor ingresa un <strong>Nombre</strong> válido.<br/>`);
         alertValidaciones.style.display = "block";
         txtNombre.style.border = "solid red thin";
         isValid = false;
     };//if que comprueba que se hayan ingresado al menos 3 carcacteres en nombre
     if (!regexCorreo.test(txtCorreo.value)) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend",
-            `Por favor ingresa un correo válido.<br/>`);
+            `Por favor ingresa un <strong>Correo Electrónico</strong> válido.<br/>`);
         alertValidaciones.style.display = "block";
         txtCorreo.style.border = "solid red thin";
         isValid = false;
@@ -55,9 +55,9 @@ btn.addEventListener("click", function (event) {
         isValid = false;
     };//if ! ValidarTelefono
 
-    if (contPalabra.length < 10) {
+    if (contPalabra.length < 7) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend",
-            `Por favor especifique más su mensaje.<br/>`);
+            `Por favor escriba su <strong>Mensaje</strong> con al menos 7 palabras.<br/>`);
         alertValidaciones.style.display = "block";
         txtMensaje.style.border = "solid red thin";
         isValid = false;
