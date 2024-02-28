@@ -12,7 +12,7 @@ main {
 }
 .card {
     transition: box-shadow 0.3s ease; /* Transición suave para el resaltado */
-    max-height:400px; /* Establece la altura máxima */
+    max-height:700px; /* Establece la altura máxima */
 }
 .card:hover {
     /* Estilos cuando el mouse está sobre la tarjeta */
