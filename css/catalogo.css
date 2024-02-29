@@ -1,22 +1,22 @@
 /*Card - Acomodar de forma uniforme todas las card */
-main{
+.items-card{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 /* Titulo de la pagina */
 h2{
     /* font-family: "Roboto", sans-serif; */
     font-family: "Montserrat", sans-serif;
     padding: 30px;
-    text-align: center;
     font-weight: bold;
 
 }
 /* Card - Cambiar el tamaño de toda la card */
 .card{
     margin: 15px;
-    width: 15rem; /*Tamaño de mi card*/
+    width: 18rem; /*Tamaño de mi card*/
     transition: transform 0.3s ease-in-out;
 }
 /* Agregarle un efecto a mi card */
@@ -49,6 +49,7 @@ h2{
     margin-top: auto;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;   
+    color: #C45564;
 }
 /* Card - Modificar todo lo que se encuentre dentro de la card */
 .card-body {
@@ -56,8 +57,13 @@ h2{
     flex-direction: column;
     padding: 15px;
     font-family: "Montserrat", sans-serif;
+    height: 150px;
+    text-align: justify;
 }
 .text-amarillo{
     color: #FCD168;
 }
-
+.card-img-top {
+    height: 250px;
+    /*object-fit: cover; /* Cubrir completamente el área del contenedor de la imagen */
+}

@@ -1,0 +1,26 @@
+.tarjeta {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+
+.tarjeta ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tarjeta ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.tarjeta ul li:last-child {
+    border-bottom: none;
+}
