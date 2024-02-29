@@ -19,9 +19,10 @@ article h1{
 }
 
 .containerTxt{
-    color: #FCD168;
-    font-size: 25px;
-    
+    color: #007BA7;
+    font-size: 25px;    
+    /* color: #FCD168; */
+    /* Text-shadow: 0.5px 0.5px 1px #383B47; */
 }
 
 section{
