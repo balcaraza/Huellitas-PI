@@ -1,0 +1,96 @@
+/* Card - Cambiar el tamaño de toda la card */
+.card{
+    margin: 15px;
+    width: 15rem; /*Tamaño de mi card*/
+    transition: transform 0.3s ease-in-out;
+}
+.img-carrito{
+    width: 25px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    
+}
+/* Card - Boton para agregar a favoritos */
+.button-favorite{
+    border:#383B47;
+    background-color: transparent;
+    font-size: 25px;
+    padding-left: 15px;
+}
+/* Card - Cambiar la posicion del precio */
+.card-precio{
+    text-align: right;
+    margin-top: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;   
+}
+/* Card - Modificar todo lo que se encuentre dentro de la card */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+.amarillo{
+    font-family: "Monserrat", sans-serif;
+    font-weight: bold;
+    color: #FCD168;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    padding-top: 30px;
+    text-align: center;
+    
+}
+.negro{
+    color: #383B47;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.azul{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #007BA7;
+    /* padding: 30px; */
+    /* padding-bottom: 0px; */
+    padding-left: 60px;
+    padding-top: 30px;
+    text-align: left;
+    font-weight: bold;
+    width: 80vw;
+}
+.carrusel{
+    padding-top: 10px;
+}
+.tarjetas{
+    display:flex;
+    justify-content: space-evenly;
+}
+/*cambio de tamaño de letra para párrafos*/
+@media (max-width: 700px) {
+    p{
+       font-size: 16px !important;
+    }
+    .azul{
+        font-size: 14px !important;
+        padding-left: 15px; 
+    }
+    .card-precio{
+        font-size: 14px !important;
+     }
+     .tarjetas{
+        display:flex;
+        width: 90vw;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+    }
+    .amarillo, .negro{
+        width:90vw;
+        align-items:justify;
+        font-size: 15px;
+    }
+}
