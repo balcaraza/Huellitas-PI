@@ -1,4 +1,5 @@
-.main{  
+
+.main>*{  
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -29,4 +30,19 @@ form{
     font-family: "roboto";
     font-optical-sizing: auto;
     font-weight:800;   
+}
+@media (max-width: 768px) {
+    /* margenes para dispositivos móviles */
+    main {
+        align-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    /* Diseño card movil */
+    .mapa >* {
+        width: 80%;
+        height: 300px;
+        text-align: center;
+
+    }
 }
