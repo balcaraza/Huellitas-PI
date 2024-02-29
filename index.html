@@ -15,7 +15,8 @@
       rel="stylesheet"
     />
     <!--Estilos generales-->
-    <link rel="stylesheet" href="css/styles.css" />    
+    <link rel="stylesheet" href="css/styles.css" />   
+    <link rel="stylesheet" href="css/principal.css" />   
 
     <!--Bootstrap-->
     <link
@@ -32,7 +33,7 @@
   <body>
     <nav class="navbar navbar-expand-xl">
       <div class="container">
-        <a href="index.html"><img src="/src/img/LogoHuellitas.png" alt="Logo Huellitas" /></a>
+        <a href="index.html"><img src="src/img/LogoHuellitas.png" alt="Logo Huellitas" /></a>
         <!--Imagen del logo de la pagina web Huellitas-->
 
         <!-- Boton para que el menu sea desplegable al momento de ser responsiva, entre 320px(Mobile) a 768px(Tablet) -->
@@ -55,7 +56,7 @@
             <a class="nav-link" href="acercaNosotros.html" >Nosotros</a>
             <a class="nav-link" href="contacto.html">Contacto</a>
             <a href="compra.html" >
-              <img class="nav-img" src="/src/img/CarritoCompras.png" alt="Carrito Compras" />
+              <img class="nav-img" src="src/img/CarritoCompras.png" alt="Carrito Compras" />
               <!--Imagen carrito de compras-->
             </a>
             <!--Boton para ingresar a la cuenta del usuario-->
@@ -97,6 +98,24 @@
     <h5 class="azul">Descubre nuestros productos más populares.</h5>
     <div class="tarjetas">
       <div class="card">
+        <div>
+        <!-- Imagen del Producto -->
+        <img src="./src/RopaMinie.jpg" class="card-img-top" alt="Ropa Minie">
+        <!--Boton de favoritos en forma de corazon-->
+        <button class="button-favorite">
+          <i class="fa-regular fa-heart"></i>
+        </button> 
+          <!-- Imagen Carrito de compras -->
+          <img class="img-carrito" src="./src/img/CarritoCompras.png" alt="Carrito Compras">
+        </div>
+        <div class="card-body">
+            <!-- Titulo o nombre del producto -->
+            <p>Ropa Para Mascota Disney Minnie Mouse Camisa Textil Rosa Grande</p>
+            <!-- Precio del producto -->
+            <h5 class="card-precio">$145.80</h5>
+        </div>
+      </div> <!--div class="card"-->
+      <div class="card"> 
         <div>
         <!-- Imagen del Producto -->
         <img src="./src/CepilloLimpieza.jpg" class="card-img-top" alt="Cepillo Limpieza">
@@ -145,9 +164,9 @@
           Todos los derechos reservados <br/></p>
         </div>
         <div class="col-md-4 d-flex justify-content-space" id="foterImags">
-          <a href="#"><img src="/src/img/facebook.png" alt="facebook" /></a>
-          <a href="#"><img src="/src/img/instagram.png" alt="instagram" /></a>
-          <a href="#"><img src="/src/img/twitter.png" alt="twitter" /></a>
+          <a href="#"><img src="src/img/facebook.png" alt="facebook" /></a>
+          <a href="#"><img src="src/img/instagram.png" alt="instagram" /></a>
+          <a href="#"><img src="src/img/twitter.png" alt="twitter" /></a>
         </div>
     </footer>
     <!--footer-->
