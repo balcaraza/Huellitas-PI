@@ -141,8 +141,7 @@ nav img{
 
 }
 
-#encabezado .amarillo,
-#encabezado .negro{
+.encabezado{
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -153,6 +152,12 @@ nav img{
     font-family: 'Roboto',sans-serif;
     font-style: normal;
     font-weight: bold;
+    font-optical-sizing: auto;
+}
+.parrafo{
+    font-family: "Roboto",sans-serif;
+    font-style: normal;
+    font-weight: 400;
     font-optical-sizing: auto;
 }
 
