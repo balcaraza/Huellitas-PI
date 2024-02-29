@@ -140,9 +140,23 @@ nav img{
     }
 
 }
-.p-amarillo{
+
+#encabezado .amarillo,
+#encabezado .negro{
     font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-optical-sizing: auto;
+    font-size: 40pt;
 }
+.titular{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-optical-sizing: auto;
+}
+
+
 .linkedin{
     margin: 5px;
 }
@@ -165,6 +179,7 @@ footer{
     width: 100%;/*ancho 100 del dispositivo*/
     background-color:#C45564; 
     font-family: 'Roboto', sans-serif;
+    font-size: 20pt;  
     justify-content: space-evenly;/*especifico para los div del footer*/
     /*position: fixed;*/
     /* bottom: 0;*/
