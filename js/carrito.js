@@ -1,4 +1,4 @@
-
+/*
 function getData(){
     let promesa = fetch("https://fakestoreapi.com/products",{method:"GET"});
     promesa.then((response)=>{
@@ -48,3 +48,4 @@ function createCards(productos){
 }
 getData();
 
+*/

@@ -70,12 +70,85 @@
     </nav>
 
     <main class="container mt-5">
-      <h1><span class="colorN">Tu carrito</span></h1> 
-      <h1><span class="colorA">de compras</span></h1>
-      <div class="centerCards" id="productsCarrito">
-
-
-      </div><!--centerCards-->
+      
+        <div>
+            <h1 class="colorA">Tu carrito</h1>
+            <h1 class="colorN"> de compras</h1> 
+            <div class="d-grid d-md-flex justify-content-around">
+                <p class="fs-5">Total a pagar: $0.00 </p>
+                <div class="d-flex justify-content-around">
+                  <a class="btn btn-primary" href="#" role="button" style="width:auto; margin:3px 3px;">Proceder al pago </a>
+                  <a class="btn btn-primary" href="#" role="button" style="width:auto; margin:3px 3px;;">Revisar pedido </a>
+                </div>
+            </div>
+            <hr>
+            <ul class="list-group list-group-flush" id="listProductos">
+              <li class="list-group-item" >
+                <div class="centerCards">
+                  <div class="card mb-3 " style="max-width: 951px">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./src/img/Productos/PelucheDinosaurio.jpg" class="img-fluid mx-auto d-block" alt="productCarritoimag" ><!-- mx-auto d-block esta clase de bostrap resueve el problema de la imagen-->
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body ">
+                          <h5 class="card-title"> Nombre de producto </h5>
+                          <hr>
+                            <p class="card-text" >
+                              <p> <span style="font-weight: bold;">Precio: </span></p>
+                            </p> 
+                            <section>
+                              <p class="text-center">Agregar más productos al carrito</p>
+                              <div class="d-flex justify-content-evenly" >
+                                <div class="btn-group ">
+                                  <button type="button" class="btn btn-primary" id ="moreProduct"> + </button> 
+                                  <button type="button" class="btn disabled" id="disableBtnNumber" >6</button> 
+                                  <button type="button" class="btn btn-primary" id ="lessProduct"> - </button>
+                                </div>
+                                <button type="button" class="btn btn-danger" id="deleteProduct"> Eliminar </button>
+                              </div><!---->
+                            </section>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!--divCard-->
+                </div>                  
+              </li>
+              <li class="list-group-item" >
+                <div class="centerCards">
+                  <div class="card mb-3 " style="max-width: 951px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./src/img/Productos/PelucheDinosaurio.jpg" class="img-fluid mx-auto d-block" alt="productCarritoimag" ><!-- mx-auto d-block esta clase de bostrap resueve el problema de la imagen-->
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body ">
+                          <h5 class="card-title"> Nombre de producto </h5>
+                          <hr>
+                            <p class="card-text" >
+                              <p> <span style="font-weight: bold;">Precio: </span></p>
+                            </p> 
+                            <section>
+                              <p class="text-center">Agregar más productos al carrito</p>
+                              <div class="d-flex justify-content-evenly" >
+                                <div class="btn-group ">
+                                  <button type="button" class="btn btn-primary" id ="moreProduct"> + </button> 
+                                  <button type="button" class="btn disabled" id="disableBtnNumber" >6</button> 
+                                  <button type="button" class="btn btn-primary" id ="lessProduct"> - </button>
+                                </div>
+                                <button type="button" class="btn btn-danger" id="deleteProduct"> Eliminar </button>
+                              </div><!---->
+                            </section>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!--divCard-->
+                </div>                  
+              </li>
+            
+            </ul>
+        </div>
+      
     </main>
 
     <!--footer-->
