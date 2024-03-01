@@ -62,6 +62,7 @@ h2{
 }
 .text-amarillo{
     color: #FCD168;
+    Text-shadow: 0.5px 0.5px 1px #383B47;
 }
 .card-img-top {
     height: 250px;

@@ -34,6 +34,7 @@
 .amarillo{
     font-family: "Monserrat", sans-serif;
     font-weight: bold;
+    Text-shadow: 0.5px 0.5px 1px #383B47;
     color: #FCD168;
     padding-top: 30px;
     padding-bottom: 0px;

@@ -37,6 +37,7 @@ main {
     font-style: normal;
     display:inline;
     color: #FCD168;
+    Text-shadow: 0.5px 0.5px 1px #383B47;
 }
 p {
     text-align:justify; /* Centrar el texto */
@@ -50,7 +51,7 @@ p {
 h6>*{
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
-    color: #FCD168;
+    color: #007BA7;
 }
 @media only screen and (max-width: 768px) {
     /* margenes para dispositivos móviles */

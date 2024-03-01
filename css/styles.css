@@ -28,6 +28,7 @@ nav img{
 /*navbar imagen del carrito de compras para hacerlo interactivo con el mouse*/
 .nav-img:hover{
     transform: scale(1.1);
+    /* cursor: url("../src/img/pataNegro2.png"), auto; */
 }
 /*Cambio de color del button o de mi boton*/
 .navbar .btn-c, .carousel .linkedin{
@@ -41,6 +42,7 @@ nav img{
     opacity: 0.7;
     color: white;
     transform: scale(1.1);
+    /* cursor: url("../src/img/pataNegro2.png"), auto; */
 }
 
 /* Estilos específicos para Laptop L (máximo ancho de 1440px) */
