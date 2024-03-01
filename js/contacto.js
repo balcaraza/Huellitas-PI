@@ -1,4 +1,5 @@
-const btn = document.getElementById("button"); //declarar botón Agregar
+let btn = document.getElementById("button"); //declarar botón Agregar
+let modalTxt =document.getElementById("modalTxt");
 
 let txtNombre = document.getElementById("nombre"); //declarar texto a recibir caja nombre
 let txtTelefono = document.getElementById("telefono"); //declarar texto a recibir caja teléfono
@@ -24,7 +25,13 @@ function validarTelefono() {
 
 btn.addEventListener("click", function (event) {
     event.preventDefault();
-    limpiarCampos(txtNombre,txtTelefono,txtCorreo,txtMensaje,isValid,alertValidacionesTexto,alertValidacionesTexto );
+    txtNombre.style.border = "";
+    txtTelefono.style.border = "";
+    txtCorreo.style.border = "";
+    txtMensaje.style.border ="";
+    alertValidacionesTexto.innerHTML="";
+    alertValidaciones.style.display="none";
+    isValid = true;
     txtNombre.value = txtNombre.value.trim();
     txtTelefono.value = txtTelefono.value.trim();
     txtCorreo.value = txtCorreo.value.trim();
@@ -81,26 +88,24 @@ btn.addEventListener("click", function (event) {
             mensaje: mensaje
         }).then(() => {
             btn.value = 'Enviar';
-            alert('Mensaje enviado correctamente!');
+            modalTxt.innerText ="Mensaje enviado correctamente!";
+            $('#exampleModal').modal('show'); // Mostrar el modal de Bootstrap
         }).catch((err) => {
             btn.value = 'Enviar';
-            alert('Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
+            modalTxt.innerText ="Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.";
+            $('#exampleModal').modal('show'); // Mostrar el modal de Bootstrap
             console.error('Error al enviar el mensaje:', err);
         });
         //Para limpiar despues de enviar
-        limpiarCampos(txtNombre,txtTelefono,txtCorreo,txtMensaje,isValid,alertValidacionesTexto,alertValidacionesTexto );
+        txtNombre.style.border = "";
+        txtTelefono.style.border = "";
+        txtCorreo.style.border = "";
+        txtMensaje.style.border ="";
+        alertValidacionesTexto.innerHTML="";
+        alertValidaciones.style.display="none";
         txtNombre.value = "";
         txtTelefono.value = "";
         txtCorreo.value = "";
         txtMensaje.value = "";
     }//if isValid
 });//btnAgregar
-function limpiarCampos(txtNombre,txtTelefono,txtCorreo,txtMensaje,isValid,alertValidacionesTexto,alertValidacionesTexto ){
-    txtNombre.style.border = "";
-    txtTelefono.style.border = "";
-    txtCorreo.style.border = "";
-    txtMensaje.style.border ="";
-    alertValidacionesTexto.innerHTML="";
-    alertValidaciones.style.display="none";
-    isValid = true;
-};//function limpiarCampos
