@@ -35,7 +35,7 @@ btnAgregar.addEventListener("click", function () {
   insertarPrecio.value = insertarPrecio.value.trim();
   let contPalabra = insertarDescripcion.value.split(" ");
 if(imagen.src.includes("#")) {
-    alertValidacionesTexto.insertAdjacentHTML("beforeend", `Por favor ingrese una <strong>Imágen</strong>.<br/>`);
+    alertValidacionesTexto.insertAdjacentHTML("beforeend", `Por favor ingrese una <strong>Imagen</strong>.<br/>`);
     alertValidaciones.style.display = "block";
     isValid = false;
   } //if validar imagen
@@ -47,7 +47,7 @@ if(imagen.src.includes("#")) {
     isValid = false;
   } //if contPalabra
   if (!validarCantidad()) {
-    alertValidacionesTexto.insertAdjacentHTML("beforeend", ` El <strong>Precio</strong> no es correcta<br/>`);
+    alertValidacionesTexto.insertAdjacentHTML("beforeend", ` El <strong>Precio</strong> no es correcto<br/>`);
     alertValidaciones.style.display = "block";
     insertarPrecio.style.border = "solid red thin"; //Para señalar el campo que esta mal
     isValid = false;
@@ -66,7 +66,7 @@ if(imagen.src.includes("#")) {
 
     productosNuevos.push(nuevoProducto);
     localStorage.setItem("productosNuevos", JSON.stringify(productosNuevos));
-    modalTxt.innerText ="Se agrego correctamente el producto";
+    modalTxt.innerText ="Se agregó correctamente el producto";
     $('#exampleModal').modal('show');
     // Limpiamos los campos
     insertarDescripcion.style.border = "";
