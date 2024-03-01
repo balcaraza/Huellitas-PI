@@ -69,7 +69,7 @@ productos.forEach(function (item) {
   let itemHTML = `
         <div class="card">
             <div>
-                <img style="max-height:300px" src="${item.img}" class="card-img-top" alt="Ropa Minie">
+                <img style="max-height:300px" src="${item.img}" class="card-img-top" alt="...">
                 <button class="button-favorite">
                     <i class="fa-regular fa-heart"></i>
                 </button> 
@@ -91,7 +91,7 @@ nuevoProducto.forEach(function (item) {
 let nuevoItemHTML = `
         <div class="card">
             <div>
-                <img style="max-height:300px" src="${item.img}" class="card-img-top" alt="Ropa Minie">
+                <img style="max-height:300px" src="${item.img}" class="card-img-top" alt="...">
                 <button class="button-favorite">
                     <i class="fa-regular fa-heart"></i>
                 </button> 
@@ -99,7 +99,7 @@ let nuevoItemHTML = `
             </div>
             <div class="card-body">
                 <p class="">${item.description}</p>
-                <h5 class="card-precio">${item.precio}</h5>
+                <h5 class="card-precio">$${item.precio}</h5>
             </div>
         </div>`;
 
