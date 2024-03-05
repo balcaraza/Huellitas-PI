@@ -4,22 +4,18 @@ main{
     padding: auto;
 
 }
+#encabezado{
+    margin: 50px;
+}
 
 .negro{
     color:#383B47;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
     margin-top: 10px;
     display: inline-block;
 }
 .amarillo{
     color:#FCD168;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
+    text-shadow: 0.5px 0.5px 1px #383B47 ;
     display:inline;
 
 }
