@@ -1,3 +1,4 @@
+// 1 captura de informacion del html
 let insertarDescripcion = document.getElementById("nombreProducto");
 let insertarPrecio = document.getElementById("precioProducto");
 let btnAgregar = document.getElementById("btnAgregar");
@@ -8,7 +9,7 @@ let modalTxt = document.getElementById("modalTxt");
 let exampleModal = document.getElementById("exampleModal")
 let productosNuevos = [];
 
-//Validaciones de campo precio
+// 2 Validaciones de campo precio con bandera
 let isValid = true;
 function validarCantidad() {
   if (insertarPrecio.value.length == 0) {
@@ -23,6 +24,8 @@ function validarCantidad() {
   return true;
 } //validarcantidad
 
+
+// 3 Click en el boton
 btnAgregar.addEventListener("click", function () {
   event.preventDefault();
   //limpiar campos
@@ -34,6 +37,8 @@ btnAgregar.addEventListener("click", function () {
   insertarDescripcion.value = insertarDescripcion.value.trim();
   insertarPrecio.value = insertarPrecio.value.trim();
   let contPalabra = insertarDescripcion.value.split(" ");
+
+  // 4 Alertas por campos incompletos o erroneos
 if(imagen.src.includes("#")) {
     alertValidacionesTexto.insertAdjacentHTML("beforeend", `Por favor ingrese una <strong>Imagen</strong>.<br/>`);
     alertValidaciones.style.display = "block";
@@ -52,8 +57,10 @@ if(imagen.src.includes("#")) {
     insertarPrecio.style.border = "solid red thin"; //Para señalar el campo que esta mal
     isValid = false;
   } //if ! validarCantidad
+
+// 5 Recuperar los productos existentes del localStorage muestra los productos en catalogo
   if (isValid) {
-    // Recuperar los productos existentes del localStorage, si los hay
+    
     let productosGuardados = localStorage.getItem("productosNuevos");
     if (productosGuardados) {
       productosNuevos = JSON.parse(productosGuardados);
@@ -63,7 +70,7 @@ if(imagen.src.includes("#")) {
        "description": insertarDescripcion.value,
        "precio": insertarPrecio.value
    };
-
+// 6 Se agregan los productos nuevos al local Storage
     productosNuevos.push(nuevoProducto);
     localStorage.setItem("productosNuevos", JSON.stringify(productosNuevos));
     modalTxt.innerText ="Se agregó correctamente el producto";
