@@ -43,13 +43,14 @@ p {
     color: #383B47;
     font-family:"Roboto", sans-serif; /*se cambio esto*/
     font-optical-sizing: auto;
-    font-weight:800;  
-    font-size: 14px;
+    font-weight:400;  
+    font-size: 22px;
+
     
 }
 h6>*{
     font-family: "Montserrat", sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     color: #FCD168;
 }
 @media only screen and (max-width: 768px) {
