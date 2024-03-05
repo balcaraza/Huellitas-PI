@@ -33,13 +33,14 @@ section{
     width: 500px; height: 300px;
 }
 .efecto1{
+   
     cursor:pointer;
-        position:relative;
-        padding:10px 20px;
-        background:white;
-        border-top-right-radius:10px;
-        border-bottom-left-radius:10px;
-        transition:all 1s;
+    position:relative;
+    padding:10px 20px;
+    background:white;
+    border-top-right-radius:15px;
+    border-bottom-left-radius:1px;
+        transition:all 2s;
         &:after,&:before{
             content:" ";
             width:10px;
@@ -73,3 +74,7 @@ section{
             }
         }
     }
+    .efecto1::before, .efecto1::after {
+        pointer-events: none; /* Deshabilita la interacción con los pseudo-elementos */
+    }
+    
