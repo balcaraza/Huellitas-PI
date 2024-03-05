@@ -1,30 +1,35 @@
+//Registro
 let btnValidarFirst = document.getElementById("btnValidarFirst");
-let btnValidarSecond = document.getElementById("btnValidarSecond");
 let alertUno = document.getElementById("alertUno");
 let alertUnoTxt = document.getElementById("alertUnoTxt");
-let alertDosTxt = document.getElementById("alertDosTxt");
-let alertDos = document.getElementById("alertDos");
 let nombre = document.getElementById("nombre");
 let correo = document.getElementById("correo");
-let correo2 = document.getElementById("correo2");
 let contrasena = document.getElementById("Password");
-let contrasena2 = document.getElementById("Password2");
 let telefono = document.getElementById("numero");
 let confirmarContrasena = document.getElementById("ConfirmPassword");
+//Iniciar sesión
+let btnValidarSecond = document.getElementById("btnValidarSecond");
+let alertDosTxt = document.getElementById("alertDosTxt");
+let alertDos = document.getElementById("alertDos");
+let correo2 = document.getElementById("correo2");
+let contrasena2 = document.getElementById("Password2");
+let exampleModal = document.getElementById("exampleModal")
+//Flag
 let isValid = true;
-//Variables que vamos a utilizar
+
+//Variables validaciones
 
 let regexNombre = new RegExp("^[a-zA-Z]+(?:\\s[a-zA-Z]+)+$");
 let regexCorreo = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+[.]{1}[^@ \t\r\n]+");
 let regexContrasena = new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~¡¿]).{8,}$");
 let regexTelefono = new RegExp("^\\d{10}$"); // Ajusta la expresión regular según tus requisitos
-//Expresiones regulares que vamos a utilizar
 
+// 1 click boton 
 
 btnValidarFirst.addEventListener("click", function(event) {
     event.preventDefault();
-    nombre.style.border = "";
-    isValid = limpiarCampos(correo, contrasena, confirmarContrasena, telefono, alertUnoTxt, alertUno);
+    limpiarCampos(nombre,correo, contrasena, confirmarContrasena, telefono, alertUnoTxt, alertUno);
+    isValid=true;
     nombre.value = nombre.value.trim();
     contrasena.value = contrasena.value.trim();
     correo.value = correo.value.trim();
@@ -32,10 +37,28 @@ btnValidarFirst.addEventListener("click", function(event) {
     telefono.value = telefono.value.trim();
     confirmarContrasena.value = confirmarContrasena.value.trim();
     isValid = validarCampos(correo, contrasena, confirmarContrasena, telefono, alertUnoTxt, alertUno, isValid);
-
+    if (isValid) {
+       
+        let registro = {
+            "nombre":nombre.value,
+            "Correo": correo.value,
+            "telefono": telefono.value,
+            "contraseña": contrasena.value,
+        };
+        localStorage.setItem("registro", JSON.stringify(registro));
+        modalTxt.innerText ="Su registro fue existoso";
+        $('#exampleModal').modal('show');
+        limpiarCampos(nombre,correo, contrasena, confirmarContrasena, telefono, alertUnoTxt, alertUno);
+        nombre.value="";
+        correo.value="";
+        telefono.value="";
+        contrasena.value="";
+        confirmarContrasena.value="";
+    }//if
 });//Boton del form de registro
+
 function validarCampos(correo, contrasena, confirmarContrasena, telefono, alertTxt, alert, isValid) {
-    if (!regexCorreo.test(correo.value)) {
+    if (!regexCorreo.test(correo.value)) { //validacion dominio
         alertTxt.insertAdjacentHTML("beforeend",
             `Por favor ingresa un correo que contenga un "@" y un dominio.<br/>`);
         alert.style.display = "block";
@@ -85,7 +108,8 @@ function validarCampos(correo, contrasena, confirmarContrasena, telefono, alertT
     return isValid;
 }
 
-function limpiarCampos(correo, contrasena, confirmarContrasena, telefono, alertTxt, alert) {
+function limpiarCampos(nombre,correo, contrasena, confirmarContrasena, telefono, alertTxt, alert) {
+    nombre.style.border = "";
     correo.style.border = "";
     contrasena.style.border = "";
     confirmarContrasena.style.border = "";
@@ -93,15 +117,3 @@ function limpiarCampos(correo, contrasena, confirmarContrasena, telefono, alertT
     alertTxt.innerHTML = "";
     alert.style.display = "none";
 }
-// btnValidarSecond.addEventListener("click", function(event) {
-//     event.preventDefault();
-//     limpiarCampos(correo2, contrasena2, confirmarContrasena2, telefono2, alertDosTxt, alertDos);
-//     contrasena2.value = contrasena.value.trim();
-//     correo2.value = correo2.value.trim();
-//     correo2.value = correo2.value.toLowerCase();
-//     contrasena2.value = contrasena2.value.trim();
-//     correo2.value = correo2.value.trim();
-//     correo2.value = correo2.value.toLowerCase();
-//     contrasena2.value = contrasena2.value.trim();
-//     isValid = validarCampos(correo2, contrasena2, confirmarContrasena2, telefono2, alertDosTxt, alertDos, isValid); 
-// });//Boton del form de registro Inicio de Sesion

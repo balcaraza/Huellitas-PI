@@ -87,7 +87,7 @@
            
             <label for="Password" class="form-label">Contraseña</label>
             <input type="password" class="form-control" id="Password">
-            
+            <div id="emailHelp" class="form-text">Mínimo 8 caracteres; 1 mayúscula, 1 minúscula y 1 caracter especial</div>
             <label for="ConfirmPassword" class="form-label">Confirma tu contraseña</label>
             <input type="password" class="form-control" id="ConfirmPassword">
           </div>
@@ -111,7 +111,23 @@
               <button id="btnValidarSecond" type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </div>
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Aviso</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="modalTxt"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
     </main>
     <!--footer-->
     <br>
@@ -134,6 +150,7 @@
       crossorigin="anonymous"
     ></script>
     <!--Script Custom-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
