@@ -16,7 +16,7 @@ let isValid = true;
 
 let regexNombre = new RegExp("^[a-zA-Z]+(?:\\s[a-zA-Z]+)+$");
 let regexCorreo = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+[.]{1}[^@ \t\r\n]+");
-let regexContrasena = new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$");
+let regexContrasena = new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~¡¿]).{8,}$");
 let regexTelefono = new RegExp("^\\d{10}$"); // Ajusta la expresión regular según tus requisitos
 //Expresiones regulares que vamos a utilizar
 
@@ -24,7 +24,7 @@ let regexTelefono = new RegExp("^\\d{10}$"); // Ajusta la expresión regular seg
 btnValidarFirst.addEventListener("click", function(event) {
     event.preventDefault();
     nombre.style.border = "";
-    limpiarCampos(correo, contrasena, confirmarContrasena, telefono, alertUnoTxt, alertUno);
+    isValid = limpiarCampos(correo, contrasena, confirmarContrasena, telefono, alertUnoTxt, alertUno);
     nombre.value = nombre.value.trim();
     contrasena.value = contrasena.value.trim();
     correo.value = correo.value.trim();
@@ -32,21 +32,8 @@ btnValidarFirst.addEventListener("click", function(event) {
     telefono.value = telefono.value.trim();
     confirmarContrasena.value = confirmarContrasena.value.trim();
     isValid = validarCampos(correo, contrasena, confirmarContrasena, telefono, alertUnoTxt, alertUno, isValid);
+
 });//Boton del form de registro
-
-btnValidarSecond.addEventListener("click", function(event) {
-    event.preventDefault();
-    limpiarCampos(correo2, contrasena2, confirmarContrasena2, telefono2, alertDosTxt, alertDos);
-    contrasena2.value = contrasena.value.trim();
-    correo2.value = correo2.value.trim();
-    correo2.value = correo2.value.toLowerCase();
-    contrasena2.value = contrasena2.value.trim();
-    correo2.value = correo2.value.trim();
-    correo2.value = correo2.value.toLowerCase();
-    contrasena2.value = contrasena2.value.trim();
-    isValid = validarCampos(correo2, contrasena2, confirmarContrasena2, telefono2, alertDosTxt, alertDos, isValid); 
-});//Boton del form de registro Inicio de Sesion
-
 function validarCampos(correo, contrasena, confirmarContrasena, telefono, alertTxt, alert, isValid) {
     if (!regexCorreo.test(correo.value)) {
         alertTxt.insertAdjacentHTML("beforeend",
@@ -88,23 +75,13 @@ function validarCampos(correo, contrasena, confirmarContrasena, telefono, alertT
     }
   // Validación de mínimo 2 palabras y máximo 10 palabras en el nombre
   let numPalabras = nombre.value.trim().split(/\s+/).length;
-  if (numPalabras < 2 || numPalabras > 10) {
+  if (numPalabras < 2 || numPalabras > 5) {
       alertUnoTxt.insertAdjacentHTML("beforeend",
-          `Por favor ingresa entre 2 y 10 palabras en el nombre.<br/>`);
+          `Por favor ingresa entre 2 y 5 palabras en el nombre.<br/>`);
       alertUno.style.display = "block";
       nombre.style.border = "solid red thin";
       isValid = false;
   }
-  nombre.value="";
-  numero.value="";
-  correo.value="";
-  contrasena.value="";
-  confirmarContrasena.value="";
-  
-  if (isValid) {
-    limpiarCampos(correo, contrasena, confirmarContrasena, telefono, alertTxt, alert)
-}
-
     return isValid;
 }
 
@@ -116,3 +93,15 @@ function limpiarCampos(correo, contrasena, confirmarContrasena, telefono, alertT
     alertTxt.innerHTML = "";
     alert.style.display = "none";
 }
+// btnValidarSecond.addEventListener("click", function(event) {
+//     event.preventDefault();
+//     limpiarCampos(correo2, contrasena2, confirmarContrasena2, telefono2, alertDosTxt, alertDos);
+//     contrasena2.value = contrasena.value.trim();
+//     correo2.value = correo2.value.trim();
+//     correo2.value = correo2.value.toLowerCase();
+//     contrasena2.value = contrasena2.value.trim();
+//     correo2.value = correo2.value.trim();
+//     correo2.value = correo2.value.toLowerCase();
+//     contrasena2.value = contrasena2.value.trim();
+//     isValid = validarCampos(correo2, contrasena2, confirmarContrasena2, telefono2, alertDosTxt, alertDos, isValid); 
+// });//Boton del form de registro Inicio de Sesion
