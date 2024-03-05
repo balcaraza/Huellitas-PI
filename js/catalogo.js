@@ -89,7 +89,7 @@ localStorage.setItem("productos", productosJSON);
 nuevoProducto =  JSON.parse(localStorage.getItem("productosNuevos")) || [];
 nuevoProducto.forEach(function (item) {
 let nuevoItemHTML = `
-        <div class="card">
+        <div cl    ass="card">
             <div>
                 <img style="max-height:300px" src="${item.img}" class="card-img-top" alt="...">
                 <button class="button-favorite">
