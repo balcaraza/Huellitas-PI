@@ -15,8 +15,8 @@
      rel="stylesheet"
    />
    <!--Estilos generales-->
-   <link rel="stylesheet" href="css/styles.css" />
-   <link rel="stylesheet" href="css/registro.css" />
+   <link rel="stylesheet" href="./css/styles.css" />
+   <link rel="stylesheet" href="./css/registro.css" />
 
    <!--Bootstrap-->
    <link
@@ -32,7 +32,7 @@
   <body>
     <nav class="navbar navbar-expand-xl">
       <div class="container">
-        <a href="index.html"><img src="/src/img/LogoHuellitas.png" alt="Logo Huellitas" /></a>
+        <a href="index.html"><img src="src/img/LogoHuellitas.png" alt="Logo Huellitas" /></a>
         <!--Imagen del logo de la pagina web Huellitas-->
 
         <!-- Boton para que el menu sea desplegable al momento de ser responsiva, entre 320px(Mobile) a 768px(Tablet) -->
@@ -55,7 +55,7 @@
             <a class="nav-link" href="acercaNosotros.html" >Nosotros</a>
             <a class="nav-link" href="contacto.html">Contacto</a>
             <a href="compra.html" >
-              <img class="nav-img" src="/src/img/CarritoCompras.png" alt="Carrito Compras" />
+              <img class="nav-img" src="src/img/CarritoCompras.png" alt="Carrito Compras" />
               <!--Imagen carrito de compras-->
             </a>
             <!--Boton para ingresar a la cuenta del usuario-->
@@ -76,13 +76,20 @@
             <p id="alertUnoTxt"></p>
           </div>
           <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Escriba su nombre">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Escriba su nombre completo">
+           
+            <label for="numero" class="form-label">Teléfono</label>
+            <input type="text" class="form-control" id="numero" aria-describedby="emailHelp" placeholder="Escriba su teléfono">
+           
             <label for="correo" class="form-label">Correo Electrónico</label>
             <input type="email" class="form-control" id="correo" aria-describedby="emailHelp" placeholder="nombre@ejemplo.com">
            
             <label for="Password" class="form-label">Contraseña</label>
             <input type="password" class="form-control" id="Password">
+            
+            <label for="ConfirmPassword" class="form-label">Confirma tu contraseña</label>
+            <input type="password" class="form-control" id="ConfirmPassword">
           </div>
           <button id="btnValidarFirst" type="submit" class="btn btn-primary">Enviar</button>
         </form>
@@ -114,9 +121,9 @@
           Todos los derechos reservados <br/></p>
         </div>
         <div class="col-md-4 d-flex justify-content-space" id="foterImags">
-          <a href="#"><img src="/src/img/facebook.png" alt="facebook" /></a>
-          <a href="#"><img src="/src/img/instagram.png" alt="instagram" /></a>
-          <a href="#"><img src="/src/img/twitter.png" alt="twitter" /></a>
+          <a href="#"><img src="./src/img/facebook.png" alt="facebook" /></a>
+          <a href="#"><img src="./src/img/instagram.png" alt="instagram" /></a>
+          <a href="#"><img src="./src/img/twitter.png" alt="twitter" /></a>
         </div>
     </footer>
     <!--footer-->
