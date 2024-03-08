@@ -49,3 +49,51 @@ function createCards(productos){
 getData();
 
 */
+let listaProductosCarrito =document.getElementById("listaProductosCarrito");
+let carrito=[
+    {    
+        img: "./src/img/Productos/JugueteFutbol.jpg",
+        description: "Juguete para mascota con sonido",
+        precio: "29.90"
+    },
+];//arreglo vacio de productos.
+
+let carritoJSON = JSON.stringify(carrito);
+
+localStorage.setItem("carrito", carritoJSON);
+
+carrito.forEach(function(item){
+    let itemHTML;//varaible vacia.
+    
+    if(!carrito.length){
+
+        itemHTML=`
+        <div class="card mb-3 " style="max-width: 951px">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="${item.img}" class="img-fluid mx-auto d-block" alt="productCarritoimag" ><!-- mx-auto d-block esta clase de bostrap resueve el problema de la imagen-->
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body ">
+                    <h5 class="card-title styTitle"> Nombre de producto </h5>
+                        <hr>
+                    <p class="styDescripcion">${item.description}</p>
+                    <h5 class="styPrecio">$${item.precio}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>`;  
+
+
+       
+    }else {
+ 
+        itemHTML =`<h5 class="card-title styTitle"> Aun no tienes nada en tu carrito </h5>`;
+    }
+
+    listaProductosCarrito.insertAdjacentHTML("beforeend",itemHTML);//si le pones element jamas lo hara :p
+});
+
+
+
+
