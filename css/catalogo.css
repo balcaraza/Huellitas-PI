@@ -68,3 +68,17 @@ h2{
     height: 250px;
     /*object-fit: cover; /* Cubrir completamente el área del contenedor de la imagen */
 }
+#corazon-lleno {
+	color: red;
+	display: none;
+}
+
+#corazon-vacio.active {
+	background-color: red;
+	/* display: none; */
+}
+
+#corazon-lleno.active {
+	/* display: block; */
+	color: red;
+}
