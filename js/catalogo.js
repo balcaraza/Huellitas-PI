@@ -79,7 +79,9 @@ productos.forEach(function (item) {
                 <i class="fa-regular fa-heart" id="corazon-vacio"></i>
                 <i class="fa-solid fa-heart" id="corazon-lleno"></i>
                 </button> 
-                <img class="img-carrito" src="./src/img/CarritoCompras.png" alt="Carrito Compras">
+                <a href="compra.html" >
+                  <img class="img-carrito" src="./src/img/CarritoCompras.png" alt="Carrito Compras">
+                </a>
             </div>
             <div class="card-body">
                 <p class="">${item.description}</p>
