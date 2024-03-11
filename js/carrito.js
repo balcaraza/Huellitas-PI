@@ -1,62 +1,19 @@
-/*
-function getData(){
-    let promesa = fetch("https://fakestoreapi.com/products",{method:"GET"});
-    promesa.then((response)=>{
-        response.json().then((data)=>{createCards(data)})
-        .catch((error)=>{console.log("Ha ocurrido un error en el json", error)});
-    })
-    .catch((error)=> {console.log("Ocurrio un error en la  solicitud", error)});
-}
-
-let productsCarrito = document.getElementById("productsCarrito");
-
-function createCards(productos){
-    productos.forEach(producto => {
-        productsCarrito.insertAdjacentHTML("beforeend", 
-        ` 
-        <div class="card mb-3 " style="max-width: 951px; width:700px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="${producto.image}" class="img-fluid mx-auto d-block" alt="productCarritoimag" style="width=64px; height=64px;" >
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body ">
-                        <h5 class="card-title">${producto.title} </h5>
-                        <p class="card-text">
-
-                        <p><strong>Precio:${producto.price}</strong></p>
-                        <p>Descripcion: </p>
-                        <p>${producto.description} </p>
-
-                        </p>
-                        <div class="panelBtn">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-success" id ="moreProduct"> + </button> 
-                                <button type="button" class="btn disabled" id="disableBtnNumber" >6</button> 
-                                <button type="button" class="btn btn-success" id ="lessProduct"> - </button>
-                            </div>
-                            <button type="button" class="btn btn-danger" id="deleteProduct"><img src="./src/img/delproductos2.png" alt="trash" style="height: 24px; width: 24px;"></button>
-                        </div>              
-                    </div>
-                </div>
-            </div>
-        </div>
-        `
-        )
-        
-    });
-}
-getData();
-
-*/
+let subTotalPago= document.getElementById("subTotalPago");
 let listaProductosCarrito =document.getElementById("listaProductosCarrito");
-let carrito=[
-    {    
-        img: "./src/img/Productos/JugueteFutbol.jpg",
-        description: "Juguete para mascota con sonido",
-        precio: "29.90"
-    },
-];//arreglo vacio de productos.
+let carrito=new Array();//arreglo vacio de productos.
+let total=0.00;
+carrito=[
+    {
+        img: "./src/img/Productos/RopaMinie.jpg",
+        description: "Ropa para mascota, disney minnie mouse, camisa textil, rosa y grande",
+        precio: "145.80",
+      },
+      {
+        img: "./src/img/Productos/CepilloLimpieza.jpg",
+        description: "Cepillo de limpieza para mascotas sintético azul 19.7x10.6x5 Cm",
+        precio: "79.90",
+      }
+];
 
 let carritoJSON = JSON.stringify(carrito);
 
@@ -65,7 +22,7 @@ localStorage.setItem("carrito", carritoJSON);
 carrito.forEach(function(item){
     let itemHTML;//varaible vacia.
     
-    if(!carrito.length){
+    if(carrito.length>0){
 
         itemHTML=`
         <div class="card mb-3 " style="max-width: 951px">
@@ -83,17 +40,27 @@ carrito.forEach(function(item){
                 </div>
             </div>
         </div>`;  
-
-
-       
-    }else {
- 
-        itemHTML =`<h5 class="card-title styTitle"> Aun no tienes nada en tu carrito </h5>`;
     }
-
     listaProductosCarrito.insertAdjacentHTML("beforeend",itemHTML);//si le pones element jamas lo hara :p
 });
 
+function calcularSubtotal(carrito) {
+    let total = 0;
+    carrito.forEach(function(item) {
+        total += parseFloat(item.precio);
+    });
+    return total.toFixed(2);
+}
+// Calcular el subtotal y mostrarlo
 
+let item2InnerHTML = "Subtotal: $" + calcularSubtotal(carrito);
+subTotalPago.insertAdjacentHTML("afterend", `<div>${item2InnerHTML}</div>`);
 
-
+    function sumarProductos(carrito){
+        let suma=0;
+        for (let index = 0; index < carrito.length; index++) {
+            let element = carrito.precio[index];
+            suma+=element;
+            
+        }
+    };
