@@ -10,16 +10,19 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 let isValid = true;
 
-let regexTelefono = new RegExp("^(?!0{10}$)\d{10}$"); //"^\\d{10}$" =/^(?!00)\d{10}$/  ^([+]?52[]1[])?[0-9]{2}[0-9]{4}[0-9]{4}$
+let regexTelefono = new RegExp("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"); 
 let regexTelefono2 = new RegExp(/(.)\1{4}/);
+
 let regexCorreo = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+[.]{1}[^@ \t\r\n]+");
 function validarTelefono() {
-    if (regexTelefono.test(txtTelefono.value)) {
+    if (!regexTelefono.test(txtTelefono.value)) {
         return false;
     }//if para verificar la expresión
     if ((regexTelefono2.test(telefono.value))) {
         return false;
     }
+
+
     return true;
 }//validarTeléfono
 

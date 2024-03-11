@@ -16,8 +16,8 @@ let isValid = true;
 let regexNombre = new RegExp("^[a-zA-Z]+(?:\\s[a-zA-Z]+)+$");
 let regexCorreo = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+[.]{1}[^@ \t\r\n]+");
 let regexContrasena = new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~¡¿]).{8,}$");
-let regexTelefono = new RegExp("^(?!0{10}$)\d{10}$"); //"^\\d{10}$" =/^(?!00)\d{10}$/  ^([+]?52[]1[])?[0-9]{2}[0-9]{4}[0-9]{4}$
-let regexTelefono2 = new RegExp(/(.)\1{4}/); // 
+let regexTelefono = new RegExp("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$");  //filtra numeros 0000000000, 0000000001
+let regexTelefono2 = new RegExp(/(.)\1{4}/); // secuencia de 5 caracteres consecutivos entre si
 
  //validacion para el telefono ^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,4}$
 
@@ -80,7 +80,7 @@ function validarCampos(correo, contrasena, confirmarContrasena, telefono, alertT
         confirmarContrasena.style.border = "solid red thin";
         isValid = false;
     }
-    if ((regexTelefono.test(telefono.value))||(regexTelefono2.test(telefono.value))) {
+    if (!regexTelefono.test(telefono.value)) {
         alertTxt.insertAdjacentHTML("beforeend",
             `Por favor ingresa un número de teléfono válido (10 dígitos).<br/>`);
         alert.style.display = "block";
@@ -88,13 +88,15 @@ function validarCampos(correo, contrasena, confirmarContrasena, telefono, alertT
         isValid = false;
     }
     
-    if (/(.)\1{9}/.test(telefono.value)) { // Verifica si hay 10 dígitos iguales consecutivos
+    if (regexTelefono2.test(telefono.value)) {
         alertTxt.insertAdjacentHTML("beforeend",
-            `Por favor ingresa un número de teléfono válido (sin secuencias de dígitos repetidos).<br/>`);
+            `Por favor ingresa un número de teléfono válido (10 dígitos).<br/>`);
         alert.style.display = "block";
         telefono.style.border = "solid red thin";
         isValid = false;
     }
+   
+    
     // Validación de mínimo 2 palabras y máximo 10 palabras en el nombre
     let numPalabras = nombre.value.trim().split(/\s+/).length;
     if (numPalabras < 2 || numPalabras > 5) {

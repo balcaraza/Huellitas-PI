@@ -44,6 +44,52 @@ nav img{
     transform: scale(1.1);
     /* cursor: url("../src/img/pataNegro2.png"), auto; */
 }
+/*Clases para encabezados y textos*/
+.encabezado{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-optical-sizing: auto;
+    font-size: 40pt;
+}
+.titular{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-optical-sizing: auto;
+}
+.parrafo{
+    font-family: "Roboto",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-optical-sizing: auto;
+}
+/*Colores para encabezados y textos*/
+.amarillo{
+    display:inline;
+    color: #FCD168;
+    Text-shadow: 0.5px 0.5px 1px #383B47;
+    /* padding-top: 20px;
+    margin-top: 10px; */
+    /* color:#FCD168;
+    text-shadow: 0.5px 0.5px 1px #383B47 ;
+    display:inline; */
+
+}
+.negro{
+    color:#383B47;
+    margin-top: 10px;
+    display: inline-block;
+}
+.espacio, h5{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.linkedin{
+    margin: 5px;
+}
 
 /* Estilos específicos para Laptop L (máximo ancho de 1440px) */
 @media (max-width: 1440px) {
@@ -143,30 +189,7 @@ nav img{
 
 }
 
-.encabezado{
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-optical-sizing: auto;
-    font-size: 40pt;
-}
-.titular{
-    font-family: 'Roboto',sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-optical-sizing: auto;
-}
-.parrafo{
-    font-family: "Roboto",sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-optical-sizing: auto;
-}
 
-
-.linkedin{
-    margin: 5px;
-}
 /*estilos especificos para el footer*/
 /*
 body{
