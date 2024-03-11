@@ -4,15 +4,16 @@ main {
     padding-right: 100px;
 }
 /*Titulo y subtitulo */
-.amarillo{
+/* .amarillo{
     color: #FCD168;
     text-align: center;
+    Text-shadow: 0.5px 0.5px 1px #383B47;
     
 }
 .negro{
     color: #383B47;
     text-align: center;
-}
+} */
 
 .azul{
     font-family: "Montserrat", sans-serif;
