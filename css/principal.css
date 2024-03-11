@@ -1,4 +1,210 @@
-/* Card - Cambiar el tamaño de toda la card */
+main {
+    /* margenes para desktop */
+    padding-left: 100px;
+    padding-right: 100px;
+}
+/*Titulo y subtitulo */
+.amarillo{
+    color: #FCD168;
+    text-align: center;
+    
+}
+.negro{
+    color: #383B47;
+    text-align: center;
+}
+
+.azul{
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #007BA7;
+    text-align: left;
+    font-size: 24px; 
+}
+/*Tarjetas y carrusel de kits*/
+
+.cardKit {
+    /* Cambia a bloque para que se muestren verticalmente */
+    display: inline-flex;
+    margin: 20px;
+    overflow: visible;
+    width: 45%;
+    height: 325px;
+  }
+  
+  .contenido{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms;
+    box-shadow: 0px 0px 10px 1px #000000ee;
+    border-radius: 5px;
+  }
+  .front, .back {
+    background-color: #151515;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .back {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .back img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto; /* Esto es opcional, para centrar la imagen */
+    z-index: 1;
+  }
+  .back::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 160px;
+    height: 160%;
+    background: linear-gradient(90deg, transparent,  #C45564, #C45564, #C45564, #C45564, transparent);
+    animation: rotation_481 5000ms infinite linear;
+  }
+  
+  .back-content {
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    background-color: #151515;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .cardKit:hover .contenido {
+    transform: rotateY(180deg);
+  }
+  
+  @keyframes rotation_481 {
+    0% {
+      transform: rotateZ(0deg);
+    }
+  
+    0% {
+      transform: rotateZ(360deg);
+    }
+  }
+  
+  .front {
+    transform: rotateY(180deg);
+    color: white;
+  }
+  
+  .front .front-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .front-content .badge {
+    background-color: #00000055;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    width: fit-content;
+  }
+  
+  .description {
+    box-shadow: 0px 0px 10px 5px #f5009755;
+    width: 100%;
+    padding: 10px;
+    background-color: #00000055;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+  }
+  
+  .title strong  {
+    font-size: 11px;
+    max-width: 100%;
+    font-family: 'Roboto',sans-serif;
+    font-size: 20px;
+    display: flex;
+  
+  }
+  
+  .title li {
+    font-family: 'Roboto',sans-serif;
+    font-size: 18px;
+    
+  }
+  .front .img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #c5386e;
+    position: relative;
+    filter: blur(15px);
+    animation: floating 2600ms infinite linear;
+  }
+  
+  #bottom {
+    background-color: #66fff7;
+    left: calc(80% - 75px); 
+    top: calc(50% - 75px);
+    width: 150px;
+    height: 150px;
+    animation-delay: -800ms;
+  }
+  
+  #right {
+    background-color: #b922ff;
+    left: 160px;
+    top: -80px;
+    width: 30px;
+    height: 30px;
+    animation-delay: -1800ms;
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+  
+    50% {
+      transform: translateY(100px);
+    }
+  
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+
+
+/* Card de catálogo - Cambiar el tamaño de toda la card */
 .card{
     margin: 15px;
     width: 15rem; /*Tamaño de mi card*/
@@ -31,67 +237,46 @@
     padding: 15px;
     font-family: "Montserrat", sans-serif;
 }
-.amarillo{
-    font-family: "Monserrat", sans-serif;
-    font-weight: bold;
-    Text-shadow: 0.5px 0.5px 1px #383B47;
-    color: #FCD168;
-    padding-top: 30px;
-    padding-bottom: 0px;
-    padding-left: 30px;
-    padding-top: 30px;
-    text-align: center;
-    
-}
-.negro{
-    color: #383B47;
-    padding: 5px;
-    text-align: center;
-    font-weight: bold;
-}
 
-.azul{
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    color: #007BA7;
-    /* padding: 30px; */
-    /* padding-bottom: 0px; */
-    padding-left: 60px;
-    padding-top: 30px;
-    text-align: left;
-    font-weight: bold;
-    width: 80vw;
-}
-.carrusel{
-    padding-top: 10px;
-}
+
 .tarjetas{
     display:flex;
     justify-content: space-evenly;
 }
-/*cambio de tamaño de letra para párrafos*/
-@media (max-width: 700px) {
-    p{
-       font-size: 16px !important;
+/*Vista de dispositivos mas pequeños de 768px*/
+@media (max-width: 768px) {
+    /* margenes para dispositivos móviles */
+    main {
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    .azul{
-        font-size: 14px !important;
-        padding-left: 15px; 
-    }
-    .card-precio{
-        font-size: 14px !important;
-     }
-     .tarjetas{
-        display:flex;
-        width: 90vw;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 20px;
-    }
-    .amarillo, .negro{
-        width:90vw;
-        align-items:justify;
-        font-size: 15px;
-    }
+  .negro,.amarillo{
+    font-size: 30px;  
+  }
+  /*Diseño de carrusel y cards de kits para cel*/
+  .cardKit {
+    display: inline-flex;
+    margin: 20px;
+    overflow: visible;
+    width: 80%;
+    height: 200px;
+  }
+  .title strong {
+    font-family: 'Roboto',sans-serif;
+    font-size: 14px;
+    
+  }
+  .title li {
+    font-family: 'Roboto',sans-serif;
+    font-size: 12px;
+    
+  }
+  .front-content .badge{
+    font-size: 16px;
+  }
+ .botonKit{
+    width: 15px;
+    height: 15px;
+ }
 }
+   
