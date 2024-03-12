@@ -8,25 +8,17 @@ main{
     margin: 50px;
 }
 
-/* .negro{
+.negro{
     color:#383B47;
     margin-top: 10px;
     display: inline-block;
 }
 .amarillo{
-    line-height: 1px;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    display:inline;
-    color: #FCD168;
-    Text-shadow: 0.5px 0.5px 1px #383B47; */
-    /* color:#FCD168;
+    color:#FCD168;
     text-shadow: 0.5px 0.5px 1px #383B47 ;
-    display:inline; */
+    display:inline;
 
-/* } */
+}
 .producto{
     color: #383B47;
     font-family: "Roboto",sans-serif;
@@ -81,7 +73,7 @@ border:2px ;
 } */
 
 .carrito{
-    display:flex ;
+    display:grid ;
     position:relative;
     justify-content:space-around;
     align-items: flex-end;
