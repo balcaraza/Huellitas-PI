@@ -10,16 +10,19 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 let isValid = true;
 
-let regexTelefono = new RegExp("^[0-9]{10,10}$");
+let regexTelefono = new RegExp("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"); 
+let regexTelefono2 = new RegExp(/(.)\1{4}/);
+
 let regexCorreo = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+[.]{1}[^@ \t\r\n]+");
 function validarTelefono() {
     if (!regexTelefono.test(txtTelefono.value)) {
         return false;
     }//if para verificar la expresión
-    const numerosProhibidos = ["0000000000", "1111111111", "2222222222", "3333333333", "4444444444", "5555555555", "6666666666", "7777777777", "8888888888", "9999999999"];
-    if (numerosProhibidos.includes(txtTelefono.value)) {
+    if ((regexTelefono2.test(telefono.value))) {
         return false;
     }
+
+
     return true;
 }//validarTeléfono
 
