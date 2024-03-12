@@ -23,14 +23,14 @@ h2{
 .card:hover{
     transform: scale(1.05);
     box-shadow: 1px 1px 10px gray; /*Aplicarle un sombreado*/
-    
+
 }
 /* Card - imagen del carrito de compras */
 .img-carrito{
     width: 25px;
     margin-bottom: 10px;
     flex-direction: row;
-    
+
 }
 /* Card - Agregarle un efecto al carrito de compras */
 .img-carrito:hover{
@@ -48,7 +48,7 @@ h2{
     text-align: right;
     margin-top: auto;
     font-family: "Montserrat", sans-serif;
-    font-weight: bold;   
+    font-weight: bold;
     color: #C45564;
 }
 /* Card - Modificar todo lo que se encuentre dentro de la card */
@@ -68,6 +68,13 @@ h2{
     height: 250px;
     /*object-fit: cover; /* Cubrir completamente el área del contenedor de la imagen */
 }
+@media (max-width: 450px) {
+    .encabezado{
+        font-weight: 300;
+        font-size: 20pt;
+        /* grid-template-columns: repeat(2, 1fr); */
+    }
+   }
 #corazon-lleno {
 	color: red;
 	display: none;

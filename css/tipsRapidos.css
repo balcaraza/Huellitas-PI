@@ -16,43 +16,29 @@ main {
 }
 .card:hover {
     /* Estilos cuando el mouse está sobre la tarjeta */
-    box-shadow: 0px 0px 25px #C45564;; /* Sombra para resaltar */
+    box-shadow: 0px 0px 25px #007BA7; /* Sombra para resaltar */
 }
 
 .estilo1{
     color: #383B47;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
     margin-top: 10px;
     display: inline-block;
-   
 }
+
 .estilo2{
     line-height: 1px;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
     display:inline;
     color: #FCD168;
-    Text-shadow: 0.5px 0.5px 1px #383B47;
+    
 }
 p {
     text-align:justify; /* Centrar el texto */
     color: #383B47;
-    font-family:"Roboto", sans-serif; /*se cambio esto*/
-    font-optical-sizing: auto;
-    font-weight:400;  
-    font-size: 22px;
-
-    
+    font-size: 22px;  
 }
 h6>*{
-    font-family: "Montserrat", sans-serif;
     font-size: 24px;
-    color: #FCD168;
+    color:#007BA7;
 }
 @media only screen and (max-width: 768px) {
     /* margenes para dispositivos móviles */
@@ -63,5 +49,8 @@ h6>*{
     /* Diseño card movil */
     .card-body {
         overflow: auto; /* Permite desplazamiento si el contenido excede la altura máxima */
+    }
+    .estilo1,.estilo3{
+        font-size: 35px;  
     }
 }

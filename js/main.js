@@ -16,8 +16,8 @@ let isValid = true;
 let regexNombre = new RegExp("^[a-zA-Z]+(?:\\s[a-zA-Z]+)+$");
 let regexCorreo = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+[.]{1}[^@ \t\r\n]+");
 let regexContrasena = new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~¡¿]).{8,}$");
-let regexTelefono = new RegExp("^\\d{10}$"); 
-let regexTelefono2 = new RegExp(/^(\d)\1{0,3}/);
+let regexTelefono = new RegExp("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$");  //filtra numeros 0000000000, 0000000001
+let regexTelefono2 = new RegExp(/(.)\1{4}/); // secuencia de 5 caracteres consecutivos entre si
 
  //validacion para el telefono ^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,4}$
 
@@ -80,20 +80,23 @@ function validarCampos(correo, contrasena, confirmarContrasena, telefono, alertT
         confirmarContrasena.style.border = "solid red thin";
         isValid = false;
     }
-    if (!(regexTelefono.test(telefono.value))&&(regexTelefono2.test(telefono.value))) {
+    if (!regexTelefono.test(telefono.value)) {
         alertTxt.insertAdjacentHTML("beforeend",
             `Por favor ingresa un número de teléfono válido (10 dígitos).<br/>`);
         alert.style.display = "block";
         telefono.style.border = "solid red thin";
         isValid = false;
     }
-    if (/(.)\1{9}/.test(telefono.value)) { // Verifica si hay 10 dígitos iguales consecutivos
+    
+    if (regexTelefono2.test(telefono.value)) {
         alertTxt.insertAdjacentHTML("beforeend",
-            `Por favor ingresa un número de teléfono válido (sin secuencias de dígitos repetidos).<br/>`);
+            `Por favor ingresa un número de teléfono válido (10 dígitos).<br/>`);
         alert.style.display = "block";
         telefono.style.border = "solid red thin";
         isValid = false;
     }
+   
+    
     // Validación de mínimo 2 palabras y máximo 10 palabras en el nombre
     let numPalabras = nombre.value.trim().split(/\s+/).length;
     if (numPalabras < 2 || numPalabras > 5) {
@@ -151,30 +154,20 @@ btnValidarSecond.addEventListener("click", function () {
     console.log(validSesion);
     console.log(sesion);
     
-    if (validSesion.Correo != sesion.correo2) {
+    if ((validSesion.Correo != sesion.correo2)||(validSesion.contrasena != sesion.contrasena2)) {
         alertDosTxt.insertAdjacentHTML("beforeend",
-            `Correo no encontrado. Por favor regístrese<br/>`);
+            `Correo y/o contraseña inválidas. Por favor regístrese<br/>`);
             alertDos.style.display = "block";
+            correo2.value="";
+            contrasena2.value="";
             correo2.style.border = "solid red thin";
-        isValid2 = false;
-    }//if verificar que el coreeo sea el mismo
-    
-    if (validSesion.contrasena != sesion.contrasena2) {
-        alertDosTxt.insertAdjacentHTML("beforeend",
-            `Contraseña invalida. Por favor compruebe su contraseña<br/>`);
-            alertDos.style.display = "block";
             contrasena2.style.border = "solid red thin";
         isValid2 = false;
-    }//if verificar que el coreeo sea el mismo
+    }//if verificar que el correo y contraseña sea el mismo
 
-
-    //redirigir
-
-    //window.location.href ='index.html';///redirige una vez que se ha pasado el login. 
-/*
     if (isValid2) {
-      
-    }//if valid*/
+        window.location.href ='index.html';///redirige una vez que se ha pasado el login. 
+    }//if valid
 
 });
 
