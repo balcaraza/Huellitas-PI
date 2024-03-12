@@ -82,10 +82,10 @@ h2{
 
 #corazon-vacio.active {
 	background-color: red;
-	/* display: none; */
+	display: none;
 }
 
 #corazon-lleno.active {
-	/* display: block; */
+	display: block;
 	color: red;
 }
