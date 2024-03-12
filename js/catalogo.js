@@ -18,7 +18,7 @@ let productos = [
     precio: "79.90",
   },
 
-  { id: "3", img: "./src/img/Productos/TazonPanda.jpg", description: "Tazón para mascota, panda animal de plástico y color blanco", precio: "$99.90" },
+  { id: "3", img: "./src/img/Productos/TazonPanda.jpg", description: "Tazón para mascota, panda animal de plástico y color blanco", precio: "99.90" },
   {
     id: "4",
     img: "./src/img/Productos/PelucheDinosaurio.jpg",
