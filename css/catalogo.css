@@ -75,3 +75,17 @@ h2{
         /* grid-template-columns: repeat(2, 1fr); */
     }
    }
+#corazon-lleno {
+	color: red;
+	display: none;
+}
+
+#corazon-vacio.active {
+	background-color: red;
+	display: none;
+}
+
+#corazon-lleno.active {
+	display: block;
+	color: red;
+}
