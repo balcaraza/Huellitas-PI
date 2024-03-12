@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="fav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.54 143.98">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #383b47;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="m79.28,22.17S91.3,1.05,115.78,1.05s41.76,20.64,41.76,41.28c0,29.52-18.76,50.4-78.26,100.32,0,0-7.34-6.86-17.5-15.6C36.12,104.97,2.33,76.61,1,45.09,1,18.69,18.64-.09,42.4,1.05c25.92-.05,36.88,21.12,36.88,21.12Z"/>
+</svg>
