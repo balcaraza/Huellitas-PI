@@ -1,4 +1,4 @@
-.colorN{
+.colorN{/*color de letras*/
     color: #383B47;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -6,7 +6,7 @@
     font-style: normal;
     margin-top: 10px;
 }
-.colorA{
+.colorA{/*color de letras*/
     color:  #FCD168;
     font-optical-sizing: auto;    
     font-family: "Montserrat", sans-serif;
@@ -61,9 +61,7 @@
  
     max-width: 951px;
 }
-
 /*animaciones*/
-
 .card:hover{/*efecto de transicion aplicado*/
     /*  transform: scale(1.1);*/
     /*backdrop-filter:brightness(90%);*/    
