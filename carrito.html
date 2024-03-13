@@ -15,9 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-    <!--Estilos generales-->
-    <link rel="stylesheet" href="css/styles.css" />
+    <!--Estilos generales--> 
     <link rel="stylesheet" href="css/carrito.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+   
 
     <!--Bootstrap-->
     <link
@@ -26,7 +27,8 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-     <!--Recursos Especificos-->
+    <!--Recursos Especificos-->
+    <link rel="shortcut icon" href="./src/img/huellitasIcon.png" type="image/x-icon">
 
     <title>Carrito</title>
   </head>
@@ -67,8 +69,23 @@
       </div>
     </nav>
 
-    <main class="container mt-5">
+    <main class="container">
+      <div>
+        <h1 class="colorA">Tu carrito <span class="colorN"> de compras</span></h1>
+      </div>
+      <br/>
+      <div class="pagarRight">
+        <h5 id="subTotalPago"></h5>
+      </div>
+      <div class="btnStyle">
+        <a class="btn btn-primary sombraBtn" href="./compra.html" role="button" style="margin: 10px;" >Proceder al pago </a>
+        <a class="btn btn-primary sombraBtn" href="#" role="button" style="margin: 10px;">Revisar pedido </a>
+      </div>      
+        <hr>    
 
+      <div id= "listaProductosCarrito" class="centerCards">
+
+      </div>                  
     </main>
 
     <!--footer-->
@@ -93,6 +110,6 @@
       crossorigin="anonymous"
     ></script>
     <!--Script Custom-->
-    <script src="js/main.js"></script>
+    <script src="js/carrito.js"></script>
   </body>
 </html>
