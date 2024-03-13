@@ -8,7 +8,10 @@
     padding: 20px;
     border: 1px solid #ccc;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    z-index: 9999;
+    z-index: 1;
+    overflow-y: auto; /* Habilita el desplazamiento vertical cuando el contenido excede el tamaño de la tarjeta */
+    max-height: 100%; /* Opcional: Establece una altura máxima para la tarjeta */
+   
 }
 
 .tarjeta ul {
@@ -24,3 +27,31 @@
 .tarjeta ul li:last-child {
     border-bottom: none;
 }
+.card{
+    width: 18rem;
+}
+.card-body{
+    background-color: #D3D1D1;
+}
+@media screen and (min-width: 1024px) {
+    /* Media query para pantallas más grandes */
+    .tarjeta {
+        width: 60%;
+        margin: 0 auto; /* Centra el elemento en la pantalla */
+    }
+
+    .card {
+        width: calc(50% - 20px); /* Divide el espacio en dos columnas con un pequeño espacio entre ellas */
+        float: left; /* Hace que los cards se muestren uno al lado del otro */
+        margin-right: 20px; /* Espacio entre los cards */
+        
+    }
+
+    .tarjeta::after {
+        content: "";
+        display: table;
+        clear: both; /* Limpiar los floats */
+    }
+    
+}
+

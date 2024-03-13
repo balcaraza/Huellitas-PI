@@ -50,50 +50,172 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" href="catalogo.html" >Productos</a>
-            <a class="nav-link" href="tipsRapidos.html" >Tips</a>
-            <a class="nav-link" href="acercaNosotros.html" >Nosotros</a>
+            <a class="nav-link" href="catalogo.html">Productos</a>
+            <a class="nav-link" href="tipsRapidos.html">Tips</a>
+            <a class="nav-link" href="acercaNosotros.html">Nosotros</a>
             <a class="nav-link" href="contacto.html">Contacto</a>
-            <a href="compra.html" >
+            <a href="compra.html">
               <img class="nav-img" src="/src/img/CarritoCompras.png" alt="Carrito Compras" />
               <!--Imagen carrito de compras-->
             </a>
             <!--Boton para ingresar a la cuenta del usuario-->
-            <a href="./registro.html"  rel="noopener noreferrer">
+            <a href="./registro.html" rel="noopener noreferrer">
               <button type="button" class="btn btn-lg btn-c">Ingresar</button>
             </a>
           </div>
         </div>
-
-        
       </div>
     </nav>
     <main class="container">
-      <button id="mostrarTarjeta">Mostrar Tarjeta</button>
-    
+      <button id="mostrarTarjeta">Comprar</button> <!--Activacion de la tarjeta de compra-->
+
       <div id="tarjeta" class="tarjeta">
-          <!-- Contenido de la tarjeta -->
-          <h2>Opciones</h2>
-          <ul>
-              <li>Opción 1</li>
-              <li>Opción 2</li>
-              <li>Opción 3</li>
-          </ul>
+       <div><button type="button" class="btn-close" aria-label="Close" id="cerrar"></button></div>
+        <div class="card mt-2 mb-2 ">
+          
+          <div class="card-body">
+            
+            <h3 class="card-title">Ralizar Compra</h3>
+            <h4 class="card-subtitle mb-2 text-body-secondary">Ingresa la dirección de envío:</h4>
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre completo </label>
+                <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido" />
+              </div>
+              <div class="mb-3">
+                <label for="calle" class="form-label">Calle</label>
+                <input type="text" class="form-control" id="calle" placeholder="Calle" />
+              </div>
+              <div class="mb-3">
+                <label for="numero" class="form-label">Número</label>
+                <input type="number" class="form-control" id="numero" placeholder="Número" />
+              </div>
+              <div class="mb-3">
+                <label for="colonia" class="form-label">Colonia</label>
+                <input type="text" class="form-control" id="colonia" placeholder="Número" />
+              </div>
+              <div class="mb-3">
+                <label for="municipio" class="form-label">Municipio</label>
+                <input type="number" class="form-control" id="municipio" placeholder="Número" />
+              </div>
+              <div class="mb-3">
+                <label for="estado" class="form-label">Estado</label>
+                <select class="form-select" id="estado" aria-label="Floating label select example">
+                  <option value="no">Seleccione uno...</option>
+                  <option value="Aguascalientes">Aguascalientes</option>
+                  <option value="Baja California">Baja California</option>
+                  <option value="Baja California Sur">Baja California Sur</option>
+                  <option value="Campeche">Campeche</option>
+                  <option value="Chiapas">Chiapas</option>
+                  <option value="Chihuahua">Chihuahua</option>
+                  <option value="CDMX">Ciudad de México</option>
+                  <option value="Coahuila">Coahuila</option>
+                  <option value="Colima">Colima</option>
+                  <option value="Durango">Durango</option>
+                  <option value="Estado de México">Estado de México</option>
+                  <option value="Guanajuato">Guanajuato</option>
+                  <option value="Guerrero">Guerrero</option>
+                  <option value="Hidalgo">Hidalgo</option>
+                  <option value="Jalisco">Jalisco</option>
+                  <option value="Michoacán">Michoacán</option>
+                  <option value="Morelos">Morelos</option>
+                  <option value="Nayarit">Nayarit</option>
+                  <option value="Nuevo León">Nuevo León</option>
+                  <option value="Oaxaca">Oaxaca</option>
+                  <option value="Puebla">Puebla</option>
+                  <option value="Querétaro">Querétaro</option>
+                  <option value="Quintana Roo">Quintana Roo</option>
+                  <option value="San Luis Potosí">San Luis Potosí</option>
+                  <option value="Sinaloa">Sinaloa</option>
+                  <option value="Sonora">Sonora</option>
+                  <option value="Tabasco">Tabasco</option>
+                  <option value="Tamaulipas">Tamaulipas</option>
+                  <option value="Tlaxcala">Tlaxcala</option>
+                  <option value="Veracruz">Veracruz</option>
+                  <option value="Yucatán">Yucatán</option>
+                  <option value="Zacatecas">Zacatecas</option>
+              </select>
+              </div>
+              <div class="mb-3">
+                <label for="cp" class="form-label">Código Postal</label>
+                <input type="number" class="form-control" id="cp" placeholder="Ejemplo 01000" />
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="phone" class="form-control" id="telefono" placeholder="5512345678" />
+              </div>
+              <div class="mb-3">
+                <label for="instrucciones" class="form-label">Instrucciones de entrega</label>
+                <textarea class="form-control" id="instrucciones" rows="3" placeholder="Color de fachada/puerta, entre las calles..."></textarea>
+              </div>
+            </form>
+          </div>
+          <!--card-body-->
+        </div>
+        <!--card-->
+        <div class="card mt-2 mb-2">
+          <div class="card-body">
+            <h3 class="card-title">Metodo de pago</h3>
+            <h4 class="card-subtitle mb-2 text-body-secondary text-justified">Ingresa los datos de tu tarjeta de Credito o Debito:</h4>
+            <form>
+              <div class="mb-3">
+                <label for="nombreTarjeta" class="form-label">Nombre en la tarjeta </label>
+                <input type="text" class="form-control" id="nombreTarjeta" aria-describedby="emailHelp" placeholder="Nombre y Apellido" />
+              </div>
+              <div class="mb-3">
+                <h4 class="card-subtitle mb-2 text-body-secondary text-justified">Fecha de vencimiento:</h4>
+                <label for="fechaVencimiento" class="form-label">Mes</label>
+                <select class="form-select" id="fechaVencimiento" aria-label="Floating label select example">
+                  <option selected>Mes</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <label for="anioVencimiento" class="form-label">Año</label>
+                <input type="text" class="form-control" id="anioVencimiento" />
+              </div>
+              <div class="mb-3">
+                <label for="numero" class="form-label">Código de seguridad</label>
+                <input type="number" class="form-control" id="ccv" placeholder="Ejemplo: 000" />
+              </div>
+            </form>
+          </div>
+          <!--card-body-->
+        </div>
+        <!--card-->
+        <div class="botones ">
+          <button type="button" class="btn btn-danger" id="cancelar">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Pagar</button>
+        </div>
       </div>
+      <!--tarjeta-->
     </main>
-    
+
     <!--footer-->
-    <br>
+    <br />
     <footer>
-        <div class="col-md-4 d-flex align-items-center mt-10" ><!--resolucion-->
-          <p style="color: white;"> <br/> © Huellitas SA de CV <br/>
-          Todos los derechos reservados <br/></p>
-        </div>
-        <div class="col-md-4 d-flex justify-content-space" id="foterImags">
-          <a href="#"><img src="/src/img/facebook.png" alt="facebook" /></a>
-          <a href="#"><img src="/src/img/instagram.png" alt="instagram" /></a>
-          <a href="#"><img src="/src/img/twitter.png" alt="twitter" /></a>
-        </div>
+      <div class="col-md-4 d-flex align-items-center mt-10">
+        <!--resolucion-->
+        <p style="color: white">
+          <br />
+          © Huellitas SA de CV <br />
+          Todos los derechos reservados <br />
+        </p>
+      </div>
+      <div class="col-md-4 d-flex justify-content-space" id="foterImags">
+        <a href="#"><img src="/src/img/facebook.png" alt="facebook" /></a>
+        <a href="#"><img src="/src/img/instagram.png" alt="instagram" /></a>
+        <a href="#"><img src="/src/img/twitter.png" alt="twitter" /></a>
+      </div>
     </footer>
     <!--footer-->
     <!--Script bootstrap-->
