@@ -39,6 +39,9 @@
         width: 60%;
         margin: 0 auto; /* Centra el elemento en la pantalla */
     }
+    .card-body{
+        display: inline-block;
+    }
 
     .card {
         width: calc(50% - 20px); /* Divide el espacio en dos columnas con un pequeño espacio entre ellas */

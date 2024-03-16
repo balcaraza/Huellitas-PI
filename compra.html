@@ -78,6 +78,9 @@
             <h3 class="card-title">Ralizar Compra</h3>
             <h4 class="card-subtitle mb-2 text-body-secondary">Ingresa la dirección de envío:</h4>
             <form>
+              <div class="alert alert-warning" role="alert" id="alertValidaciones" style="display:none">
+                <p id="alertValidacionesTexto"></p>
+              </div>
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre completo </label>
                 <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido" />
@@ -87,21 +90,21 @@
                 <input type="text" class="form-control" id="calle" placeholder="Calle" />
               </div>
               <div class="mb-3">
-                <label for="numero" class="form-label">Número</label>
-                <input type="number" class="form-control" id="numero" placeholder="Número" />
+                <label for="numero" class="form-label">Número exterior y/o interior</label>
+                <input type="number" class="form-control" id="numero" placeholder="Eje: 123 interior 2" />
               </div>
               <div class="mb-3">
                 <label for="colonia" class="form-label">Colonia</label>
-                <input type="text" class="form-control" id="colonia" placeholder="Número" />
+                <input type="text" class="form-control" id="colonia" placeholder="Colonia" />
               </div>
               <div class="mb-3">
                 <label for="municipio" class="form-label">Municipio</label>
-                <input type="number" class="form-control" id="municipio" placeholder="Número" />
+                <input type="text" class="form-control" id="municipio" placeholder="Municipio" />
               </div>
               <div class="mb-3">
                 <label for="estado" class="form-label">Estado</label>
                 <select class="form-select" id="estado" aria-label="Floating label select example">
-                  <option value="no">Seleccione uno...</option>
+                  <option selected>Seleccione uno...</option>
                   <option value="Aguascalientes">Aguascalientes</option>
                   <option value="Baja California">Baja California</option>
                   <option value="Baja California Sur">Baja California Sur</option>
@@ -145,8 +148,8 @@
                 <input type="phone" class="form-control" id="telefono" placeholder="5512345678" />
               </div>
               <div class="mb-3">
-                <label for="instrucciones" class="form-label">Instrucciones de entrega</label>
-                <textarea class="form-control" id="instrucciones" rows="3" placeholder="Color de fachada/puerta, entre las calles..."></textarea>
+                <label for="instruc" class="form-label">Instrucciones de entrega</label>
+                <textarea class="form-control" id="instruc" rows="3" placeholder="Color de fachada/puerta, entre las calles..."></textarea>
               </div>
             </form>
           </div>
@@ -158,33 +161,36 @@
             <h3 class="card-title">Metodo de pago</h3>
             <h4 class="card-subtitle mb-2 text-body-secondary text-justified">Ingresa los datos de tu tarjeta de Credito o Debito:</h4>
             <form>
+              <div class="alert alert-warning" role="alert" id="alertValidaciones2" style="display:none">
+                <p id="alertValidacionesTexto2"></p>
+              </div>
               <div class="mb-3">
                 <label for="nombreTarjeta" class="form-label">Nombre en la tarjeta </label>
                 <input type="text" class="form-control" id="nombreTarjeta" aria-describedby="emailHelp" placeholder="Nombre y Apellido" />
               </div>
               <div class="mb-3">
                 <h4 class="card-subtitle mb-2 text-body-secondary text-justified">Fecha de vencimiento:</h4>
-                <label for="fechaVencimiento" class="form-label">Mes</label>
-                <select class="form-select" id="fechaVencimiento" aria-label="Floating label select example">
+                <label for="mesVencimiento" class="form-label">Mes</label>
+                <select class="form-select" id="mesVencimiento" aria-label="Floating label select example">
                   <option selected>Mes</option>
-                  <option value="01">01</option>
-                  <option value="02">02</option>
-                  <option value="03">03</option>
-                  <option value="04">04</option>
-                  <option value="05">05</option>
-                  <option value="06">06</option>
-                  <option value="07">07</option>
-                  <option value="08">08</option>
-                  <option value="09">09</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
+                  <option value=01>01</option>
+                  <option value=02>02</option>
+                  <option value=03>03</option>
+                  <option value=04>04</option>
+                  <option value=05>05</option>
+                  <option value=06>06</option>
+                  <option value=07>07</option>
+                  <option value=08>08</option>
+                  <option value=09>09</option>
+                  <option value=10>10</option>
+                  <option value=11>11</option>
+                  <option value=12>12</option>
                 </select>
                 <label for="anioVencimiento" class="form-label">Año</label>
-                <input type="text" class="form-control" id="anioVencimiento" />
+                <input type="text" class="form-control" id="anioVencimiento" placeholder="Año"  />
               </div>
               <div class="mb-3">
-                <label for="numero" class="form-label">Código de seguridad</label>
+                <label for="ccv" class="form-label">Código de seguridad</label>
                 <input type="number" class="form-control" id="ccv" placeholder="Ejemplo: 000" />
               </div>
             </form>
@@ -194,7 +200,7 @@
         <!--card-->
         <div class="botones ">
           <button type="button" class="btn btn-danger" id="cancelar">Cancelar</button>
-          <button type="submit" class="btn btn-primary">Pagar</button>
+          <button type="button" class="btn btn-primary" id="pagar">Pagar</button>
         </div>
       </div>
       <!--tarjeta-->
