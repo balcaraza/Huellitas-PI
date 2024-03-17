@@ -1,60 +1,34 @@
-.tarjeta {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    z-index: 1;
-    overflow-y: auto; /* Habilita el desplazamiento vertical cuando el contenido excede el tamaño de la tarjeta */
-    max-height: 100%; /* Opcional: Establece una altura máxima para la tarjeta */
-   
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
-.tarjeta ul {
-    list-style-type: none;
-    padding: 0;
+input[type=number] { -moz-appearance:textfield; }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-.tarjeta ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-.tarjeta ul li:last-child {
-    border-bottom: none;
-}
-.card{
-    width: 18rem;
-}
-.card-body{
-    background-color: #D3D1D1;
-}
-@media screen and (min-width: 1024px) {
-    /* Media query para pantallas más grandes */
-    .tarjeta {
-        width: 60%;
-        margin: 0 auto; /* Centra el elemento en la pantalla */
-    }
-    .card-body{
-        display: inline-block;
-    }
-
-    .card {
-        width: calc(50% - 20px); /* Divide el espacio en dos columnas con un pequeño espacio entre ellas */
-        float: left; /* Hace que los cards se muestren uno al lado del otro */
-        margin-right: 20px; /* Espacio entre los cards */
-        
-    }
-
-    .tarjeta::after {
-        content: "";
-        display: table;
-        clear: both; /* Limpiar los floats */
-    }
+.form {
+    padding: 10px;
     
 }
 
+.form form {
+    display: block; /* Ajustamos el formulario para que se comporte como bloque */
+    margin-bottom: 10px; /* Agregamos un margen inferior para separar los formularios */
+}
+
+.form form label,
+.form form input {
+    display: block;
+    margin-bottom: 5px;
+}
+@media (max-width: 768px) { /* Consulta de medios para dispositivos con ancho máximo de 768px (vista móvil) */
+    .container {
+        grid-template-columns: 1fr; /* Cambiamos a una sola columna */
+    }
+}
