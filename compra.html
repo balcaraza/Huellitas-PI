@@ -66,148 +66,144 @@
         </div>
       </div>
     </nav>
-    <main >
+    <main>
       <div class="container">
         <div class="form">
-            <div class="card mt-2 mb-2 ">
-      
-                <div class="card-body">
-                  
-                  <h3 class="card-title">Ralizar Compra</h3>
-                  <h4 class="card-subtitle mb-2 text-body-secondary">Ingresa la dirección de envío:</h4>
-                  <form>
-                    <div class="alert alert-warning" role="alert" id="alertValidaciones" style="display:none">
-                      <p id="alertValidacionesTexto"></p>
-                    </div>
-                    <div class="mb-3">
-                      <label for="nombre" class="form-label">Nombre completo </label>
-                      <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido" />
-                    </div>
-                    <div class="mb-3">
-                      <label for="calle" class="form-label">Calle</label>
-                      <input type="text" class="form-control" id="calle" placeholder="Calle" />
-                    </div>
-                    <div class="mb-3">
-                      <label for="numero" class="form-label">Número exterior y/o interior</label>
-                      <input type="number" class="form-control" id="numero" placeholder="Eje: 123 interior 2" />
-                    </div>
-                    <div class="mb-3">
-                      <label for="colonia" class="form-label">Colonia</label>
-                      <input type="text" class="form-control" id="colonia" placeholder="Colonia" />
-                    </div>
-                    <div class="mb-3">
-                      <label for="municipio" class="form-label">Municipio</label>
-                      <input type="text" class="form-control" id="municipio" placeholder="Municipio" />
-                    </div>
-                    <div class="mb-3">
-                      <label for="estado" class="form-label">Estado</label>
-                      <select class="form-select" id="estado" aria-label="Floating label select example">
-                        <option selected>Seleccione uno...</option>
-                        <option value="Aguascalientes">Aguascalientes</option>
-                        <option value="Baja California">Baja California</option>
-                        <option value="Baja California Sur">Baja California Sur</option>
-                        <option value="Campeche">Campeche</option>
-                        <option value="Chiapas">Chiapas</option>
-                        <option value="Chihuahua">Chihuahua</option>
-                        <option value="CDMX">Ciudad de México</option>
-                        <option value="Coahuila">Coahuila</option>
-                        <option value="Colima">Colima</option>
-                        <option value="Durango">Durango</option>
-                        <option value="Estado de México">Estado de México</option>
-                        <option value="Guanajuato">Guanajuato</option>
-                        <option value="Guerrero">Guerrero</option>
-                        <option value="Hidalgo">Hidalgo</option>
-                        <option value="Jalisco">Jalisco</option>
-                        <option value="Michoacán">Michoacán</option>
-                        <option value="Morelos">Morelos</option>
-                        <option value="Nayarit">Nayarit</option>
-                        <option value="Nuevo León">Nuevo León</option>
-                        <option value="Oaxaca">Oaxaca</option>
-                        <option value="Puebla">Puebla</option>
-                        <option value="Querétaro">Querétaro</option>
-                        <option value="Quintana Roo">Quintana Roo</option>
-                        <option value="San Luis Potosí">San Luis Potosí</option>
-                        <option value="Sinaloa">Sinaloa</option>
-                        <option value="Sonora">Sonora</option>
-                        <option value="Tabasco">Tabasco</option>
-                        <option value="Tamaulipas">Tamaulipas</option>
-                        <option value="Tlaxcala">Tlaxcala</option>
-                        <option value="Veracruz">Veracruz</option>
-                        <option value="Yucatán">Yucatán</option>
-                        <option value="Zacatecas">Zacatecas</option>
-                    </select>
-                    </div>
-                    <div class="mb-3">
-                      <label for="cp" class="form-label">Código Postal</label>
-                      <input type="number" class="form-control" id="cp" placeholder="Ejemplo 01000" />
-                    </div>
-                    <div class="mb-3">
-                      <label for="telefono" class="form-label">Teléfono</label>
-                      <input type="phone" class="form-control" id="telefono" placeholder="5512345678" />
-                    </div>
-                    <div class="mb-3">
-                      <label for="instruc" class="form-label">Instrucciones de entrega</label>
-                      <textarea class="form-control" id="instruc" rows="3" placeholder="Color de fachada/puerta, entre las calles..."></textarea>
-                    </div>
-                  </form>
+          <div class="card mt-2 mb-2">
+            <div class="card-body">
+              <h3 class="card-title">Ralizar Compra</h3>
+              <h4 class="card-subtitle mb-2 text-body-secondary">Ingresa la dirección de envío:</h4>
+              <form>
+                <div class="alert alert-warning" role="alert" id="alert" style="display: none">
+                  <p id="alertTxt"></p>
                 </div>
-                <!--card-body-->
-              </div>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre completo </label>
+                  <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido" />
+                </div>
+                <div class="mb-3">
+                  <label for="calle" class="form-label">Calle</label>
+                  <input type="text" class="form-control" id="calle" placeholder="Calle" />
+                </div>
+                <div class="mb-3">
+                  <label for="numero" class="form-label">Número exterior y/o interior</label>
+                  <input type="text" class="form-control" id="numero" placeholder="Eje: 123 interior 2" />
+                </div>
+                <div class="mb-3">
+                  <label for="colonia" class="form-label">Colonia</label>
+                  <input type="text" class="form-control" id="colonia" placeholder="Colonia" />
+                </div>
+                <div class="mb-3">
+                  <label for="municipio" class="form-label">Municipio</label>
+                  <input type="text" class="form-control" id="municipio" placeholder="Municipio" />
+                </div>
+                <div class="mb-3">
+                  <label for="estado" class="form-label">Estado</label>
+                  <select class="form-select" id="estado" aria-label="Floating label select example">
+                    <option selected>Seleccione uno...</option>
+                    <option value="Aguascalientes">Aguascalientes</option>
+                    <option value="Baja California">Baja California</option>
+                    <option value="Baja California Sur">Baja California Sur</option>
+                    <option value="Campeche">Campeche</option>
+                    <option value="Chiapas">Chiapas</option>
+                    <option value="Chihuahua">Chihuahua</option>
+                    <option value="CDMX">Ciudad de México</option>
+                    <option value="Coahuila">Coahuila</option>
+                    <option value="Colima">Colima</option>
+                    <option value="Durango">Durango</option>
+                    <option value="Estado de México">Estado de México</option>
+                    <option value="Guanajuato">Guanajuato</option>
+                    <option value="Guerrero">Guerrero</option>
+                    <option value="Hidalgo">Hidalgo</option>
+                    <option value="Jalisco">Jalisco</option>
+                    <option value="Michoacán">Michoacán</option>
+                    <option value="Morelos">Morelos</option>
+                    <option value="Nayarit">Nayarit</option>
+                    <option value="Nuevo León">Nuevo León</option>
+                    <option value="Oaxaca">Oaxaca</option>
+                    <option value="Puebla">Puebla</option>
+                    <option value="Querétaro">Querétaro</option>
+                    <option value="Quintana Roo">Quintana Roo</option>
+                    <option value="San Luis Potosí">San Luis Potosí</option>
+                    <option value="Sinaloa">Sinaloa</option>
+                    <option value="Sonora">Sonora</option>
+                    <option value="Tabasco">Tabasco</option>
+                    <option value="Tamaulipas">Tamaulipas</option>
+                    <option value="Tlaxcala">Tlaxcala</option>
+                    <option value="Veracruz">Veracruz</option>
+                    <option value="Yucatán">Yucatán</option>
+                    <option value="Zacatecas">Zacatecas</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="cp" class="form-label">Código Postal</label>
+                  <input type="number" class="form-control" id="cp" placeholder="Ejemplo 01000" />
+                </div>
+                <div class="mb-3">
+                  <label for="telefono" class="form-label">Teléfono</label>
+                  <input type="phone" class="form-control" id="telefono" placeholder="5512345678" />
+                </div>
+                <div class="mb-3">
+                  <label for="instruc" class="form-label">Instrucciones de entrega</label>
+                  <textarea class="form-control" id="instruc" rows="3" placeholder="Color de fachada/puerta, entre las calles..."></textarea>
+                </div>
+              </form>
+            </div>
+            <!--card-body-->
+          </div>
         </div>
         <div class="form">
-            
-            <div> <!-- Div contenedor para que los elementos se muestren como bloques -->
-                <div class="card mt-2 mb-2">
-                    <div class="card-body">
-                      <h3 class="card-title">Metodo de pago</h3>
-                      <h4 class="card-subtitle mb-2 text-body-secondary text-justified">Ingresa los datos de tu tarjeta de Credito o Debito:</h4>
-                      <form>
-                        <div class="alert alert-warning" role="alert" id="alertValidaciones2" style="display:none">
-                          <p id="alertValidacionesTexto2"></p>
-                        </div>
-                        <div class="mb-3">
-                          <label for="nombreTarjeta" class="form-label">Nombre en la tarjeta </label>
-                          <input type="text" class="form-control" id="nombreTarjeta" aria-describedby="emailHelp" placeholder="Nombre y Apellido" />
-                        </div> <div class="mb-3">
-                          <label for="numTarjeta" class="form-label">Nombre en la tarjeta </label>
-                          <input type="text" class="form-control" id="numTarjeta" aria-describedby="emailHelp" placeholder="Nombre y Apellido" />
-                        </div>                        <div class="mb-3">
-                          <h4 class="card-subtitle mb-2 text-body-secondary text-justified">Fecha de vencimiento:</h4>
-                          <label for="mesVencimiento" class="form-label">Mes</label>
-                          <select class="form-select" id="mesVencimiento" aria-label="Floating label select example">
-                            <option selected>Mes</option>
-                            <option value=01>01</option>
-                            <option value=02>02</option>
-                            <option value=03>03</option>
-                            <option value=04>04</option>
-                            <option value=05>05</option>
-                            <option value=06>06</option>
-                            <option value=07>07</option>
-                            <option value=08>08</option>
-                            <option value=09>09</option>
-                            <option value=10>10</option>
-                            <option value=11>11</option>
-                            <option value=12>12</option>
-                          </select>
-                          <label for="anioVencimiento" class="form-label">Año</label>
-                          <input type="text" class="form-control" id="anioVencimiento" placeholder="Año"  />
-                        </div>
-                        <div class="mb-3">
-                          <label for="ccv" class="form-label">Código de seguridad</label>
-                          <input type="number" class="form-control" id="ccv" placeholder="Ejemplo: 000" />
-                        </div>
-                      </form>
-                    </div>
-                    <!--card-body-->
+          <div>
+            <!-- Div contenedor para que los elementos se muestren como bloques -->
+            <div class="card mt-2 mb-2">
+              <div class="card-body">
+                <h3 class="card-title">Método de pago</h3>
+                <h4 class="card-subtitle mb-2 text-body-secondary text-justified">Ingresa los datos de su tarjeta de Credito o Debito:</h4>
+                <form>
+                  <div class="alert alert-warning" role="alert" id="alert2" style="display: none">
+                    <p id="alertTxt2"></p>
                   </div>
-                  <div class="botones ">
-                    
-                    <input type="submit" id="pagar" value="Pagar" class="btn btn-primary btn-lg btn-block">
+                  <div class="mb-3">
+                    <label for="nombreTarjeta" class="form-label">Nombre en la tarjeta </label>
+                    <input type="text" class="form-control" id="nombreTarjeta" aria-describedby="emailHelp" placeholder="Nombre y Apellido" />
                   </div>
-                </div>
+                  <div class="mb-3">
+                    <label for="numTarjeta" class="form-label">Número de tarjeta de Credito o Debito</label>
+                    <input type="number" class="form-control" id="numTarjeta" aria-describedby="emailHelp" placeholder="0123 4567 8901 2345" />
+                  </div>
+                  <div class="mb-3">
+                    <h4 class="card-subtitle mb-2 text-body-secondary text-justified">Fecha de vencimiento:</h4>
+                    <label for="mesVencimiento" class="form-label">Mes</label>
+                    <select class="form-select" id="mesVencimiento" aria-label="Floating label select example">
+                      <option selected>Mes</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <label for="anioVencimiento" class="form-label">Año</label>
+                    <input type="text" class="form-control" id="anioVencimiento" placeholder="Año" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="ccv" class="form-label">Código de seguridad</label>
+                    <input type="number" class="form-control" id="ccv" placeholder="Ejemplo: 000" />
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
+          <br />
+          <input type="submit" id="pagar" value="Pagar" class="btn btn-primary btn-lg btn-block" />
         </div>
-    </div>
+      </div>
     </main>
 
     <!--footer-->

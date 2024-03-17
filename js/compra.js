@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let numTarjeta = document.getElementById("numTarjeta");
   let mesVencimiento = document.getElementById("mesVencimiento");
   let anioVencimiento = document.getElementById("anioVencimiento");
-  let selector=0;
   let ccv = document.getElementById("ccv");
 
   // Obtener referencias a los elementos de alerta
@@ -137,7 +136,10 @@ document.addEventListener("DOMContentLoaded", function () {
       instruc.style.border = "solid red thin";
       isValid = false;
     };// if contInstru 
+
+
 //Validaciones de Formulario Método de pago
+
 // Validar nombre de la tarjeta
 nombreTarjeta.value = nombreTarjeta.value.trim();
 let numNom = nombreTarjeta.value.trim().split(/\s+/).length;
@@ -147,6 +149,7 @@ if (numNom < 2 || numNom > 5) {
   nombreTarjeta.style.border = "solid red thin";
   isValid = false;
 }//if nombreTarjeta
+
 //validar tarjeta
 numTarjeta.value = numTarjeta.value.trim();
 if (numTarjeta.value.length < 4) {
