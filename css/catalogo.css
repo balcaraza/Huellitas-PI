@@ -30,6 +30,7 @@ h2{
     width: 25px;
     margin-bottom: 10px;
     flex-direction: row;
+
 }
 /* Card - Agregarle un efecto al carrito de compras */
 .img-carrito:hover{
@@ -43,12 +44,13 @@ h2{
     padding-left: 15px;
 }
 /* Card - Cambiar la posicion del precio */
-.card-precio{
+.card-precio h5{
     text-align: right;
     margin-top: auto;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     color: #C45564;
+    padding: 20px;
 }
 /* Card - Modificar todo lo que se encuentre dentro de la card */
 .card-body {
@@ -56,8 +58,8 @@ h2{
     flex-direction: column;
     padding: 15px;
     font-family: "Montserrat", sans-serif;
-    height: 150px;
     text-align: justify;
+    height: 100px;
 }
 .text-amarillo{
     color: #FCD168;
@@ -67,6 +69,7 @@ h2{
     height: 250px;
     /*object-fit: cover; /* Cubrir completamente el área del contenedor de la imagen */
 }
+
 @media (max-width: 450px) {
     .encabezado{
         font-weight: 300;
@@ -74,7 +77,6 @@ h2{
         /* grid-template-columns: repeat(2, 1fr); */
     }
 }
-
 #corazon-lleno {
 	color: red;
 	display: none;
@@ -136,21 +138,6 @@ h2{
     .img-fondo-perro {
         height: 355px;
         margin-bottom: 60px;
-    }
-    /* Card - Cambiar el tamaño de toda la card */
-    .card{
-        margin: 15px;
-        width: 15rem; /*Tamaño de mi card*/
-        transition: transform 0.3s ease-in-out;
-    }
-     /* Imagen de las cards */
-    .card-img-top{
-        height: 200px;
-        width: 25px;
-    }
-    /* Card - Modificar todo lo que se encuentre dentro de la card */
-    .card-body{
-        font-size: 15px;
     }
 }
 /* Estilos específicos para Tablet (máximo ancho de 768px) */
