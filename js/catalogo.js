@@ -93,8 +93,10 @@ productos.forEach(function (item) {
                 </a>
             </div>
             <div class="card-body">
-                <p class="">${item.description}</p>
-                <h5 class="card-precio">$${item.precio}</h5>
+                <p class="card-descripcion">${item.description}</p>
+            </div>
+            <div class="card-precio">
+              <h5 class="">$${item.precio}</h5>
             </div>
         </div>`;
 
@@ -115,8 +117,10 @@ let nuevoItemHTML = `
                 <img class="img-carrito" src="./src/img/CarritoCompras.png" alt="Carrito Compras">
             </div>
             <div class="card-body">
-                <p class="">${item.description}</p>
-                <h5 class="card-precio">$${item.precio}</h5>
+                <p class="card-descripcion">${item.description}</p>
+            </div>
+            <div class="card-precio">
+              <h5 class="">$${item.precio}</h5>
             </div>
         </div>`;
 

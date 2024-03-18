@@ -77,4 +77,8 @@ section{
     .efecto1::before, .efecto1::after {
         pointer-events: none; /* Deshabilita la interacción con los pseudo-elementos */
     }
+
+    .encabezado-nosotros {
+        margin-top: 100px;
+    }
     
