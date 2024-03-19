@@ -18,6 +18,9 @@
     <!--Estilos generales-->
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="/css/favoritos.css">
+
+    <script src="https://kit.fontawesome.com/fd83881aca.js" crossorigin="anonymous"></script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -67,7 +70,7 @@
     </nav>
 
     <main class="container mt-5">
-      <div>
+      <div class="cabezal">
        <h2 class="negro mb-4 encabezado">Mis <span class="amarillo">favoritos</span></h2>
       </div>
        <!-- card para favoritos -->
@@ -81,18 +84,23 @@
             <!-- </button> -->
            <img src="/src/img/imagen.png" class="img-fluid card-img-top rounded-start" alt="...">           
           </div>
-          <div class="col-md-8">
-            <div class="card-body">
+          <div class="col-md-8 contenedor-texto">
+            <div class="card-body" id="1">
               <h5 class="producto"><strong>producto</strong></h5>
               <p class="card-text precio">$...</p>
               <p class="descripcion">Descripción</p>
               <div class="botones">
-              <img src="./src/img/FAV2.svg" class="favorito" width="25px" height="25px"alt="favorito">
-              <img class="carrito" src="./src/img/CarritoCompras.png"  width="25px" height="25px" alt="Carrito Compras">
+                <button class="favorite">
+                  <i class="fa-regular fa-heart" id="corazon-vacio"></i>
+                  <i class="fa-solid fa-heart" id="corazon-lleno"></i>
+                </button>
 
+                  <a href="compra.html" >
+                    <img class="img-carrito" src="./src/img/CarritoCompras.png" width="25px" height="25px alt="Carrito Compras">
+                  </a>
               </div>
               <!-- <div class ="boton">
-                <div class="addNumber_cont">
+                 <div class="addNumber_cont">
                   <button id="dasabledBtn" class="menos" onclick="addValueFunction()"
                   value="decrease">
                   -
@@ -120,13 +128,20 @@
           <img src="/src/img/imagen.png" class="img-fluid card-img-top rounded-start" alt="...">           
          </div>
          <div class="col-sm-8">
-           <div class="card-body">
+           <div class="card-body" id="2">
              <h5 class="producto"><strong>producto</strong></h5>
              <p class="card-text precio">$...</p>
-             <p class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti officiis voluptatibus excepturi ab molestiae veniam</p>
-             <img src="./src/img/FAV2.svg" class="favorito" width="25px" height="25px"alt="">
-             <img class="carrito" src="./src/img/CarritoCompras.png"  width="25px" height="25px" alt="Carrito Compras">
+             <p class="descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti officiis</p>
+             <div class="botones">
+              <button class="favorite">
+                <i class="fa-regular fa-heart" id="corazon-vacio"></i>
+                <i class="fa-solid fa-heart" id="corazon-lleno"></i>
+              </button>
 
+                <a href="compra.html" >
+                  <img class="img-carrito" src="./src/img/CarritoCompras.png" width="25px" height="25px alt="Carrito Compras">
+                </a>
+            </div>
              <!-- <div class ="boton">
                <div class="addNumber_cont">
                  <button id="dasabledBtn" class="menos" onclick="addValueFunction()"
@@ -156,14 +171,24 @@
         <img src="/src/img/imagen.png" class="img-fluid card-img-top rounded-start" alt="...">           
        </div>
        <div class="col-sm-8">
-         <div class="card-body">
+         <div class="card-body" id="3">
            <h5 class="producto"><strong>producto</strong></h5>
            <p class="card-text precio">$...</p>
            <p class="descripcion">Descripción</p>
-           <button class="favorite">
-            <img src="./src/img/FAV2.svg" class="favorito" width="25px" height="25px"alt="">
-           </button>
-            <img class="carrito" src="./src/img/CarritoCompras.png"  width="25px" height="25px" alt="Carrito Compras">
+           <div class="botones">
+            <button class="favorite">
+              <i class="fa-regular fa-heart" id="corazon-vacio"></i>
+              <i class="fa-solid fa-heart" id="corazon-lleno"></i>
+            </button>
+
+              <a href="compra.html" >
+                <img class="img-carrito" src="./src/img/CarritoCompras.png" width="25px" height="25px alt="Carrito Compras">
+              </a>
+          </div>
+           <!-- <button class="button-favorite">
+            <i class="fa-regular fa-heart" id="corazon-vacio"></i>
+            <i class="fa-solid fa-heart" id="corazon-lleno"></i>
+            </button>  -->
 
            <!-- <div class ="boton">
              <div class="addNumber_cont">
@@ -194,13 +219,20 @@
       <img src="/src/img/imagen.png" class="img-fluid card-img-top rounded-start" alt="...">           
      </div>
      <div class="col-sm-8">
-       <div class="card-body">
+       <div class="card-body" id="4">
          <h5 class="producto"><strong>producto</strong></h5>
          <p class="card-text precio">$...</p>
          <p class="descripcion">Descripción</p>
-         <img src="./src/img/FAV2.svg" class="favorito" width="25px" height="25px"alt="">
-         <img class="carrito" src="./src/img/CarritoCompras.png"  width="25px" height="25px" alt="Carrito Compras">
+         <div class="botones">
+          <button class="favorite">
+            <i class="fa-regular fa-heart" id="corazon-vacio"></i>
+            <i class="fa-solid fa-heart" id="corazon-lleno"></i>
+          </button>
 
+            <a href="compra.html" >
+              <img class="img-carrito" src="./src/img/CarritoCompras.png" width="25px" height="25px alt="Carrito Compras">
+            </a>
+        </div>
          <!-- <div class ="boton">
            <div class="addNumber_cont">
              <button id="dasabledBtn" class="menos" onclick="addValueFunction()"
@@ -245,5 +277,6 @@
     ></script>
     <!--Script Custom-->
     <script src="js/favoritos.js"></script>
+    <script src="js/catalogo.js"></script>
   </body>
 </html>
