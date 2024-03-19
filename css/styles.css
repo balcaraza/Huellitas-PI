@@ -23,7 +23,6 @@ nav img{
     margin-right: 55px;
     height: 50px;
     width: 50px;
-   
 }
 /*navbar imagen del carrito de compras para hacerlo interactivo con el mouse*/
 .nav-img:hover{
@@ -51,6 +50,7 @@ nav img{
     font-weight: 700;
     font-optical-sizing: auto;
     font-size: 40pt;
+    margin-top: 56px
 }
 .titular{
     font-family: 'Roboto',sans-serif;
@@ -82,9 +82,8 @@ nav img{
     display: inline-block;
 }
 .espacio, h5{
-    margin-top: 20px;
+    margin-top: 90px;
     margin-bottom: 20px;
-    padding-top: 10px;
 }
 
 .linkedin{
