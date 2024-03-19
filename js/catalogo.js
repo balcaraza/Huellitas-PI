@@ -157,7 +157,7 @@ const toggleFavorite = (producto) => {
   }else{
     favoritos.push(producto);
     actualizarFavoritos();
-  }
+  };
 };
 
 const showHTML = () => {
@@ -196,9 +196,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const productos = {
           id: card.id,
           description: card.querySelector(".card-body p").textContent,
-          precio: card.querySelector(".card-precio h5").textContent 
+          precio: card.querySelector(".card-precio h5").textContent,
+          img: card.querySelector("card-img-top img")
         }
-        toggleFavorite(productos)
+        toggleFavorite(productos);
         showHTML();
 
     });

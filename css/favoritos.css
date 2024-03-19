@@ -186,7 +186,7 @@ h3{
 } */
 
 /* estilos para el botón de corazón */
-.button-favorite{
+.favorite{
     border: none;
     background-color: transparent;
     font-size: 25px;
