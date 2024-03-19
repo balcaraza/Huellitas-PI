@@ -11,6 +11,7 @@ let exampleModal = document.getElementById("exampleModal");
 let registros =[];
 //Flag
 let isValid = true;
+//variables del form de inicio de sesion
 
 //Variables validaciones
 

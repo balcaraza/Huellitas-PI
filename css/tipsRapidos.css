@@ -31,6 +31,9 @@ main {
     color: #FCD168;
     
 }
+.encabezado-tips{
+    margin-top: 90px;
+}
 p {
     text-align:justify; /* Centrar el texto */
     color: #383B47;
