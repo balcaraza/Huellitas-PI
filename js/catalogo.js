@@ -138,6 +138,7 @@ const actualizarFavoritos = () => {
 
 //Cargar los favoritos
 const cargaFavoritos = () => {
+
   const almacenarFavoritos = localStorage.getItem("favoritos");
 
   // Si hay datos a almacenar 
@@ -152,10 +153,10 @@ const toggleFavorite = (producto) => {
   );
   if(index > -1){
     favoritos.splice(index, 1);
-    cargaFavoritos();
+    actualizarFavoritos();
   }else{
     favoritos.push(producto);
-    cargaFavoritos();
+    actualizarFavoritos();
   }
 };
 
@@ -165,17 +166,20 @@ const showHTML = () => {
 
     const esFavorito = favoritos.some(favoritos => favoritos.id === productoId);
 
-    const favoritoBoton = produc.querySelector(".button-favorite");
+    //const favoritoBoton = produc.querySelector(".button-favorite");
     const favoritoBotonActivo = produc.querySelector("#corazon-lleno");
     const favoritoBotonDesactivado = produc.querySelector("#corazon-vacio");
     
-    // favoritoBoton.classList.toggle("favorite");
-    favoritoBotonActivo.classList.toggle("active");
-    favoritoBotonDesactivado.classList.toggle("active");
+    if (favoritoBotonActivo && favoritoBotonDesactivado) {
+      favoritoBotonActivo.classList.toggle("active", esFavorito);
+      favoritoBotonDesactivado.classList.toggle("active", esFavorito);
+    }
 
-
-      console.log(esFavorito);
-      console.log(productoId);
+    console.log("=======================");
+    console.log(productoId);
+    console.log(esFavorito);
+    //favoritoBoton.classList.toggle("favorite-active", esFavorito);
+    
   })
 }
 
@@ -192,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const productos = {
           id: card.id,
           description: card.querySelector(".card-body p").textContent,
-          precio: card.querySelector(".card-body .card-precio").textContent 
+          precio: card.querySelector(".card-precio h5").textContent 
         }
         toggleFavorite(productos)
         showHTML();
@@ -200,6 +204,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+cargaFavoritos();
 
 
 // Llamadas a la función addItem con objetos que representan diferentes ítems
