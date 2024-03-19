@@ -10,12 +10,14 @@ let productos = [
     img: "./src/img/Productos/RopaMinie.jpg",
     description: "Ropa para mascota, disney minnie mouse, camisa textil, rosa y grande",
     precio: "145.80",
+    categoria: "ropa",
   },
   {
     id: "2",
     img: "./src/img/Productos/CepilloLimpieza.jpg",
     description: "Cepillo de limpieza para mascotas sintético azul 19.7x10.6x5 Cm",
     precio: "79.90",
+    categoria: "accesorios",
   },
 
   { id: "3", img: "./src/img/Productos/TazonPanda.jpg", description: "Tazón para mascota, panda animal de plástico y color blanco", precio: "99.90" },
@@ -24,54 +26,63 @@ let productos = [
     img: "./src/img/Productos/PelucheDinosaurio.jpg",
     description: "Peluche para mascota de dinosaurio, 100% Poliéster 35.5x13 Cm",
     precio: "129.90",
+    categoria: "juguete",
   },
   {
     id: "5",
     img: "./src/img/Productos/JugueteFutbol.jpg",
     description: "Juguete para mascota con sonido",
     precio: "29.90",
+    categoria: "juguete",
   },
   {
     id: "6",
     img: "./src/img/Productos/toallitaAzul.jpg",
     description: "Toalla de baño con capucha, absorbente de alta calidad",
     precio: "150",
+    categoria: "ropa",
   },
   {
     id: "7",
     img: "./src/img/Productos/casaGatos.jpg",
     description: "Casa para gatos, color morada con rascadero",
     precio: "350",
+    categoria: "muebles",
   },
   {
     id: "8",
     img: "./src/img/Productos/ChalecoArnes.jpg",
     description: "Chaleco con arnés para mascotas 100% poliéster azul 25x35",
     precio: "99.90",
+    categoria: "ropa",
   },
   {
     id: "9",
     img: "./src/img/Productos/DisfrazLaGarra.jpg",
     description: "Disfraz para mascota, de disney alíen toy story, textil de color verde y grande",
     precio: "149.90",
+    categoria: "ropa",
   },
   {
     id: "10",
     img: "./src/img/Productos/TazonRosa.jpg",
     description: "Tazón para mascota de disney minnie mouse, plástico y de color rosa",
     precio: "99.90",
+    categoria: "accesorios",
   },
   {
     id: "11",
     img: "./src/img/Productos/cama.jpg",
     description: "Cama Resistente con Relleno Suave y Color cafe",
     precio: "299",
+    categoria: "muebles",
   },
   {
     id: "12",
     img: "./src/img/Productos/collarPerro.jpg",
     description: "Collar de piel, color cafe, grabado",
     precio: "250",
+    categoria: "accesorios",
   },
 ];
 let productosJSON = JSON.stringify(productos);
@@ -129,6 +140,25 @@ let nuevoItemHTML = `
     
 });
 
+let btnRopa = document.getElementById("btnRopa");
+let btnMuebles = document.getElementById("btnMuebles");
+let btnJuguetes = document.getElementById("btnJuguetes");
+let btnAccesorios = document.getElementById("btnAccesorios");
+
+btnRopa.addEventListener("click", function (event) {
+  event.preventDefault();
+  const prodRopa = filtrarProdxCat(productos, "ropa");
+  console.log(prodRopa);
+});
+
+function filtrarProdxCat(productos, categoria) {
+  return productos.filter(product => product.categoria === categoria);
+  
+}
+productosJSON = JSON.stringify(productos);
+localStorage.setItem("productos", productosJSON);
+
+
 const producto = document.querySelectorAll(".card");
 
 //Actualizar los favoritos en el localStorage
@@ -159,25 +189,25 @@ const toggleFavorite = (producto) => {
   }
 };
 
-const showHTML = () => {
-  producto.forEach(produc => {
-    const productoId = produc.id;
+// const showHTML = () => {
+//   producto.forEach(produc => {
+//     const productoId = produc.id;
 
-    const esFavorito = favoritos.some(favoritos => favoritos.id === productoId);
+//     const esFavorito = favoritos.some(favoritos => favoritos.id === productoId);
 
-    const favoritoBoton = produc.querySelector(".button-favorite");
-    const favoritoBotonActivo = produc.querySelector("#corazon-lleno");
-    const favoritoBotonDesactivado = produc.querySelector("#corazon-vacio");
+//     const favoritoBoton = produc.querySelector(".button-favorite");
+//     const favoritoBotonActivo = produc.querySelector("#corazon-lleno");
+//     const favoritoBotonDesactivado = produc.querySelector("#corazon-vacio");
     
-    // favoritoBoton.classList.toggle("favorite");
-    favoritoBotonActivo.classList.toggle("active");
-    favoritoBotonDesactivado.classList.toggle("active");
+//     favoritoBoton.classList.toggle("favorite");
+//     favoritoBotonActivo.classList.toggle("active");
+//     favoritoBotonDesactivado.classList.toggle("active");
 
 
-      console.log(esFavorito);
-      console.log(productoId);
-  })
-}
+//       console.log(esFavorito);
+//       console.log(productoId);
+//   })
+// }
 
 //Agrega un evento que escucha el evento DOMContentLoaded al objeto document. El DOMContentLoaded se dispara cuando el HTML ha sido completamente cargado y analizado
 document.addEventListener("DOMContentLoaded", function() {
