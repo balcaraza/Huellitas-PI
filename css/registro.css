@@ -39,3 +39,19 @@ form{
     margin-top: 55px;
     margin-left: 55px;
 }
+/* Estilo al boton de los forms */
+.enviar{
+    background-color: #007BA7 ;
+    color: white;
+    font-size: 18px;
+    border: 0;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-family: 'Roboto'
+    }
+    .enviar:hover{
+    background-color: #007BA7 ;
+    color: white;
+    padding: 9px 18px;
+    opacity: 0.8;
+    }
