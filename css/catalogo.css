@@ -70,6 +70,13 @@ h2{
     /*object-fit: cover; /* Cubrir completamente el área del contenedor de la imagen */
 }
 
+.button-addcarito{/*fondo de boton carrito*/
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    padding-left: 15px;
+}
+
 @media (max-width: 450px) {
     .encabezado{
         font-weight: 300;
