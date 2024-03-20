@@ -209,25 +209,29 @@ const toggleFavorite = (producto) => {
   };
 };
 
-// const showHTML = () => {
-//   producto.forEach(produc => {
-//     const productoId = produc.id;
+const showHTML = () => {
+   producto.forEach(produc => {
+     const productoId = produc.id;
 
-//     const esFavorito = favoritos.some(favoritos => favoritos.id === productoId);
+     const esFavorito = favoritos.some(favoritos => favoritos.id === productoId);
 
-//     const favoritoBoton = produc.querySelector(".button-favorite");
-//     const favoritoBotonActivo = produc.querySelector("#corazon-lleno");
-//     const favoritoBotonDesactivado = produc.querySelector("#corazon-vacio");
+     const favoritoBoton = produc.querySelector(".button-favorite");
+     const favoritoBotonActivo = produc.querySelector("#corazon-lleno");
+     const favoritoBotonDesactivado = produc.querySelector("#corazon-vacio");
     
-//     favoritoBoton.classList.toggle("favorite");
-//     favoritoBotonActivo.classList.toggle("active");
-//     favoritoBotonDesactivado.classList.toggle("active");
+     favoritoBoton.classList.toggle("favorite");
+     favoritoBotonActivo.classList.toggle("active");
+     favoritoBotonDesactivado.classList.toggle("active");
+     if (favoritoBotonActivo && favoritoBotonDesactivado) {
+      favoritoBotonActivo.classList.toggle("active", esFavorito);
+      favoritoBotonDesactivado.classList.toggle("active", esFavorito);
+    }
 
 
-//       console.log(esFavorito);
-//       console.log(productoId);
-//   })
-// }
+       console.log(esFavorito);
+       console.log(productoId);
+   })
+ }
 
 //Agrega un evento que escucha el evento DOMContentLoaded al objeto document. El DOMContentLoaded se dispara cuando el HTML ha sido completamente cargado y analizado
 document.addEventListener("DOMContentLoaded", function () {
@@ -255,3 +259,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+  
