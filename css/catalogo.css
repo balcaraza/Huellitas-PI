@@ -282,8 +282,3 @@ h2{
         margin-top: 20px;
     }
 }
-
-.selecCategoria{
-    display:flex;
-    justify-content: space-evenly;
-}
