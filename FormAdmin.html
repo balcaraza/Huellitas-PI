@@ -73,7 +73,7 @@
             <p id="alertValidacionesTexto"></p>
           </div>
 
-          <div class="mb-3">
+          <div class="mb-3 ">
             <label for="upload_widget" class="form-label">Imagen</label>
             <!-- Marca error porque -->
             <div>
@@ -95,7 +95,12 @@
                       imageUrl = result.info.url;
                       // Actualizar el atributo src de la imagen
                       document.getElementById("miImagen").src = imageUrl;
-                    }
+                      // Actualizar el atributo src de la imagen
+                      document.getElementById("miImagen").src = imageUrl;
+                       // Mostrar la imagen
+                       document.getElementById("miImagen").style.display = "block";
+                       document.getElementById("contentImagen").style.display = "block";
+                      }
                   }
                 );
 
@@ -107,7 +112,13 @@
                   false
                 );
               </script>
-              <img id="miImagen" src="#" alt="Descripción de la imagen" style="display: none" />
+              <div id="contentImagen" style="display: none;">
+                <br/>
+                <div class="imgag d-flex  justify-content-center align-items-center">
+                  <img id="miImagen" class="img-fluid" src="#" alt="Descripción de la imagen" style="display: none;" />
+                </div>
+              </div>
+             
             </div>
           </div>
           <div class="mb-3">

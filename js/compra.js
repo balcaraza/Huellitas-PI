@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let regexTelefono = new RegExp("^[+]?[(]?[0-9]{3}[)]?[-s.]?[0-9]{3}[-s.]?[0-9]{4,6}$");
   let regexTelefono2 = new RegExp(/(.)\1{4}/);
   let isValid = true;
+
+  //modal de pedido
+  let exampleModal = document.getElementById("exampleModal");
   // Función para validar el teléfono
   function validarTelefono() {
     if (!regexTelefono.test(telefono.value)) {
@@ -72,7 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
       alertOne.style.display = "block";
       nombre.style.border = "solid red thin";
       isValid = false;
-    }//if nombre
+    } //if nombre
+
     //Validación calle
     calle.value = calle.value.trim();
     if (calle.value.length < 3) {
@@ -81,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       calle.style.border = "solid red thin";
       isValid = false;
     } //if calle
+
     //Validación número.
     numero.value = numero.value.trim();
     if (numero.value.length < 1) {
@@ -89,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
       numero.style.border = "solid red thin";
       isValid = false;
     } //if length me valida que tenga un dato permite letra s porque puede ser 1-A
+
     //Validación de Colonia
     colonia.value = colonia.value.trim();
     if (colonia.value.length < 3) {
@@ -97,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       colonia.style.border = "solid red thin";
       isValid = false;
     } //if colonia
+
     //Validacion municipio
     municipio.value = municipio.value.trim();
     if (municipio.value.length < 4) {
@@ -105,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
       municipio.style.border = "solid red thin";
       isValid = false;
     } //if municipio
+
     //Validación estado
     if (estado.value == "Seleccione uno...") {
       alertTxt.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Estado</strong>.<br/>`);
@@ -112,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
       estado.style.border = "solid red thin";
       isValid = false;
     } //if estado
+
     //Validación cp
     if (cp.value.length !== 5) {
       alertTxt.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Código Postal</strong> válido.<br/>`);
@@ -119,92 +128,119 @@ document.addEventListener("DOMContentLoaded", function () {
       cp.style.border = "solid red thin";
       isValid = false;
     } //if para verificar la expresión
+
     //validación telefono
     telefono.value = telefono.value.trim();
-    if (!validarTelefono()) { //si validarTelefono me regresa un falso
-      alertTxt.insertAdjacentHTML("beforeend",
-        `El <strong>Teléfono</strong> no es correcto.<br/>`);
+    if (!validarTelefono()) {
+      //si validarTelefono me regresa un falso
+      alertTxt.insertAdjacentHTML("beforeend", `El <strong>Teléfono</strong> no es correcto.<br/>`);
       alertOne.style.display = "block";
       telefono.style.border = "solid red thin";
       isValid = false;
-    };//if ! ValidarTelefono
+    } //if ! ValidarTelefono
+    //Instrucciones
     let contPalabra = instruc.value.trim().split(/\s+/).length;
-    if ((contPalabra < 3) && (instruc.value !== "")) {
-      alertTxt.insertAdjacentHTML("beforeend",
-        `Por favor que sus <strong>Instrucciones</strong> sean mayor a 3 palabras.`);
+    if (contPalabra < 3 && instruc.value !== "") {
+      alertTxt.insertAdjacentHTML("beforeend", `Por favor que sus <strong>Instrucciones</strong> sean mayor a 3 palabras.`);
       alertOne.style.display = "block";
       instruc.style.border = "solid red thin";
       isValid = false;
-    };// if contInstru 
+    } // if contInstru
+
+    //Validaciones de Formulario Método de pago
+
+    // Validar nombre de la tarjeta
+    nombreTarjeta.value = nombreTarjeta.value.trim();
+    let numNom = nombreTarjeta.value.trim().split(/\s+/).length;
+    if (numNom < 2 || numNom > 5) {
+      alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Nombre</strong> válido.<br/>`);
+      alert2.style.display = "block";
+      nombreTarjeta.style.border = "solid red thin";
+      isValid = false;
+    } //if nombreTarjeta
+
+    //validar tarjeta
+    numTarjeta.value = numTarjeta.value.trim();
+    if (numTarjeta.value.length < 4) {
+      alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Numero de tarjeta</strong> válido.<br/>`);
+      alert2.style.display = "block";
+      numTarjeta.style.border = "solid red thin";
+      isValid = false;
+    } //if numero tarjeta
+
+    //Validacióon Numer
+    let fechaActual = new Date();
+    let mesActual = fechaActual.getMonth();
+    console.log(mesActual);
+    if (mesVencimiento.value == "Mes") {
+      alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Mes</strong>.<br/>`);
+      alert2.style.display = "block";
+      mesVencimiento.style.border = "solid red thin";
+      isValid = false;
+    }
+    if (mesVencimiento.value <= mesActual) {
+      alertTxt2.insertAdjacentHTML("beforeend", `El <strong>Mes</strong> no puede ser menor al mes actual<br/>`);
+      alert2.style.display = "block";
+      mesVencimiento.style.border = "solid red thin";
+      isValid = false;
+    }
+
+    //Validación año
+    anioVencimiento.value = anioVencimiento.value.trim();
+    let aniActual = fechaActual.getFullYear();
+    let valorDefault = 0;
+
+    if (anioVencimiento.value == valorDefault) {
+      alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Año</strong>.<br/>`);
+      alert2.style.display = "block";
+      anioVencimiento.style.border = "solid red thin";
+      isValid = false;
+    }
+    if (Number(anioVencimiento.value) < Number(aniActual)) {
+      alertTxt2.insertAdjacentHTML("beforeend", `El <strong>Año</strong> no puede ser menor al año actual.<br/>`);
+      alert2.style.display = "block";
+      anioVencimiento.style.border = "solid red thin";
+      isValid = false;
+    }
+//Validacion ccv
+    if (ccv.value.length !== 3) {
+      alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Código de Seguridad</strong> válido.<br/>`);
+      alert2.style.display = "block";
+      ccv.style.border = "solid red thin";
+      isValid = false;
+    } //if para verificar la expresión
+
+    //Modal de pedido realizado
+    if (isValid) {
+      guardarCompra(nombre.value, calle.value, numero.value, colonia.value, municipio.value, estado.value, cp.value, telefono.value,
+         instruc.value, nombreTarjeta.value, numTarjeta.value, mesVencimiento.value, anioVencimiento.value, ccv.value);
+      modalTxt.innerText = "Pedido realizado";
+      $("#exampleModal").modal("show");
+     
+      nombre.style.border = "";
+    calle.style.border = "";
+    numero.style.border = "";
+    colonia.style.border = "";
+    municipio.style.border = "";
+    estado.style.border = "";
+    cp.style.border = "";
+    telefono.style.border = "";
+    instruc.style.border = "";
+    nombreTarjeta.style.border = "";
+    numTarjeta.style.border = "";
+    mesVencimiento.style.border = "";
+    anioVencimiento.style.border = "";
+    ccv.style.border = "";
+    alertTxt.innerHTML = "";
+    alertTxt2.innerHTML = "";
+    alertOne.style.display = "none";
+    alert2.style.display = "none";
+    } //if
 
 
-//Validaciones de Formulario Método de pago
-
-// Validar nombre de la tarjeta
-nombreTarjeta.value = nombreTarjeta.value.trim();
-let numNom = nombreTarjeta.value.trim().split(/\s+/).length;
-if (numNom < 2 || numNom > 5) {
-  alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Nombre</strong> válido.<br/>`);
-  alert2.style.display = "block";
-  nombreTarjeta.style.border = "solid red thin";
-  isValid = false;
-}//if nombreTarjeta
-
-//validar tarjeta
-numTarjeta.value = numTarjeta.value.trim();
-if (numTarjeta.value.length < 4) {
-  alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Numero de tarjeta</strong> válido.<br/>`);
-  alert2.style.display = "block";
-  numTarjeta.style.border = "solid red thin";
-  isValid = false;
-} //if numero tarjeta
-//Validacióon Numer
-let fechaActual = new Date();
-let mesActual =  fechaActual.getMonth();
-console.log(mesActual);
-if ((mesVencimiento.value == "Mes") ) {
-  alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Mes</strong>.<br/>`);
-  alert2.style.display = "block";
-  mesVencimiento.style.border = "solid red thin";
-  isValid = false;
-} if (mesVencimiento.value<=mesActual) {
-  alertTxt2.insertAdjacentHTML("beforeend", `El <strong>Mes</strong> no puede ser menor al mes actual<br/>`);
-  alert2.style.display = "block";
-  mesVencimiento.style.border = "solid red thin";
-  isValid = false;
-} 
-//Validación año
-
-anioVencimiento.value = anioVencimiento.value.trim();
-let aniActual = fechaActual.getFullYear();
-let valorDefault = 0;
-
-  
-
-if (anioVencimiento.value== valorDefault) {
-  alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Año</strong>.<br/>`);
-  alert2.style.display = "block";
-  anioVencimiento.style.border = "solid red thin";
-  isValid = false;
-} 
-if (Number(anioVencimiento.value) < Number(aniActual) ) {
-  alertTxt2.insertAdjacentHTML("beforeend", `El <strong>Año</strong> no puede ser menor al año actual.<br/>`);
-  alert2.style.display = "block";
-  anioVencimiento.style.border = "solid red thin";
-  isValid = false;
-}  
-
-
-
-if (ccv.value.length !==3) {
-  alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Código de Seguridad</strong> válido.<br/>`);
-  alert2.style.display = "block";
-  ccv.style.border = "solid red thin";
-  isValid = false;
-} //if para verificar la expresión
   });
-
 });
+
 function validarTelefono() {
   if (!regexTelefono.test(telefono.value)) {
     return false;
@@ -215,3 +251,26 @@ function validarTelefono() {
 
   return true;
 } //validarTeléfono
+
+function guardarCompra(nombre, calle, numero, colonia, municipio, estado, cp, telefono, instruc, nombreTarjeta, numTarjeta, mes, anio, ccv){
+  var compra = {
+    "nombre": nombre,
+    "calle": calle,
+    "numero": numero,
+    "colonia": colonia,
+    "municipio": municipio,
+    "estado": estado,
+    "cp": cp,
+    "telefono": telefono,
+    "instrucciones": instruc,
+    "nombreTarjeta": nombreTarjeta,
+    "numeroTarjeta": numTarjeta,
+    "mes": mes,
+    "anio": anio,
+    "ccv": ccv
+  }
+  var compraJSON =JSON.stringify(compra);
+  localStorage.setItem('compra', compraJSON);
+  
+
+}

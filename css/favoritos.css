@@ -4,10 +4,7 @@ main{
     padding: auto;
 
 }
-#encabezado{
-    margin: 50px;
-}
-
+/* estilos del encabezado */
 .negro{
     color:#383B47;
     margin-top: 10px;
@@ -17,15 +14,14 @@ main{
     color:#FCD168;
     text-shadow: 0.5px 0.5px 1px #383B47 ;
     display:inline;
-
 }
+
+/* estilos del texto descriptivo del producto */
 .producto{
     color: #383B47;
     font-family: "Roboto",sans-serif;
     font-weight:bold;
     display: inline-block;
-
-
 }
 .precio{
     color: #007BA7;
@@ -33,27 +29,39 @@ main{
     font-weight: bolder;
     float: right;
 }
-
+.descripcion{
+    color: #383B47;
+    font-family: "Roboto",sans-serif;
+    font-weight:normal;
+    line-height: 20px;
+}
+.cabezal{
+    margin: 20px;
+    margin-left: 20px;
+}
 .container-products {
 	display: grid;
 	/* grid-template-columns: repeat(2, 1fr);    */
-	/* margin: 30px ;   */
+	margin: 50px ;  
 	gap: 30px;
 }
 
-@media (min-width: 450px) {
-    .container-products{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-   }
-
-.card-product {
-	display:flexbox;
+/* .card-product {
     gap: 20px;
 	cursor: pointer;
+    padding: -10px;
+    margin-top: -5px;
 
+} */
+/* .contenedor-texto{
+    padding-top:0px;
+  
 }
+.card-body{
+    margin-top: -15px;
+    margin-bottom: -100px;
+} */
+
 
 /* .favButton{
     color: #B92336;
@@ -72,13 +80,13 @@ align-items: flex-end;
 border:2px ;
 } */
 
-.carrito{
+.carrito{ 
     display:grid ;
     position:relative;
     justify-content:space-around;
     align-items: flex-end;
 }
-.favorito{
+/* .favorito{
     color: #B92336;
     padding: 0;
     margin: 0;
@@ -88,12 +96,24 @@ border:2px ;
     float: inline-start;
     justify-content: space-around;
     align-items: flex-end;
+    stroke: none;
    
+} */
+
+/* .fa-solid{
+    position: absolute;
+    z-index: 1;
 }
+.fa-regular{
+    position: absolute;
+    z-index: 1;
+} */
 /* #fav{
 float: inline-end;
 } */
-.boton{
+
+/* botón para agregar o quitar productos */
+/* .boton{
     width: 100%;
     height: 100%;
     display: flex;
@@ -101,19 +121,16 @@ float: inline-end;
     grid-row-end: auto;
     justify-content:center;
     align-items: center;
-
 }
 .addNumber_cont{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 button:hover{
     background-color: #007BA7;
     opacity: 40%;
-
 }
 .value_cont{
     width: 70px;
@@ -134,7 +151,6 @@ h3{
     font-family: "roboto",sans-serif;
     font-size: 10px;
     padding-top: 10px;
-
 }
 .menos{
     z-index: 1;
@@ -151,8 +167,6 @@ h3{
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0px 10px 10px #00000030;
-
-
 }
 .mas{
     z-index: 1;
@@ -169,9 +183,38 @@ h3{
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0px 10px 10px #00000030;
+} */
 
+/* estilos para el botón de corazón */
+.favorite{
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    padding-left: 15px;
 }
 
+#corazon-lleno {
+	color: red;
+	display: none;
+}
+
+#corazon-vacio.active {
+	background-color: red;
+	display: none;
+}
+
+#corazon-lleno.active {
+	display: block;
+	color: red;
+}
+
+/* media queries para el responsivo */
 @media screen and(max-width:376px) {
      
 }
+@media (min-width: 450px) {
+    .container-products{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+   }

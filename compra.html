@@ -71,7 +71,7 @@
         <div class="form">
           <div class="card mt-2 mb-2">
             <div class="card-body">
-              <h3 class="card-title">Ralizar Compra</h3>
+              <h3 class="card-title">Realizar Compra</h3>
               <h4 class="card-subtitle mb-2 text-body-secondary">Ingresa la dirección de envío:</h4>
               <form>
                 <div class="alert alert-warning" role="alert" id="alert" style="display: none">
@@ -158,7 +158,7 @@
             <div class="card mt-2 mb-2">
               <div class="card-body">
                 <h3 class="card-title">Método de pago</h3>
-                <h4 class="card-subtitle mb-2 text-body-secondary text-justified">Ingresa los datos de su tarjeta de Credito o Debito:</h4>
+                <h4 class="card-subtitle mb-2 text-body-secondary text-justified">Ingresa los datos de su tarjeta de Crédito o Débito:</h4>
                 <form>
                   <div class="alert alert-warning" role="alert" id="alert2" style="display: none">
                     <p id="alertTxt2"></p>
@@ -202,6 +202,24 @@
           </div>
           <br />
           <input type="submit" id="pagar" value="Pagar" class="btn btn-primary btn-lg btn-block" />
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Aviso</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p id="modalTxt"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -232,5 +250,6 @@
     ></script>
     <!--Script Custom-->
     <script src="js/compra.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>
