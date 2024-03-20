@@ -1,4 +1,5 @@
 //
+let sutotal2= document.getElementById("sutotal2");
 let subTotalPago = document.getElementById("subTotalPago");
 let listaProductosCarrito = document.getElementById("listaProductosCarrito");
 //let carrito=new Array();//arreglo vacio de productos.
@@ -35,10 +36,20 @@ cardCarrito.forEach(function (item) {
 
 });
 console.log(total);
-let item2InnerHTML = "Subtotal: $" + total.toFixed(2); 
-let item3InnerHTML = "Subtotal: $" + total.toFixed(2); 
-subTotalPago.insertAdjacentHTML("afterend", `<div>${item2InnerHTML}</div>`);
 
+
+
+let item2InnerHTML = "Subtotal: $" + total.toFixed(2); 
+let item3InnerHTML = "Envio: $100" ; 
+let item4InnerHTML = "Total: $" + (parseFloat(total) + 100).toFixed(2);
+
+
+
+
+subTotalPago.insertAdjacentHTML("beforeend", `<div>${item2InnerHTML}</div>`);//Envio
+subTotalPago.insertAdjacentHTML("beforeend", `<div>${item3InnerHTML}</div>`); //subtotal 
+subTotalPago.insertAdjacentHTML("beforeend", `<div>${item4InnerHTML}</div>`);//total
+//sutotal2.insertAdjacentHTML("beforeend", `<div>${item4InnerHTML}</div>`);//tota
 function sumarProductos(carrito) {
     let suma = 0;
     for (let index = 0; index < carrito.length; index++) {
@@ -47,3 +58,4 @@ function sumarProductos(carrito) {
 
     }
 };
+
