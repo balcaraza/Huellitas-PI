@@ -6,7 +6,10 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 let imagen = document.getElementById("miImagen");
 let modalTxt = document.getElementById("modalTxt");
-let exampleModal = document.getElementById("exampleModal")
+let exampleModal = document.getElementById("exampleModal");
+let contentImagen = document.getElementById("contentImagen");
+let id=18;
+
 let productosNuevos = [];
 
 // 2 Validaciones de campo precio con bandera
@@ -29,8 +32,8 @@ function validarCantidad() {
 btnAgregar.addEventListener("click", function () {
   event.preventDefault();
   //limpiar campos
-   insertarDescripcion.style.border = "";
-   insertarPrecio.style.border = "";
+  insertarDescripcion.style.border = "";
+  insertarPrecio.style.border = "";
   alertValidacionesTexto.innerHTML = "";
   alertValidaciones.style.display = "none";
   isValid = true;
@@ -39,7 +42,7 @@ btnAgregar.addEventListener("click", function () {
   let contPalabra = insertarDescripcion.value.split(" ");
 
   // 4 Alertas por campos incompletos o erroneos
-if(imagen.src.includes("#")) {
+  if (imagen.src.includes("#")) {
     alertValidacionesTexto.insertAdjacentHTML("beforeend", `Por favor ingrese una <strong>Imagen</strong>.<br/>`);
     alertValidaciones.style.display = "block";
     isValid = false;
@@ -57,23 +60,46 @@ if(imagen.src.includes("#")) {
     insertarPrecio.style.border = "solid red thin"; //Para señalar el campo que esta mal
     isValid = false;
   } //if ! validarCantidad
-
-// 5 Recuperar los productos existentes del localStorage muestra los productos en catalogo
+    //Obtener el ultimo id de la key de todos los productos en caso que hayas ido a catalogo y regresado a ingresar
+    //un producto
+    // Obtener los productos de otra clave en localStorage
+    let idtodosProductos = localStorage.getItem("todosProductos");
+    if (idtodosProductos) {
+      let productos = JSON.parse(idtodosProductos);// Convertir los productos a un array
+      if (productos.length > 0) {// Verificar si hay productos en el array
+        let ultimoProducto = productos[productos.length - 1]; // Obtener el último producto del array
+        id = ultimoProducto.id;// Obtener el ID del último producto
+      }
+    } 
+    //Esto es en caso de que le des f5 a la pagina de formulario y ya hay productos en la key nuevos productos
+    let idNewProductos = localStorage.getItem("productosNuevos");
+    if (idNewProductos) {
+      let productos = JSON.parse(idNewProductos);// Convertir los productos a un array
+      if (productos.length > 0) {// Verificar si hay productos en el array
+        let ultimoProducto = productos[productos.length - 1]; // Obtener el último producto del array
+        id = ultimoProducto.id;// Obtener el ID del último producto
+      }
+    } 
+  // 5 Recuperar los productos existentes del localStorage muestra los productos en catalogo
   if (isValid) {
     
+    console.log("ID del último producto de otra clave:", id);
+    //if todosProductos
+    id++;
     let productosGuardados = localStorage.getItem("productosNuevos");
     if (productosGuardados) {
       productosNuevos = JSON.parse(productosGuardados);
     }//if
     let nuevoProducto = {
-      "img":imagen.src,
-       "description": insertarDescripcion.value,
-       "precio": insertarPrecio.value
-   };
-// 6 Se agregan los productos nuevos al local Storage
+      "id": id,
+      "img": imagen.src,
+      "description": insertarDescripcion.value,
+      "precio": insertarPrecio.value
+    };
+    // 6 Se agregan los productos nuevos al local Storage
     productosNuevos.push(nuevoProducto);
     localStorage.setItem("productosNuevos", JSON.stringify(productosNuevos));
-    modalTxt.innerText ="Se agregó correctamente el producto";
+    modalTxt.innerText = "Se agregó correctamente el producto";
     $('#exampleModal').modal('show');
     // Limpiamos los campos
     insertarDescripcion.style.border = "";
@@ -82,8 +108,9 @@ if(imagen.src.includes("#")) {
     alertValidaciones.style.display = "none";
     insertarDescripcion.value = "";
     insertarPrecio.value = "";
-    imagen.value = "";
+    imagen.src = "#";
+    contentImagen.style.display = "none";
 
-    
+
   } //isValid
 });

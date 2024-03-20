@@ -212,11 +212,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Modal de pedido realizado
     if (isValid) {
-      
+      guardarCompra(nombre.value, calle.value, numero.value, colonia.value, municipio.value, estado.value, cp.value, telefono.value,
+         instruc.value, nombreTarjeta.value, numTarjeta.value, mesVencimiento.value, anioVencimiento.value, ccv.value);
       modalTxt.innerText = "Pedido realizado";
       $("#exampleModal").modal("show");
      
-      
+      nombre.style.border = "";
+    calle.style.border = "";
+    numero.style.border = "";
+    colonia.style.border = "";
+    municipio.style.border = "";
+    estado.style.border = "";
+    cp.style.border = "";
+    telefono.style.border = "";
+    instruc.style.border = "";
+    nombreTarjeta.style.border = "";
+    numTarjeta.style.border = "";
+    mesVencimiento.style.border = "";
+    anioVencimiento.style.border = "";
+    ccv.style.border = "";
+    alertTxt.innerHTML = "";
+    alertTxt2.innerHTML = "";
+    alertOne.style.display = "none";
+    alert2.style.display = "none";
     } //if
 
 
@@ -233,3 +251,26 @@ function validarTelefono() {
 
   return true;
 } //validarTeléfono
+
+function guardarCompra(nombre, calle, numero, colonia, municipio, estado, cp, telefono, instruc, nombreTarjeta, numTarjeta, mes, anio, ccv){
+  var compra = {
+    "nombre": nombre,
+    "calle": calle,
+    "numero": numero,
+    "colonia": colonia,
+    "municipio": municipio,
+    "estado": estado,
+    "cp": cp,
+    "telefono": telefono,
+    "instrucciones": instruc,
+    "nombreTarjeta": nombreTarjeta,
+    "numeroTarjeta": numTarjeta,
+    "mes": mes,
+    "anio": anio,
+    "ccv": ccv
+  }
+  var compraJSON =JSON.stringify(compra);
+  localStorage.setItem('compra', compraJSON);
+  
+
+}
