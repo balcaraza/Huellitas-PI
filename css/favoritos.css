@@ -195,12 +195,12 @@ h3{
 
 #corazon-lleno {
 	color: red;
-	display: none;
+	display: blok;
 }
 
 #corazon-vacio.active {
-	background-color: red;
-	display: none;
+	color: red;
+	display: block;
 }
 
 #corazon-lleno.active {

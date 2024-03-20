@@ -79,12 +79,12 @@ localStorage.setItem("productos", productosJSON);
 
 
 productos.forEach(function (item) {
-  // Crear el HTML para cada elemento
+  // Crear el HTML para cada elemento 
   let itemHTML = `
         <div class="card" id="${item.id}">
             <div>
                 <img style="max-height:300px" src="${item.img}" class="card-img-top" alt="...">
-                <button class="button-favorite">
+                <button class="button-favorite" onclick="removeFavorite('${item.id}')">
                 <i class="fa-regular fa-heart" id="corazon-vacio"></i>
                 <i class="fa-solid fa-heart" id="corazon-lleno"></i>
                 </button> 
@@ -110,7 +110,7 @@ nuevoProducto.forEach(function (item) {
 let nuevoItemHTML = `
         <div class="card">
             <div>
-                <img style="max-height:300px" src="${item.img}" class="card-img-top" alt="...">
+                <img style="max-height:300px" src="${item.img}" class="card-img-top img-fav" alt="...">
                 <button class="button-favorite">
                     <i class="fa-regular fa-heart"></i>
                 </button> 
@@ -197,15 +197,17 @@ document.addEventListener("DOMContentLoaded", function() {
           id: card.id,
           description: card.querySelector(".card-body p").textContent,
           precio: card.querySelector(".card-precio h5").textContent,
-          img: card.querySelector("card-img-top img")
+          img: card.querySelector(".card-img-top").src
         }
         toggleFavorite(productos);
         showHTML();
-
+        actualizarFavoritos();
     });
   });
+  cargaFavoritos();
 });
-cargaFavoritos();
+
+
 
 
 // Llamadas a la función addItem con objetos que representan diferentes ítems
