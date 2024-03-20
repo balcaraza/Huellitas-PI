@@ -46,14 +46,14 @@ let productos = [
     id: "7",
     img: "./src/img/Productos/RopaMinie.jpg",
     description: "Ropa para mascota, disney minnie mouse, camisa textil, rosa y grande",
-    precio: "145.80",
+    precio: "145.80"
   },
   {
     id: "8",
     id: "8",
     img: "./src/img/Productos/CepilloLimpieza.jpg",
     description: "Cepillo de limpieza para mascotas sintético azul 19.7x10.6x5 Cm",
-    precio: "79.90",
+    precio: "79.90"
   },
 
   { id: "9", img: "./src/img/Productos/TazonPanda.jpg", description: "Tazón para mascota, panda animal de plástico y color blanco", precio: "99.90" },
@@ -66,63 +66,63 @@ let productos = [
     id: "10",
     img: "./src/img/Productos/PelucheDinosaurio.jpg",
     description: "Peluche para mascota de dinosaurio, 100% Poliéster 35.5x13 Cm",
-    precio: "129.90",
+    precio: "129.90"
   },
   {
     id: "11",
     id: "11",
     img: "./src/img/Productos/JugueteFutbol.jpg",
     description: "Juguete para mascota con sonido",
-    precio: "29.90",
+    precio: "29.90"
   },
   {
     id: "12",
     id: "12",
     img: "./src/img/Productos/toallitaAzul.jpg",
     description: "Toalla de baño con capucha, absorbente de alta calidad",
-    precio: "150",
+    precio: "150"
   },
   {
     id: "13",
     id: "13",
     img: "./src/img/Productos/casaGatos.jpg",
     description: "Casa para gatos, color morada con rascadero",
-    precio: "350",
+    precio: "350"
   },
   {
     id: "14",
     id: "14",
     img: "./src/img/Productos/ChalecoArnes.jpg",
     description: "Chaleco con arnés para mascotas 100% poliéster azul 25x35",
-    precio: "99.90",
+    precio: "99.90"
   },
   {
     id: "15",
     id: "15",
     img: "./src/img/Productos/DisfrazLaGarra.jpg",
     description: "Disfraz para mascota, de disney alíen toy story, textil de color verde y grande",
-    precio: "149.90",
+    precio: "149.90"
   },
   {
     id: "16",
     id: "16",
     img: "./src/img/Productos/TazonRosa.jpg",
     description: "Tazón para mascota de disney minnie mouse, plástico y de color rosa",
-    precio: "99.90",
+    precio: "99.90"
   },
   {
     id: "17",
     id: "17",
     img: "./src/img/Productos/cama.jpg",
     description: "Cama Resistente con Relleno Suave y Color cafe",
-    precio: "299",
+    precio: "299"
   },
   {
     id: "18",
     id: "18",
     img: "./src/img/Productos/collarPerro.jpg",
     description: "Collar de piel, color cafe, grabado",
-    precio: "250",
+    precio: "250"
   },
 ];
 let productosJSON = JSON.stringify(productos);
@@ -215,28 +215,25 @@ const toggleFavorite = (producto) => {
   };
 };
 
-const showHTML = () => {
-  producto.forEach(produc => {
-    const productoId = produc.id;
+// const showHTML = () => {
+//   producto.forEach(produc => {
+//     const productoId = produc.id;
 
-    const esFavorito = favoritos.some(favoritos => favoritos.id === productoId);
+//     const esFavorito = favoritos.some(favoritos => favoritos.id === productoId);
 
-    //const favoritoBoton = produc.querySelector(".button-favorite");
-    const favoritoBotonActivo = produc.querySelector("#corazon-lleno");
-    const favoritoBotonDesactivado = produc.querySelector("#corazon-vacio");
+//     const favoritoBoton = produc.querySelector(".button-favorite");
+//     const favoritoBotonActivo = produc.querySelector("#corazon-lleno");
+//     const favoritoBotonDesactivado = produc.querySelector("#corazon-vacio");
     
-    if (favoritoBotonActivo && favoritoBotonDesactivado) {
-      favoritoBotonActivo.classList.toggle("active", esFavorito);
-      favoritoBotonDesactivado.classList.toggle("active", esFavorito);
-    }
+//     favoritoBoton.classList.toggle("favorite");
+//     favoritoBotonActivo.classList.toggle("active");
+//     favoritoBotonDesactivado.classList.toggle("active");
 
-    console.log("=======================");
-    console.log(productoId);
-    console.log(esFavorito);
-    //favoritoBoton.classList.toggle("favorite-active", esFavorito);
-    
-  })
-}
+
+//       console.log(esFavorito);
+//       console.log(productoId);
+//   })
+// }
 
 //Agrega un evento que escucha el evento DOMContentLoaded al objeto document. El DOMContentLoaded se dispara cuando el HTML ha sido completamente cargado y analizado
 document.addEventListener("DOMContentLoaded", function() {

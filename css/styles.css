@@ -200,6 +200,8 @@ body{
   } */
 
 footer{
+    left: 0;
+    bottom: 0;
     padding-top: 25px;
     align-items: center;
     display: flex;
@@ -208,7 +210,7 @@ footer{
     width: 100%;/*ancho 100 del dispositivo*/
     background-color:#C45564; 
     font-family: 'Roboto', sans-serif;
-    font-size: 20pt;  
+    font-size: 14pt;  
     justify-content: space-evenly;/*especifico para los div del footer*/
     /*position: fixed;*/
     /* bottom: 0;*/
