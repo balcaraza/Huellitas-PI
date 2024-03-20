@@ -3,72 +3,75 @@ let itemsContainer = document.getElementById("list-items");
 
 //Arreglo de los productos favoritos
 let favoritos = [] 
-
+//Los id de kits son de 1-6
 let productos = [
   {
-    id: "1",
+    id: "7",
     img: "./src/img/Productos/RopaMinie.jpg",
     description: "Ropa para mascota, disney minnie mouse, camisa textil, rosa y grande",
     precio: "145.80",
   },
   {
-    id: "2",
+    id: "8",
     img: "./src/img/Productos/CepilloLimpieza.jpg",
     description: "Cepillo de limpieza para mascotas sintético azul 19.7x10.6x5 Cm",
     precio: "79.90",
   },
 
-  { id: "3", img: "./src/img/Productos/TazonPanda.jpg", description: "Tazón para mascota, panda animal de plástico y color blanco", precio: "99.90" },
+  { id: "9", 
+    img: "./src/img/Productos/TazonPanda.jpg", 
+    description: "Tazón para mascota, panda animal de plástico y color blanco", 
+    precio: "99.90" },
   {
-    id: "4",
+    id: "10",
     img: "./src/img/Productos/PelucheDinosaurio.jpg",
     description: "Peluche para mascota de dinosaurio, 100% Poliéster 35.5x13 Cm",
     precio: "129.90",
   },
   {
-    id: "5",
+    id: "11",
     img: "./src/img/Productos/JugueteFutbol.jpg",
     description: "Juguete para mascota con sonido",
     precio: "29.90",
   },
   {
-    id: "6",
+    id: "12",
     img: "./src/img/Productos/toallitaAzul.jpg",
     description: "Toalla de baño con capucha, absorbente de alta calidad",
     precio: "150",
   },
   {
-    id: "7",
+    id: "13",
     img: "./src/img/Productos/casaGatos.jpg",
     description: "Casa para gatos, color morada con rascadero",
     precio: "350",
   },
   {
-    id: "8",
+    id: "14",
     img: "./src/img/Productos/ChalecoArnes.jpg",
     description: "Chaleco con arnés para mascotas 100% poliéster azul 25x35",
     precio: "99.90",
   },
   {
-    id: "9",
+    id: "15",
     img: "./src/img/Productos/DisfrazLaGarra.jpg",
     description: "Disfraz para mascota, de disney alíen toy story, textil de color verde y grande",
     precio: "149.90",
   },
   {
-    id: "10",
+    id: "16",
     img: "./src/img/Productos/TazonRosa.jpg",
     description: "Tazón para mascota de disney minnie mouse, plástico y de color rosa",
     precio: "99.90",
   },
   {
-    id: "11",
+    id: "17",
     img: "./src/img/Productos/cama.jpg",
     description: "Cama Resistente con Relleno Suave y Color cafe",
     precio: "299",
   },
   {
-    id: "12",
+    id: "18",
     img: "./src/img/Productos/collarPerro.jpg",
     description: "Collar de piel, color cafe, grabado",
     precio: "250",
@@ -128,6 +131,10 @@ let nuevoItemHTML = `
   itemsContainer.insertAdjacentHTML("beforeend",nuevoItemHTML);
     
 });
+//Hacer una sola key en el localstorage con todos los productos
+productos = JSON.parse(localStorage.getItem('productos')) || [];
+let todosProductos = productos.concat(nuevoProducto); 
+localStorage.setItem('todosProductos', JSON.stringify(todosProductos));
 
 const producto = document.querySelectorAll(".card");
 
