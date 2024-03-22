@@ -122,12 +122,12 @@ localStorage.setItem("productos", productosJSON);
 
 
 productos.forEach(function (item) {
-  // Crear el HTML para cada elemento 
+  // Crear el HTML para cada elemento
   let itemHTML = `
         <div class="card" id="${item.id}">
             <div>
                 <img style="max-height:300px" src="${item.img}" class="card-img-top" alt="...">
-                <button class="button-favorite" onclick="removeFavorite('${item.id}')">
+                <button class="button-favorite">
                 <i class="fa-regular fa-heart" id="corazon-vacio"></i>
                 <i class="fa-solid fa-heart" id="corazon-lleno"></i>
                 </button> 
@@ -153,7 +153,7 @@ nuevoProducto.forEach(function (item) {
   let nuevoItemHTML = `
         <div class="card">
             <div>
-                <img style="max-height:300px" src="${item.img}" class="card-img-top img-fav" alt="...">
+                <img style="max-height:300px" src="${item.img}" class="card-img-top" alt="...">
                 <button class="button-favorite">
                     <i class="fa-regular fa-heart"></i>
                 </button> 
@@ -208,30 +208,28 @@ const toggleFavorite = (producto) => {
     actualizarFavoritos();
   };
 };
-
 const showHTML = () => {
-   producto.forEach(produc => {
-     const productoId = produc.id;
+  producto.forEach(produc => {
+    const productoId = produc.id;
 
-     const esFavorito = favoritos.some(favoritos => favoritos.id === productoId);
+    const esFavorito = favoritos.some(favoritos => favoritos.id === productoId);
 
-     const favoritoBoton = produc.querySelector(".button-favorite");
-     const favoritoBotonActivo = produc.querySelector("#corazon-lleno");
-     const favoritoBotonDesactivado = produc.querySelector("#corazon-vacio");
+    //const favoritoBoton = produc.querySelector(".button-favorite");
+    const favoritoBotonActivo = produc.querySelector("#corazon-lleno");
+    const favoritoBotonDesactivado = produc.querySelector("#corazon-vacio");
     
-     favoritoBoton.classList.toggle("favorite");
-     favoritoBotonActivo.classList.toggle("active");
-     favoritoBotonDesactivado.classList.toggle("active");
-     if (favoritoBotonActivo && favoritoBotonDesactivado) {
+    if (favoritoBotonActivo && favoritoBotonDesactivado) {
       favoritoBotonActivo.classList.toggle("active", esFavorito);
       favoritoBotonDesactivado.classList.toggle("active", esFavorito);
     }
 
-
-       console.log(esFavorito);
-       console.log(productoId);
-   })
- }
+    console.log("=======================");
+    console.log(productoId);
+    console.log(esFavorito);
+    //favoritoBoton.classList.toggle("favorite-active", esFavorito);
+    
+  })
+}
 
 //Agrega un evento que escucha el evento DOMContentLoaded al objeto document. El DOMContentLoaded se dispara cuando el HTML ha sido completamente cargado y analizado
 document.addEventListener("DOMContentLoaded", function () {
@@ -242,16 +240,16 @@ document.addEventListener("DOMContentLoaded", function () {
     boton.addEventListener('click', (e) => {
       //Para obtener un elemento especifico del html
       const card = e.target.closest(".card");
-        // Crear un objeto con la información del producto basado en el elemento card
-        const productos = {
-          id: card.id,
-          description: card.querySelector(".card-body p").textContent,
-          precio: card.querySelector(".card-precio h5").textContent,
-          img: card.querySelector(".card-img-top").src
-        }
-        toggleFavorite(productos);
-        showHTML();
-        actualizarFavoritos();
+      // Crear un objeto con la información del producto basado en el elemento card
+      const productos = {
+        id: card.id,
+        description: card.querySelector(".card-body p").textContent,
+        precio: card.querySelector(".card-precio h5").textContent,
+        img: card.querySelector(".card-img-top").src
+      }
+      toggleFavorite(productos);
+      showHTML();
+      actualizarFavoritos();
     });
   });
   cargaFavoritos();
@@ -259,4 +257,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+///------------------------------------------ Agregar a array de Carrito-----------------
+// Función para manejar el evento de clic en los botones de agregar al carrito
+const handleAddToCart = (e) => {
+  // Obtener la tarjeta (card) que contiene el botón presionado
+  const card = e.target.closest(".card");
   
+  // Crear un objeto con la información del producto basado en la tarjeta
+  const product = {
+    id: card.id,
+    description: card.querySelector(".card-body p").textContent,
+    precio: card.querySelector(".card-precio h5").textContent,
+    img: card.querySelector(".card-img-top").src
+  };
+  
+  // Obtener los productos en el carrito desde el localStorage o un arreglo vacío si no hay ninguno
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  // Agregar el producto al arreglo de productos en el carrito
+  carrito.push(product);
+
+  // Actualizar el localStorage con los productos en el carrito
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+};
+
+// Agregar el evento de clic a todos los botones de agregar al carrito
+const addToCartButtons = document.querySelectorAll(".button-addcarito");
+addToCartButtons.forEach(button => {
+  button.addEventListener("click", handleAddToCart);
+});
