@@ -8,6 +8,8 @@ let contrasena = document.getElementById("Password");
 let telefono = document.getElementById("numero");
 let confirmarContrasena = document.getElementById("ConfirmPassword");
 let exampleModal = document.getElementById("exampleModal");
+
+
 let registros =[];
 //Flag
 let isValid = true;
@@ -23,8 +25,41 @@ let regexTelefono2 = new RegExp(/(.)\1{4}/); // secuencia de 5 caracteres consec
 
 //validacion para el telefono ^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,4}$
 
-// 1 click boton
+const eye = document.querySelector('.eyeOne');
+eye.addEventListener('click', () => {
+  let input = document.querySelector(".viewOne");
+  if (input.type === "password") {
+    input.type = "text";
+    eye.setAttribute('src', 'src/img/eye.png'); // Cambia la imagen a 'eye.png'
+  } else {
+    input.type = "password";
+    eye.setAttribute('src', 'src/img/closeye.png'); // Cambia la imagen a 'closeye.png'
+  }
+});
+const eyeDos = document.querySelector('.eyeTwo');
+eyeDos.addEventListener('click', () => {
+  let inputDos = document.querySelector(".viewTwo");
+  if (inputDos.type === "password") {
+    inputDos.type = "text";
+    eyeDos.setAttribute('src', 'src/img/eye.png'); // Cambia la imagen a 'eye.png'
+  } else {
+    inputDos.type = "password";
+    eyeDos.setAttribute('src', 'src/img/closeye.png'); // Cambia la imagen a 'closeye.png'
+  }
+});
+const eyeTres = document.querySelector('.eyeTres');
+eyeTres.addEventListener('click', () => {
+  let inputTres = document.querySelector(".viewTres");
+  if (inputTres.type === "password") {
+    inputTres.type = "text";
+    eyeTres.setAttribute('src', 'src/img/eye.png'); // Cambia la imagen a 'eye.png'
+  } else {
+    inputTres.type = "password";
+    eyeTres.setAttribute('src', 'src/img/closeye.png'); // Cambia la imagen a 'closeye.png'
+  }
+});
 
+// 1 click boton
 btnValidarFirst.addEventListener("click", function (event) {
   event.preventDefault();
   limpiarCampos(nombre, correo, contrasena, confirmarContrasena, telefono, alertUnoTxt, alertUno);
@@ -49,7 +84,7 @@ btnValidarFirst.addEventListener("click", function (event) {
     };
     registros.push(registro);
     localStorage.setItem("registros", JSON.stringify(registros));
-    modalTxt.innerText = "Su registro fue existoso";
+    modalTxt.innerText = "Su registro fue exitoso";
     $("#exampleModal").modal("show");
    
     limpiarCampos(nombre, correo, contrasena, confirmarContrasena, telefono, alertUnoTxt, alertUno);
@@ -64,13 +99,13 @@ btnValidarFirst.addEventListener("click", function (event) {
 function validarCampos(correo, contrasena, confirmarContrasena, telefono, alertTxt, alert, isValid) {
   if (!regexCorreo.test(correo.value)) {
     //validacion dominio
-    alertTxt.insertAdjacentHTML("beforeend", `Por favor ingresa un correo que contenga un "@" y un dominio.<br/>`);
+    alertTxt.insertAdjacentHTML("beforeend", `Por favor, ingrese un <strong>Correo</strong> válido con formato 'nombre@dominio'.<br/>`);
     alert.style.display = "block";
     correo.style.border = "solid red thin";
     isValid = false;
   }
   if(registros.some(registro => registro.Correo === correo.value)){
-    alertTxt.insertAdjacentHTML("beforeend", `El usuario ya existe.<br/>`);
+    alertTxt.insertAdjacentHTML("beforeend", `Este <strong>Usuario</strong> ya existe.<br/>`);
     alert.style.display = "block";
     correo.style.border = "solid red thin";
     isValid = false;
@@ -78,7 +113,7 @@ function validarCampos(correo, contrasena, confirmarContrasena, telefono, alertT
   if (!regexContrasena.test(contrasena.value)) {
     alertTxt.insertAdjacentHTML(
       "beforeend",
-      `Por favor ingresa una contraseña con mínimo ocho caracteres,
+      `Por favor, ingrese una <strong>Contraseña</strong> con mínimo ocho caracteres,
              al menos una letra mayúscula, letra minúscula, 
              un número y un carácter especial.<br/>`
     );
@@ -87,21 +122,21 @@ function validarCampos(correo, contrasena, confirmarContrasena, telefono, alertT
     isValid = false;
   }
   if (contrasena.value !== confirmarContrasena.value) {
-    alertTxt.insertAdjacentHTML("beforeend", `Las contraseñas no coinciden.<br/>`);
+    alertTxt.insertAdjacentHTML("beforeend", `Las <strong>Contraseñas</strong> no coinciden.<br/>`);
     alert.style.display = "block";
     contrasena.style.border = "solid red thin";
     confirmarContrasena.style.border = "solid red thin";
     isValid = false;
   }
   if (!regexTelefono.test(telefono.value)) {
-    alertTxt.insertAdjacentHTML("beforeend", `Por favor ingresa un número de teléfono válido (10 dígitos).<br/>`);
+    alertTxt.insertAdjacentHTML("beforeend", `Por favor, ingrese un número de <strong>Teléfono</strong> válido (10 dígitos).<br/>`);
     alert.style.display = "block";
     telefono.style.border = "solid red thin";
     isValid = false;
   }
 
   if (regexTelefono2.test(telefono.value)) {
-    alertTxt.insertAdjacentHTML("beforeend", `Por favor ingresa un número de teléfono válido (10 dígitos).<br/>`);
+    alertTxt.insertAdjacentHTML("beforeend", `Por favor, ingrese un número de <strong>Teléfono</strong> válido (10 dígitos).<br/>`);
     alert.style.display = "block";
     telefono.style.border = "solid red thin";
     isValid = false;
@@ -110,7 +145,7 @@ function validarCampos(correo, contrasena, confirmarContrasena, telefono, alertT
   // Validación de mínimo 2 palabras y máximo 10 palabras en el nombre
   let numPalabras = nombre.value.trim().split(/\s+/).length;
   if (numPalabras < 2 || numPalabras > 5) {
-    alertUnoTxt.insertAdjacentHTML("beforeend", `Por favor ingresa entre 2 y 5 palabras en el nombre.<br/>`);
+    alertUnoTxt.insertAdjacentHTML("beforeend", `Por favor, ingrese <strong>Nombre</strong> y <strong>Apellido</strong>.<br/>`);
     alertUno.style.display = "block";
     nombre.style.border = "solid red thin";
     isValid = false;
@@ -161,25 +196,30 @@ btnValidarSecond.addEventListener("click", function () {
   console.log(array);
   console.log(sesion);
   let encontrado = false;
-  for (let i = 0; i < array.length; i++) {
+  if(array === null){
+    alertDosTxt.insertAdjacentHTML("beforeend", `<strong>Correo</strong> y/o <strong>Contraseña</strong> no válidos.<br/>`);
+    alertDos.style.display = "block";
+    correo2.style.border = "solid red thin";
+    contrasena2.style.border = "solid red thin";
+  }else {for (let i = 0; i < array.length; i++) {
     if (array[i].Correo === sesion.correo2 && array[i].contrasena === sesion.contrasena2) {
       encontrado = true;
       break;
+    }}
+    if (encontrado) {
+      console.log("Sesión válida");
+      // Hacer algo si la sesión es válida
+      window.location.href = "index.html"; ///redirige una vez que se ha pasado el login.
+    } else {
+      console.log("Sesión inválida");
+      // Hacer algo si la sesión es inválida
+      alertDosTxt.insertAdjacentHTML("beforeend", `<strong>Correo</strong> y/o <strong>Contraseña</strong> no válidos.<br/>`);
+      alertDos.style.display = "block";
+      correo2.style.border = "solid red thin";
+      contrasena2.style.border = "solid red thin";
     }
-  }
+}
 
-  if (encontrado) {
-    console.log("Sesión válida");
-    // Hacer algo si la sesión es válida
-    window.location.href = "index.html"; ///redirige una vez que se ha pasado el login.
-  } else {
-    console.log("Sesión inválida");
-    // Hacer algo si la sesión es inválida
-    alertDosTxt.insertAdjacentHTML("beforeend", `Correo y/o contraseña inválidas. Por favor regístrese<br/>`);
-    alertDos.style.display = "block";
-    correo2.value = "";
-    contrasena2.value = "";
-    correo2.style.border = "solid red thin";
-    contrasena2.style.border = "solid red thin";
-  }
+ 
+ 
 });
