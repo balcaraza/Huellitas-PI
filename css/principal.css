@@ -260,33 +260,7 @@ main {
   .btnconseguir{
   text-align: center;
   } 
-  article{
-    
-    row-gap: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-      align-items: center;
-   
-  }
-    @media (width <1205px){
-      article {
-       grid-template-columns: 1fr 1fr;
-     
-       }
-      }
-      @media (width <426px){
-        article {
-         grid-template-columns: 1fr;
-      
-         }
-        }
-        .card:hover{
-          transform: scale(1.05);
-          box-shadow: 1px 1px 10px gray;
-          transition: transform 0.3s ease-in-out;
-        }
-        /* Card - Cambiar la posicion del precio */
+   /* Card - Cambiar la posicion del precio */
 .card-precio{
   text-align: right;
   margin-top: auto;
@@ -304,5 +278,101 @@ main {
     height: 150px;
     text-align: justify;
   }
+  .card:hover{
+    transform: scale(1.05);
+    box-shadow: 1px 1px 10px gray;
+    transition: transform 0.3s ease-in-out;
+  }
   
-  
+   /*Card - Acomodar de forma uniforme todas las card */
+  article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+/* Card - Cambiar el tamaño de toda la card */
+.card{
+  margin: 15px;
+  width: 18rem; /* Tamaño de mi card */
+  transition: transform 0.3s ease-in-out;
+}
+/* Card - Modificar todo lo que se encuentre dentro de la card */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+  height: 100px;
+}
+
+/* Media Queries */
+@media (width <1441px){
+  article {
+   #cuartacard{
+    display: none;
+   }
+   }
+}
+
+@media (max-width: 768px){
+  .card{
+      width: 15rem; /* Tamaño de mi card para tablet */
+  }
+}
+
+@media (max-width: 426px){
+  .card{
+      width: 15rem; /* Tamaño de mi card para dispositivos móviles */
+  }
+}
+
+/* Titulo de la pagina */
+h4{
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+  padding: 30px;
+  font-weight: bold;
+}
+
+/* Estilos específicos para Laptop (máximo ancho de 1024px) */
+@media (max-width: 1024px) {
+  /* h2 del titulo del encabezado */
+  h4{
+      font-size: 32px;
+  }
+}
+
+/* Estilos específicos para Tablet (máximo ancho de 768px) */
+@media (max-width: 768px){
+  /* h2 del titulo del encabezado */
+  h4{
+      font-size: 29px;
+  }
+}
+
+/* Estilos específicos para Mobile L (máximo ancho de 425px) */
+@media (max-width: 426px){
+  /* h4 del titulo del encabezado */
+  h4{
+      font-size: 25px;
+      font-weight: bold;
+  }
+}
+
+@media (max-width: 376px) {
+  /* h2 del titulo del encabezado */
+  h4{
+      font-size: 25px;
+      font-weight: bold;
+  }
+}
+
+@media (max-width: 320px) {
+  /* h2 del titulo del encabezado */
+  h4{
+      font-size: 25px;
+      font-weight: bold;
+  }
+}
