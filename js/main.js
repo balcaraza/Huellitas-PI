@@ -133,9 +133,7 @@ function validarCampos(correo, contrasena, confirmarContrasena, telefono, alertT
     alert.style.display = "block";
     telefono.style.border = "solid red thin";
     isValid = false;
-  }
-
-  if (regexTelefono2.test(telefono.value)) {
+  }else if (regexTelefono2.test(telefono.value)) {
     alertTxt.insertAdjacentHTML("beforeend", `Por favor, ingrese un número de <strong>Teléfono</strong> válido (10 dígitos).<br/>`);
     alert.style.display = "block";
     telefono.style.border = "solid red thin";
