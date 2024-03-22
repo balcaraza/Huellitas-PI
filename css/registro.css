@@ -20,6 +20,25 @@ form{
     padding-right: 55px;
     padding-bottom: 70px;
 }
+  .input-row {
+    position: relative;
+    display: inline-block;
+    width: 100%; 
+  }
+
+  .input-row img.eye {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer; /* Establece el cursor como puntero */
+  }
+
+  .input-row input {
+    padding-right: 25px;
+  }
 .titulo1{
     color: #383B47;
     font-family: "Montserrat", sans-serif;

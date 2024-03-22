@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     nombre.value = nombre.value.trim();
     let numPalabras = nombre.value.trim().split(/\s+/).length;
     if (numPalabras < 2 || numPalabras > 5) {
-      alertTxt.insertAdjacentHTML("beforeend", `Por favor ingrese su <strong>Nombre</strong> completo.<br/>`);
+      alertTxt.insertAdjacentHTML("beforeend", `Por favor, ingrese <strong>Nombre</strong> y <strong>Apellido</strong>.<br/>`);
       alertOne.style.display = "block";
       nombre.style.border = "solid red thin";
       isValid = false;
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //Validación calle
     calle.value = calle.value.trim();
     if (calle.value.length < 3) {
-      alertTxt.insertAdjacentHTML("beforeend", `Por favor ingrese una <strong>Calle</strong> válida.<br/>`);
+      alertTxt.insertAdjacentHTML("beforeend", `Por favor, ingrese una <strong>Calle</strong> válida.<br/>`);
       alertOne.style.display = "block";
       calle.style.border = "solid red thin";
       isValid = false;
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //Validación número.
     numero.value = numero.value.trim();
     if (numero.value.length < 1) {
-      alertTxt.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Número</strong> válido.<br/>`);
+      alertTxt.insertAdjacentHTML("beforeend", `Por favor, ingrese un <strong>Número</strong> válido.<br/>`);
       alertOne.style.display = "block";
       numero.style.border = "solid red thin";
       isValid = false;
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //Validación de Colonia
     colonia.value = colonia.value.trim();
     if (colonia.value.length < 3) {
-      alertTxt.insertAdjacentHTML("beforeend", `Por favor ingrese una <strong>Colonia</strong> válida.<br/>`);
+      alertTxt.insertAdjacentHTML("beforeend", `Por favor, ingrese una <strong>Colonia</strong> válida.<br/>`);
       alertOne.style.display = "block";
       colonia.style.border = "solid red thin";
       isValid = false;
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //Validacion municipio
     municipio.value = municipio.value.trim();
     if (municipio.value.length < 4) {
-      alertTxt.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Municipio</strong> válido.<br/>`);
+      alertTxt.insertAdjacentHTML("beforeend", `Por favor, ingrese un <strong>Municipio</strong> válido.<br/>`);
       alertOne.style.display = "block";
       municipio.style.border = "solid red thin";
       isValid = false;
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Validación estado
     if (estado.value == "Seleccione uno...") {
-      alertTxt.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Estado</strong>.<br/>`);
+      alertTxt.insertAdjacentHTML("beforeend", `Por favor, ingrese un <strong>Estado</strong>.<br/>`);
       alertOne.style.display = "block";
       estado.style.border = "solid red thin";
       isValid = false;
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Validación cp
     if (cp.value.length !== 5) {
-      alertTxt.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Código Postal</strong> válido.<br/>`);
+      alertTxt.insertAdjacentHTML("beforeend", `Por favor, ingrese un <strong>Código Postal</strong> válido.<br/>`);
       alertOne.style.display = "block";
       cp.style.border = "solid red thin";
       isValid = false;
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
     telefono.value = telefono.value.trim();
     if (!validarTelefono()) {
       //si validarTelefono me regresa un falso
-      alertTxt.insertAdjacentHTML("beforeend", `El <strong>Teléfono</strong> no es correcto.<br/>`);
+      alertTxt.insertAdjacentHTML("beforeend", `Por favor, ingrese un número de <strong>Teléfono</strong> válido (10 dígitos).<br/>`);
       alertOne.style.display = "block";
       telefono.style.border = "solid red thin";
       isValid = false;
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //Instrucciones
     let contPalabra = instruc.value.trim().split(/\s+/).length;
     if (contPalabra < 3 && instruc.value !== "") {
-      alertTxt.insertAdjacentHTML("beforeend", `Por favor que sus <strong>Instrucciones</strong> sean mayor a 3 palabras.`);
+      alertTxt.insertAdjacentHTML("beforeend", `Por favor, que sus <strong>Instrucciones</strong> sean mayor a 3 palabras.`);
       alertOne.style.display = "block";
       instruc.style.border = "solid red thin";
       isValid = false;
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
     nombreTarjeta.value = nombreTarjeta.value.trim();
     let numNom = nombreTarjeta.value.trim().split(/\s+/).length;
     if (numNom < 2 || numNom > 5) {
-      alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Nombre</strong> válido.<br/>`);
+      alertTxt2.insertAdjacentHTML("beforeend", `Por favor, ingrese <strong>Nombre</strong> y <strong>Apellido</strong>.<br/>`);
       alert2.style.display = "block";
       nombreTarjeta.style.border = "solid red thin";
       isValid = false;
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //validar tarjeta
     numTarjeta.value = numTarjeta.value.trim();
     if (numTarjeta.value.length < 4) {
-      alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Numero de tarjeta</strong> válido.<br/>`);
+      alertTxt2.insertAdjacentHTML("beforeend", `Por favor, ingrese un <strong>Numero de tarjeta</strong> válido.<br/>`);
       alert2.style.display = "block";
       numTarjeta.style.border = "solid red thin";
       isValid = false;
@@ -171,40 +171,41 @@ document.addEventListener("DOMContentLoaded", function () {
     //Validacióon Numer
     let fechaActual = new Date();
     let mesActual = fechaActual.getMonth();
-    console.log(mesActual);
-    if (mesVencimiento.value == "Mes") {
-      alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Mes</strong>.<br/>`);
-      alert2.style.display = "block";
-      mesVencimiento.style.border = "solid red thin";
-      isValid = false;
-    }
-    if (mesVencimiento.value <= mesActual) {
-      alertTxt2.insertAdjacentHTML("beforeend", `El <strong>Mes</strong> no puede ser menor al mes actual<br/>`);
-      alert2.style.display = "block";
-      mesVencimiento.style.border = "solid red thin";
-      isValid = false;
-    }
-
-    //Validación año
     anioVencimiento.value = anioVencimiento.value.trim();
     let aniActual = fechaActual.getFullYear();
-    let valorDefault = 0;
+    console.log(fechaActual);
+    if (mesVencimiento.value == "Mes") {
+      alertTxt2.insertAdjacentHTML("beforeend", `Por favor, ingrese un <strong>Mes</strong>.<br/>`);
+      alert2.style.display = "block";
+      mesVencimiento.style.border = "solid red thin";
+      isValid = false;
+    }
+    if((Number(anioVencimiento.value) == Number(aniActual)) && (mesVencimiento.value < (mesActual+1))) {
+      alertTxt2.insertAdjacentHTML("beforeend", `La <strong>Fecha</strong> ya venció.<br/>`);
+      alert2.style.display = "block";
+      mesVencimiento.style.border = "solid red thin";
+      anioVencimiento.style.border = "solid red thin";
+      isValid = false;
+    }
+    //Validación año
+   
 
-    if (anioVencimiento.value == valorDefault) {
+    if (anioVencimiento.value == "") {
       alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Año</strong>.<br/>`);
       alert2.style.display = "block";
       anioVencimiento.style.border = "solid red thin";
       isValid = false;
-    }
-    if (Number(anioVencimiento.value) < Number(aniActual)) {
-      alertTxt2.insertAdjacentHTML("beforeend", `El <strong>Año</strong> no puede ser menor al año actual.<br/>`);
+    }else if ((Number(anioVencimiento.value) < Number(aniActual))) {
+      alertTxt2.insertAdjacentHTML("beforeend", `La <strong>Fecha</strong> ya venció.<br/>`);
       alert2.style.display = "block";
       anioVencimiento.style.border = "solid red thin";
+      mesVencimiento.style.border = "solid red thin";
       isValid = false;
+      
     }
 //Validacion ccv
     if (ccv.value.length !== 3) {
-      alertTxt2.insertAdjacentHTML("beforeend", `Por favor ingrese un <strong>Código de Seguridad</strong> válido.<br/>`);
+      alertTxt2.insertAdjacentHTML("beforeend", `Por favor, ingrese un <strong>Código de Seguridad</strong> válido.<br/>`);
       alert2.style.display = "block";
       ccv.style.border = "solid red thin";
       isValid = false;
