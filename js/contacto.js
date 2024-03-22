@@ -44,14 +44,14 @@ btn.addEventListener("click", function (event) {
 
     if (txtNombre.value.length < 3) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend",
-            `Por favor ingresa un <strong>Nombre</strong> válido.<br/>`);
+            `Por favor, ingrese <strong>Nombre</strong> y <strong>Apellido</strong>.<br/>`);
         alertValidaciones.style.display = "block";
         txtNombre.style.border = "solid red thin";
         isValid = false;
     };//if que comprueba que se hayan ingresado al menos 3 carcacteres en nombre
     if (!regexCorreo.test(txtCorreo.value)) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend",
-            `Por favor ingresa un <strong>Correo Electrónico</strong> válido.<br/>`);
+        `Por favor, ingrese un <strong>Correo</strong> válido con formato 'nombre@dominio'.<br/>`);
         alertValidaciones.style.display = "block";
         txtCorreo.style.border = "solid red thin";
         isValid = false;
@@ -59,7 +59,7 @@ btn.addEventListener("click", function (event) {
 
     if (!validarTelefono()) { //si validarTelefono me regresa un falso
         alertValidacionesTexto.insertAdjacentHTML("beforeend",
-            `El <strong>Teléfono</strong> no es correcto.<br/>`);
+            `Por favor, ingrese un número de <strong>Teléfono</strong> válido (10 dígitos).<br/>`);
         alertValidaciones.style.display = "block";
         txtTelefono.style.border = "solid red thin";
         isValid = false;
@@ -67,7 +67,7 @@ btn.addEventListener("click", function (event) {
 
     if (contPalabra.length < 7) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend",
-            `Por favor escriba su <strong>Mensaje</strong> con al menos 7 palabras.<br/>`);
+            `Por favor, escriba su <strong>Mensaje</strong> con al menos 7 palabras.<br/>`);
         alertValidaciones.style.display = "block";
         txtMensaje.style.border = "solid red thin";
         isValid = false;
