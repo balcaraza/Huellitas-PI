@@ -76,13 +76,13 @@ let productos = [
   },
   {
     id: "12",
-    img: "./src/img/Productos/toallitaAzul.jpg",
+    img: "./src/img/Productos/toallitaAzul1.jpg",
     description: "Toalla de baño con capucha, absorbente de alta calidad",
     precio: "150"
   },
   {
     id: "13",
-    img: "./src/img/Productos/casaGatos.jpg",
+    img: "./src/img/Productos/casaGatos3.jpg",
     description: "Casa para gatos, color morada con rascadero",
     precio: "350"
   },
@@ -106,13 +106,13 @@ let productos = [
   },
   {
     id: "17",
-    img: "./src/img/Productos/cama.jpg",
+    img: "./src/img/Productos/cama4.jpg",
     description: "Cama Resistente con Relleno Suave y Color cafe",
     precio: "299"
   },
   {
     id: "18",
-    img: "./src/img/Productos/collarPerro.jpg",
+    img: "./src/img/Productos/collarPerro2.jpg",
     description: "Collar de piel, color cafe, grabado",
     precio: "250"
   },
@@ -208,26 +208,28 @@ const toggleFavorite = (producto) => {
     actualizarFavoritos();
   };
 };
+const showHTML = () => {
+  producto.forEach(produc => {
+    const productoId = produc.id;
 
-// const showHTML = () => {
-//   producto.forEach(produc => {
-//     const productoId = produc.id;
+    const esFavorito = favoritos.some(favoritos => favoritos.id === productoId);
 
-//     const esFavorito = favoritos.some(favoritos => favoritos.id === productoId);
-
-//     const favoritoBoton = produc.querySelector(".button-favorite");
-//     const favoritoBotonActivo = produc.querySelector("#corazon-lleno");
-//     const favoritoBotonDesactivado = produc.querySelector("#corazon-vacio");
+    //const favoritoBoton = produc.querySelector(".button-favorite");
+    const favoritoBotonActivo = produc.querySelector("#corazon-lleno");
+    const favoritoBotonDesactivado = produc.querySelector("#corazon-vacio");
     
-//     favoritoBoton.classList.toggle("favorite");
-//     favoritoBotonActivo.classList.toggle("active");
-//     favoritoBotonDesactivado.classList.toggle("active");
+    if (favoritoBotonActivo && favoritoBotonDesactivado) {
+      favoritoBotonActivo.classList.toggle("active", esFavorito);
+      favoritoBotonDesactivado.classList.toggle("active", esFavorito);
+    }
 
-
-//       console.log(esFavorito);
-//       console.log(productoId);
-//   })
-// }
+    console.log("=======================");
+    console.log(productoId);
+    console.log(esFavorito);
+    //favoritoBoton.classList.toggle("favorite-active", esFavorito);
+    
+  })
+}
 
 //Agrega un evento que escucha el evento DOMContentLoaded al objeto document. El DOMContentLoaded se dispara cuando el HTML ha sido completamente cargado y analizado
 document.addEventListener("DOMContentLoaded", function () {
@@ -243,15 +245,16 @@ document.addEventListener("DOMContentLoaded", function () {
         id: card.id,
         description: card.querySelector(".card-body p").textContent,
         precio: card.querySelector(".card-precio h5").textContent,
-        img: card.querySelector("card-img-top img")
+        img: card.querySelector(".card-img-top").src
       }
       toggleFavorite(productos);
       showHTML();
-
+      actualizarFavoritos();
     });
   });
+  cargaFavoritos();
 });
-cargaFavoritos();
+
 
 
 ///------------------------------------------ Agregar a array de Carrito-----------------
