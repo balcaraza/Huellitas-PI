@@ -76,13 +76,13 @@ let productos = [
   },
   {
     id: "12",
-    img: "./src/img/Productos/toallitaAzul.jpg",
+    img: "./src/img/Productos/toallitaAzul1.jpg",
     description: "Toalla de baño con capucha, absorbente de alta calidad",
     precio: "150"
   },
   {
     id: "13",
-    img: "./src/img/Productos/casaGatos.jpg",
+    img: "./src/img/Productos/casaGatos3.jpg",
     description: "Casa para gatos, color morada con rascadero",
     precio: "350"
   },
@@ -106,13 +106,13 @@ let productos = [
   },
   {
     id: "17",
-    img: "./src/img/Productos/cama.jpg",
+    img: "./src/img/Productos/cama4.jpg",
     description: "Cama Resistente con Relleno Suave y Color cafe",
     precio: "299"
   },
   {
     id: "18",
-    img: "./src/img/Productos/collarPerro.jpg",
+    img: "./src/img/Productos/collarPerro2.jpg",
     description: "Collar de piel, color cafe, grabado",
     precio: "250"
   },

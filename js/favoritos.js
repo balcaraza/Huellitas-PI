@@ -13,21 +13,25 @@ traerFavoritosCatalogo.forEach(function (item) {
     let itemHTML = `<div class="card-product" id="${item.id}">
     <div class="card mb-3" style="max-width: 540px;">      
      <div class="row g-0">
-       <div class="col-md-4">        
-        <img src=${item.img} class="img-fluid card-img-top rounded-start img-fav" fav" alt="...">            
+       <div class="col-md-4 cont-img">        
+        <img   src=${item.img} class="img-fluid card-img-top rounded-start img-fav" fav" alt="...">            
        </div>
        <div class="col-md-8 contenedor-texto">
-         <div class="card-body" id="1">
-           <p class="card-text precio">${item.precio}</p>
+         <div class="precio" id="1">
+           <p class="card-text">${item.precio}</p>
+          </div>
+          <div class="card-body" id="1">
            <p class="description">${item.description}</p>
+          </div>
            <div class="botones">
              <button class="favorite" onclick="removeFavorite('${item.id}')">
                <i class="fa-solid fa-heart" id="corazon-lleno"></i>
              </button>
-               <a href="compra.html" >
-                 <img class="img-carrito" src="./src/img/CarritoCompras.png" width="25px" height="25px alt="Carrito Compras">
-               </a>
-           </div>`
+              <button class="button-addcarito">
+                 <i class="fa-solid fa-cart-shopping" id="${item.id}"></i>
+                </button> 
+           </div>
+        </div>`
   
     // Insertar el HTML generado en el contenedor
     itemsContainer.insertAdjacentHTML("beforeend", itemHTML);
