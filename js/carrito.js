@@ -51,7 +51,7 @@ if (carritoGuardado) {
 
         <img src="/src/img/c1415.png" class="card-img" alt="sincompra" style="opacity:0.5">
         <div class="card-img-overlay" >
-          <h1 class="colorNCarrito">¿Aun no has añadido nada genial a tu carrito? da click <a href="catalogo.html">aqui</a></h1>
+          <h1 class="colorNCarrito">¿Aún no has añadido nada genial a tu carrito? Haz click <a href="catalogo.html">aquí</a></h1>
 
         </div>
       
