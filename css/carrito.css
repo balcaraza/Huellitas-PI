@@ -16,11 +16,17 @@
     Text-shadow: 0.5px 0.5px 1px #383B47;
 }
 .centerCards{
-    /*margin-top: 25px;*/
+    /*margin-top: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;*/
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
 }
 .card-body {
     font-family: "Montserrat", sans-serif;
@@ -61,8 +67,15 @@
  
     max-width: 951px;
 }
+.tamanioCard{
+    display: flex;
+    max-width: 450px;;
+    padding: 30;
+
+}
+
 /*animaciones*/
-.card:hover{/*efecto de transicion aplicado*/
+.lleno:hover{/*efecto de transicion aplicado*/
     /*  transform: scale(1.1);*/
     /*backdrop-filter:brightness(90%);*/    
     /*transition: 0.2s;*/
@@ -76,4 +89,22 @@
    /* transition: 0.6s;*/
    /* transform: scale(1.01);*/
     margin: 5px;
+}
+
+/* apartado no tienes productos*/
+.carritoVacio{
+    height:450px;
+    text-align:justify ;
+
+}
+
+.colorNCarrito{/*color de letras*/
+    color: #383B47;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 10px;
+    opacity: 0.4;
+    transition: opacity 0.5s;
 }
