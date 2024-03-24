@@ -67,7 +67,8 @@
     </nav>
     <main>
       <div>
-        <h2 id="NewProduct">Agrega un nuevo producto</h2>
+        <h2 id="NewProduct">Agrega un nuevo <span class="amarillo"> producto</span></h2>
+        <br>
         <form>
           <div class="alert alert-danger" role="alert" id="alertValidaciones" style="display:none">
             <p id="alertValidacionesTexto" style="font-weight: normal;"></p>
@@ -127,10 +128,13 @@
           </div>
           <div class="mb-3">
             <label for="precioProducto" class="form-label">Precio</label>
-            <input type="tel" class="form-control" id="precioProducto" placeholder="Ingrese precio de producto" />
+            <input type="tel" class="form-control" id="precioProducto" placeholder="Ingrese precio del producto" />
           </div>
-          <button type="submit" id="btnAgregar" class="btn btn-primary" style="background-color: #fcd168; color: #383b47">Enviar</button>
+          <button type="submit" id="btnAgregar" class="btn btn-primary">Agregar</button>
         </form>
+      </div>
+      <div>
+        <!-- <img id="gatitowork" src="src/img/gatito trbajando.png" alt=""> -->
       </div>
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -150,6 +154,10 @@
         </div>
       </div>
     </main>
+    <div id="divseparador">
+      <br>
+      <br>
+    </div>
     <!--footer-->
 
     <footer>

@@ -3,17 +3,22 @@ main{
     display: flex;
     justify-content: center;
     column-gap: 16px;
-    background-color: #007BA7;
+    background-color:#E5E7E9
+    /* #e8e8e8; */
 }
  form{
-    color: #383B47;
+    /* color: #383B47; */
     font-family: "roboto";
     font-optical-sizing: auto;
     font-weight:800;   
     font-optical-sizing: auto;
     padding-left: 55px;
     padding-right: 55px;
-    padding-bottom: 100px;
+    padding-top: 15px;
+    padding-bottom: 55px;
+    border-style: solid;
+    border-radius: 8PX;
+    background-color: #A6ACAF
  }
  #NewProduct{
     color: #383B47;
@@ -30,3 +35,23 @@ main{
 
    
  }
+ #btnAgregar{
+   background-color: #007BA7 ;
+   color: white;
+   font-size: 18px;
+   border: 0;
+   padding: 8px 15px;
+   border-radius: 6px;
+   font-family: 'Roboto'
+   }
+   #btnAgregar:hover{
+   background-color: #007BA7 ;
+   color: white;
+   padding: 9px 18px;
+   opacity: 0.8;
+   }
+ 
+   #divseparador{
+      background-color: #e8e8e8;
+   }
+
